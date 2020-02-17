@@ -53,7 +53,7 @@
 
 ### C语言参考：
 
-- [Linux C编程一站式学习](https://zhuanlan.zhihu.com/p/33674267)  （把书读厚）
+- [Linux C编程一站式学习](http://akaedu.github.io/book/index.html)  （把书读厚）
 
 - [K&R C语言程序设计](https://github.com/huyubing/books-pdf/blob/master/C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80(K%26R)%E6%B8%85%E6%99%B0%E4%B8%AD%E6%96%87%E7%89%88.pdf) （把书读薄）
 
