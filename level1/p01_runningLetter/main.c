@@ -5,23 +5,30 @@
 #define SLEEP_TIME 25
 
 int main(void) {
+    int i = 0; 
+    int change = 1;
     while (1) {
-        for (int i = 0; i < WIDTH; i++) {
-            system("CLS");
-            for (int j = 0; j < i; j++) {
-                printf(" ");
-            }
-            printf("A");
-            Sleep(SLEEP_TIME);
+        system("CLS");
+        for (int j = 0; j < i; j++) {
+            printf(" ");
         }
+        printf("A");
+        Sleep(SLEEP_TIME);
 
-        for (int i = WIDTH; i > 0; i--) {
-            system("CLS");
-            for (int j = 0; j < i; j++) {
-                printf(" ");
-            }
-            printf("A");
-            Sleep(SLEEP_TIME);
+        i += change;
+        switch (i) {
+            case WIDTH-1:
+                change = -1;
+                break;
+            
+            case 0:
+                change = 1;
+                break;
+            
+            default:
+                break;
         }
     }
+
+    return 0;
 }
