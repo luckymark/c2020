@@ -55,5 +55,4 @@ Generated\ Files/
 
 # Files built by JetBrains Clion / for cmake
 .idea/
-CMakeLists.txt
 cmake-build-debug/
