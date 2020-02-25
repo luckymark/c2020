@@ -135,7 +135,7 @@ void del(int id)
 	node *p = find(rt, id), *q;
 	if(p == NULL) 
 	{
-		printf("¸Ã»õÎï²»´æÔÚ\n");
+		printf("该货物不存在\n");
 		return;
 	}
 	cnt--;
@@ -182,7 +182,7 @@ int main(void)
 //	pf(rt);
 	while(1)
 	{
-		printf("Êý¾Ý½«´æ´¢ÔÚware.txtÖÐ\n1ÏÔÊ¾´æ»õÁÐ±í\n2Èë¿â\n3³ö¿â\n4ÍË³ö³ÌÐò\n");
+		printf("数据将存储在ware.txt中\n1显示存货列表\n2入库\n3出库\n4退出程序\n");
 		char c = getch();
 //		int c;
 //		scanf("%d", &c);
@@ -209,8 +209,9 @@ int main(void)
 			Save();
 			break;
 		}
-		printf("°´ÈÎÒâ¼ü¼ÌÐø\n");
+		printf("按任意键继续\n");
 		char ch = getch();
+
 		system("cls");
 	}
- } 
+ }
