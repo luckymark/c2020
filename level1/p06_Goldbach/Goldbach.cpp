@@ -1,16 +1,17 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
-int prime[200];
-bool isnprime[200];
-int cnt = 0;
-void init(int maxn)
+const int MAXN = 100;
+const int max_prime = 50;
+int prime[max_prime];
+bool isnprime[max_prime];
+void init(int &count)
 {
 	int i, j;
-	for(i = 2;i <= maxn;i++)
+	for(i = 2;i <= MAXN;i++)
 	{
-		if(!isnprime[i]) prime[++cnt] = i;
-		for(j = 1;j <= cnt && i * prime[j] <= maxn;j++)
+		if(!isnprime[i]) prime[++count] = i;
+		for(j = 1;j <= count && i * prime[j] <= MAXN;j++)
 		{
 			isnprime[i * prime[j]] = true;
 			if(i % prime[j] == 0) break;
@@ -19,11 +20,11 @@ void init(int maxn)
 }
 int main(void)
 {
-	int i, j;
-	init(100);
-	for(i = 4;i <= 100;i++)
+	int i, j, count = 0;
+	init(count);
+	for(i = 4;i <= MAXN;i++)
 	{
-		for(j = 1;j <= cnt && prime[j] <= i / 2;j++)
+		for(j = 1;j <= count && prime[j] <= i / 2;j++)
 		if(!isnprime[i - prime[j]])
 		{
              printf("%d + %d = %d\n",prime[j], i - prime[j], i);
