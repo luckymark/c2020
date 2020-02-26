@@ -45,5 +45,6 @@ int main(void)
 			Sleep(SLEEP_TIME);
 		}
 	}
+	CloseHandle(hOut);
 	return 0;
 }
