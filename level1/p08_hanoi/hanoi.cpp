@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+const int maxn = 64;
 void move(int x, char from, char to)
 {printf("%d from %c  --> to %c\n", x, from, to);return;}
 
@@ -17,6 +18,5 @@ void hanoi(int n, char from, char middle, char to)
 }
 int main(void)
 {
-	int n = 64;
-	hanoi(n,'A','B','C');
+	hanoi(maxn,'A','B','C');
  } 
