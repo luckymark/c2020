@@ -30,6 +30,7 @@ void render() {
 int main() {
 	char command[100];
 	sprintf(command, "mode concols=%d lines=1", WIDTH);
+	system("title runningLetter");
 	system(command);
 	for (;;) {
 		render();
