@@ -16,17 +16,11 @@ int main(void) {
         Sleep(SLEEP_TIME);
 
         i += change;
-        switch (i) {
-            case WIDTH-1:
-                change = -1;
-                break;
-            
-            case 0:
-                change = 1;
-                break;
-            
-            default:
-                break;
+        
+        if (i == WIDTH - 1) {
+            change = -1;
+        } else if (i == 0) {
+            change = 1;
         }
     }
 
