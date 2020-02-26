@@ -1,8 +1,10 @@
 #include<stdio.h>
 #include<time.h>
-
-int prime[400];
-bool isnprime[1001];
+#include<string.h> 
+const int MAXN = 1000;
+const int MAX_prime = 400;
+int prime[MAX_prime];
+bool isnprime[MAXN];
 int cnt = 0;
 void init(int maxn)
 {
@@ -22,9 +24,11 @@ int main(void)
 	double a, b;
 	int i;
 	
+	memset(isnprime,false,sizeof(isnprime));
+	
 	a = (double)clock();
 	
-	init(1000);
+	init(MAXN);
 	
 	for(i = 1;i <= cnt;i++)
 	printf("%d\n", prime[i]);
