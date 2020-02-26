@@ -2,35 +2,35 @@
 #include<time.h>
 #include<string.h> 
 const int MAXN = 1000;
-const int MAX_prime = 400;
-int prime[MAX_prime];
+const int MAXPRIME = 400;
+int prime[MAXPRIME];
 bool isnprime[MAXN];
-int cnt = 0;
-void init(int maxn)
+
+void init(int &count)
 {
 	int i, j;
-	for(i = 2;i <= maxn;i++)
+	for(i = 2;i <= MAXN;i++)
 	{
-		if(!isnprime[i]) prime[++cnt] = i;
-		for(j = 1;j <= cnt && i * prime[j] <= maxn;j++)
+		if(!isnprime[i]) prime[++count] = i;
+		for(j = 1;j <= count && i * prime[j] <= MAXN;j++)
 		{
 			isnprime[i * prime[j]] = true;
 			if(i % prime[j] == 0) break;
+			
 		}
 	}
 }
 int main(void)
 {
 	double a, b;
-	int i;
+	int i, count = 0;
+	a = (double)clock();
 	
 	memset(isnprime,false,sizeof(isnprime));
 	
-	a = (double)clock();
+	init(count);
 	
-	init(MAXN);
-	
-	for(i = 1;i <= cnt;i++)
+	for(i = 1;i <= count;i++)
 	printf("%d\n", prime[i]);
 	
 	b = (double)clock();
