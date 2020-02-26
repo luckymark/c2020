@@ -29,19 +29,19 @@ void show_list(Goods *goods) {
 void warehouse(Goods *goods) {
     int model, quantity;
 
-    printf("\n执行入库操作...\n\n");
-    printf("请输入入库的商品型号(001~004 或 输入 0 以退出): ");
+    printf("\nPerforming warehousing operations...\n\n");
+    printf("Please enter the product model(001~004 or enter 0 to quit): ");
     scanf("%d", &model);
 
     if (model != 0) {
         if (model > 4 || model < 1) {
-            printf("\n该商品不存在！\n\n");
+            printf("\nThis product does not exist!\n\n");
         } else {
-            printf("请输入入库数量: ");
+            printf("Please enter the quantity: ");
             scanf("%d", &quantity);
 
             if (quantity <= 0) {
-                printf("\n数量必须为正整数！\n\n");
+                printf("\nQuantity must be a positive integer!\n\n");
             } else {
                 switch (model) {
                     case 1:
@@ -64,7 +64,7 @@ void warehouse(Goods *goods) {
                         break;
                 }
 
-                printf("\n入库成功！\n\n");
+                printf("\nSuccess!\n\n");
             }
         }
     }
@@ -73,54 +73,54 @@ void warehouse(Goods *goods) {
 void outbound(Goods *goods) {
     int model, quantity;
 
-    printf("\n执行出库操作...\n\n");
-    printf("请输入出库的商品型号(001~004 或 输入 0 以退出): ");
+    printf("\nPerform outbound operations...\n\n");
+    printf("Please enter the product model(001~004 or enter 0 to quit): ");
     scanf("%d", &model);
 
     if (model != 0) {
         if (model > 4 || model < 1) {
-            printf("\n该商品不存在！\n\n");
+            printf("\nThis product does not exist!\n\n");
         } else {
-            printf("请输入出库数量: ");
+            printf("Please enter the quantity: ");
             scanf("%d", &quantity);
 
             if (quantity <= 0) {
-                printf("\n数量必须为正整数！\n\n");
+                printf("\nQuantity must be a positive integer!\n\n");
             } else {
                 switch (model) {
                     case 1:
                         if (goods->g1 < quantity) {
-                            printf("\n库存不足！\n\n");
+                            printf("\nInsufficient inventory!\n\n");
                         } else {
                             goods->g1 -= quantity;
-                            printf("\n出库成功！\n\n");
+                            printf("\nSuccess!\n\n");
                         }
                         break;
 
                     case 2:
                         if (goods->g2 < quantity) {
-                            printf("\n库存不足！\n\n");
+                            printf("\nInsufficient inventory!\n\n");
                         } else {
                             goods->g2 -= quantity;
-                            printf("\n出库成功！\n\n");
+                            printf("\nSuccess!\n\n");
                         }
                         break;
 
                     case 3:
                         if (goods->g3 < quantity) {
-                            printf("\n库存不足！\n\n");
+                            printf("\nInsufficient inventory!\n\n");
                         } else {
                             goods->g3 -= quantity;
-                            printf("\n出库成功！\n\n");
+                            printf("\nSuccess!\n\n");
                         }
                         break;
 
                     case 4:
                         if (goods->g4 < quantity) {
-                            printf("\n库存不足！\n\n");
+                            printf("\nInsufficient inventory!\n\n");
                         } else {
                             goods->g4 -= quantity;
-                            printf("\n出库成功！\n\n");
+                            printf("\nSuccess!\n\n");
                         }
                         break;
 

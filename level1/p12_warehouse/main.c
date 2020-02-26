@@ -4,21 +4,21 @@
 int main(void) {
     Goods *goods = init();
 
-    printf("欢迎使用库存管理系统！\n\n");
+    printf("Welcome to Inventory Management System!\n\n");
 
     while (1) {
         int num;
         size_t status = 0;
 
-        printf("1) 显示存货列表\n");
-        printf("2) 入库\n");
-        printf("3) 出库\n");
-        printf("0) 保存并退出\n");
-        printf("输入编号执行相应操作: ");
+        printf("1) Show inventory list\n");
+        printf("2) Warehouse\n");
+        printf("3) Outbound\n");
+        printf("0) Save and quit\n");
+        printf("Enter the number to perform the corresponding operation: ");
         scanf("%d", &num);
 
         if (num < 0 || num > 3) {
-            printf("\n编号错误！\n\n");
+            printf("\nNumbering error!\n\n");
             continue;
         } else {
             switch (num) {
@@ -37,14 +37,14 @@ int main(void) {
                 case 0:
                     status = save(goods);
                     if (status == 0) {
-                        printf("\n保存失败！\n\n");
-                        printf("是否强制退出(0:是(默认) 其它:否): ");
+                        printf("\nSave failed!\n\n");
+                        printf("Whether to force quit(0:Yes(default) Others:No): ");
                         scanf("%d", &num);
                         if (num == 0) {
                             status = -1;
                         }
                     } else {
-                        printf("\n保存成功！\n\n");
+                        printf("\nSaved successfully!\n\n");
                     }
                     break;
 
@@ -58,7 +58,7 @@ int main(void) {
         }
     }
 
-    printf("再见！\n");
+    printf("Bye!\n");
 
     return 0;
 }
