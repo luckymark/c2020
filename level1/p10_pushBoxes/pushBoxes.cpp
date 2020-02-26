@@ -224,4 +224,5 @@ int main(void)
 	creat_mp();
 	load_tip();
 	work();
+	CloseHandle(hOut);
 }
