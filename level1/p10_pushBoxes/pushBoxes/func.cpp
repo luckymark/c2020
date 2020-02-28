@@ -3,28 +3,9 @@
 #include <Windows.h>
 #include "func_used.h"
 
-void new_game(void)
+int new_game(int num_upboard,int board[][ROW],Upthing* upboard)
 {
-	/* 以下部分需要文档读取 */
-	int num_upboard = 3; // 人加箱子的个数
-	int board[LINE][ROW] = {
-	{1,1,1,1,1},
-	{1,0,2,2,1},
-	{1,0,0,0,1},
-	{1,0,0,0,1},
-	{1,1,1,1,1},
-	};
-	Upthing* upboard = (Upthing*)malloc(sizeof(Upthing) * num_upboard);
-	upboard[0].hang = 1;
-	upboard[0].lie = 1;
-	upboard[1].hang = 2;
-	upboard[1].lie = 2;
-	upboard[2].hang = 2;
-	upboard[2].lie = 3;
 	int count_step = 0; // 记录步数
-	/* ------------------  */
-
-
 	print_game(board, upboard, num_upboard);
 	while (!isGameover(upboard, num_upboard, board)) 
 	{
@@ -34,6 +15,7 @@ void new_game(void)
 	}
 	printf("\n恭喜您用了%d步完成游戏\n", count_step);
 	Sleep(ONE_SECOND);
+	return count_step;
 }
 bool isGameover(Upthing* upboard, int num_upboard, int board[][ROW])
 {

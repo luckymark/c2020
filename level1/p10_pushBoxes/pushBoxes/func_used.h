@@ -18,7 +18,8 @@ typedef struct __PER_BOX__ {
 #define ONE_SECOND 1000  //Sleep函数中一秒的值
 
 /* 开启新的游戏 */
-void new_game();
+/* 返回步数 */
+int new_game(int num_upboard, int board[][ROW], Upthing* upboard);
 
 /* 返回游戏是否结束 */
 /* 游戏结束返回true */
