@@ -1,0 +1,4 @@
+"D:\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\asus\source\repos\c2020-1\level1\p11_linkedList\linkedList
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="linkedList"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="linkedList">
+				<Option output="C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/linkedList.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/MinGW/seh/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="D:/MinGW/seh/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="D:/MinGW/seh/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 linkedList"/>
+					<CompileFile command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="linkedList/fast">
+				<Option output="C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/linkedList.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/MinGW/seh/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="D:/MinGW/seh/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="D:/MinGW/seh/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 linkedList/fast"/>
+					<CompileFile command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/seh/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/list_base.c">
+			<Option target="linkedList"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/list_base.h">
+			<Option target="linkedList"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/main.c">
+			<Option target="linkedList"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
