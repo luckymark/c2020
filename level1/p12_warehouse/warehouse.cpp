@@ -8,6 +8,7 @@ const int NAME_LENGTH=20;
 
 int GoodsTypes;
 
+
 struct Goods
 {
 	char name[NAME_LENGTH];
