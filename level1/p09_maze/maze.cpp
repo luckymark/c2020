@@ -82,7 +82,7 @@ void E_note()
 }
 int main()
 {
-	freopen("1.txt","w",stdout); 
+	//freopen("1.txt","w",stdout); 
 	Create_map();
 	node play;
 	play.x=2,play.y=2;
