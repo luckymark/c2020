@@ -8,3 +8,7 @@
 ### 参考：
 
 [神经网络入门](http://blog.csdn.net/zzwu/article/details/574931) 
+
+
+### 预训练
+model放在pretrained.zip，解压覆盖即可测试
