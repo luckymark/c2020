@@ -8,8 +8,7 @@ int main(){
     clock_t start,end;
     start = clock();
     memset(nextPrime,0,sizeof(nextPrime));
-    int lastPrime = 2;
-    nextPrime[0] = 2;//第一个素数2是唯一的偶数，特殊处理
+    int lastPrime = 2;//第一个素数2
     printf("%3d,",2);
     for (int i = 3; i <= MAXN; ) {
         int flag = 1;
