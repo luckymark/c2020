@@ -1,31 +1,21 @@
 #include<stdio.h>
 #include<math.h>
-#include<time.h> 
-#include<stdlib.h>
-#include<windows.h>
-
-const int MAX=1002;
-
-bool jud[MAX];
-int prime[MAX];
- 
+int pow(int x)
+{
+	return x*x*x;
+}
 int main()
 {
-	DWORD start=GetTickCount();
-	int tol=0;
-	for(int i=2;i<=MAX;i++)
+	for(int i=100;i<=999;i++)
 	{
-		if(jud[i]==0) prime[++tol] = i;
-		for(int j=1; j<=tol; j++)
-		{
-			if(prime[j]*i > MAX) break;
-			jud[prime[j]*i]=1;
-			if(i%prime[j]==0) break; 
-		}
+		int x=i;
+		int a=i%10;
+		i/=10;
+		int b=i%10;
+		i/=10;
+		int c=i%10;
+		if(pow(a)+pow(b)+pow(c)==x) 
+		printf("%d\n",x);
+		i=x;
 	}
-	for(int i=2;i<=1000;i++)
-	if(jud[i]==0) printf("%d\n",i);
-	DWORD end=GetTickCount();
-	printf("the total time cost is %d ms",end-start);
-
 } 

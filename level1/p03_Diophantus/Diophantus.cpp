@@ -1,21 +1,17 @@
 #include<stdio.h>
-#include<math.h>
-int pow(int x)
-{
-	return x*x*x;
-}
+
 int main()
 {
-	for(int i=100;i<=999;i++)
+	for(int i=1;i<=1000;i++)
 	{
-		int x=i;
-		int a=i%10;
-		i/=10;
-		int b=i%10;
-		i/=10;
-		int c=i%10;
-		if(pow(a)+pow(b)+pow(c)==x) 
-		printf("%d\n",x);
-		i=x;
+		if(!(i%7)&&!(i%12))
+		{
+			int x=i/6+i/12+i/7+i/2;
+			if(x+9==i)
+			{
+				printf("Diophantus is %d years old",i);
+				return 0;
+			}
+		}
 	}
 } 
