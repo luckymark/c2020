@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <math.h>
 
+int Isprime(int n);
+
 int main()
 {
-    int Isprime(int n);
     int i, j, flag;
     for (i = 6; i <= 100; i = i + 2)
     {
