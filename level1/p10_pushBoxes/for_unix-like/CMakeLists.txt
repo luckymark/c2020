@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 3.15)
-project(p10_pushBoxes C)
+project(boxes C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(p10_pushBoxes main.c boxes.c boxes.h)
+include_directories(.)
+
+add_executable(boxes
+        boxes.c
+        boxes.h
+        main.c)

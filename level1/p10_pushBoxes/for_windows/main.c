@@ -4,53 +4,45 @@
 #include "boxes.h"
 
 int main() {
-    int ch;
+    unsigned int ch;
+    Game game;
     int in_place = 0;
-    int x = 1; // height
-    int y = 2; // width
-    int boxes_x[BOXES] = {5, 6};
-    int boxes_y[BOXES] = {4, 4};
-    int targets_x[BOXES] = {8, 8};
-    int targets_y[BOXES] = {2, 26};
-    char map[HEIGHT][WIDTH] =
-            {{'+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+'},
-             {'+', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', '@', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', '@', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+'},
-             {'+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', ' ', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+'},
-             {'+', ' ', '*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '*', ' ', '+'},
-             {'+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+'},
-             {'+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+'}};
+
+    while (1) {
+        printf("Please enter the filename: ");
+        scanf("%s", game.filename);
+        getchar();
+        init_game(&game);
+        if (game.map == NULL) {
+            printf("%s not found!\n", game.filename);
+        } else {
+            break;
+        }
+    }
 
     system("CLS");
-    print_map(map);
+    print_map(&game);
     printf("Use arrow keys or wasd to move or enter q to quit.\n");
+    printf("Moves: %d\n", game.moves);
 
     while ((ch = getch()) != 'q') {
         if (ch == 0 || ch == 224) {
             // Use arrow keys
             switch (getch()) {
                 case 72: // Up
-                    move(map, &x, &y, boxes_x, boxes_y, targets_x, targets_y, 0);
+                    move(&game, 0);
                     break;
 
                 case 80: // Down
-                    move(map, &x, &y, boxes_x, boxes_y, targets_x, targets_y, 1);
+                    move(&game, 1);
                     break;
 
                 case 77: // Right
-                    move(map, &x, &y, boxes_x, boxes_y, targets_x, targets_y, 2);
+                    move(&game, 2);
                     break;
 
                 case 75: // Lift
-                    move(map, &x, &y, boxes_x, boxes_y, targets_x, targets_y, 3);
+                    move(&game, 3);
                     break;
 
                 default:
@@ -61,22 +53,22 @@ int main() {
             switch (ch) {
                 case 'w':
                 case 'W': // Up
-                    move(map, &x, &y, boxes_x, boxes_y, targets_x, targets_y, 0);
+                    move(&game, 0);
                     break;
 
                 case 's':
                 case 'S': // Down
-                    move(map, &x, &y, boxes_x, boxes_y, targets_x, targets_y, 1);
+                    move(&game, 1);
                     break;
 
                 case 'd':
                 case 'D': // Right
-                    move(map, &x, &y, boxes_x, boxes_y, targets_x, targets_y, 2);
+                    move(&game, 2);
                     break;
 
                 case 'a':
                 case 'A': // Lift
-                    move(map, &x, &y, boxes_x, boxes_y, targets_x, targets_y, 3);
+                    move(&game, 3);
                     break;
 
                 default:
@@ -85,26 +77,43 @@ int main() {
         }
 
         system("CLS");
-        print_map(map);
+        print_map(&game);
 
-        for (int i = 0; i < BOXES; i++) {
-            for (int j = 0; j < BOXES; j++) {
-                if (boxes_x[i] == targets_x[j] && boxes_y[i] == targets_y[j]) {
+        for (int i = 0; i < game.boxes; i++) {
+            for (int j = 0; j < game.boxes; j++) {
+                if (game.boxes_x[i] == game.targets_x[j] && game.boxes_y[i] == game.targets_y[j]) {
                     in_place++;
                 }
             }
         }
 
-        if (in_place == BOXES) {
+        if (in_place == game.boxes) {
             printf("Success!\n");
-            getchar();
+            while (1) {
+                printf("Save or not?[y/n]");
+                ch = getch();
+                if (ch == 'y' || ch == 'Y') {
+                    save_game(&game);
+                    break;
+                } else if (ch == 'n' || ch == 'N') {
+                    break;
+                } else {
+                    printf("\n");
+                }
+            }
             break;
         } else {
             in_place = 0;
             printf("Use arrow keys or wasd to move or enter q to quit.\n");
+            printf("Moves: %d\n", game.moves);
         }
     }
 
+    printf("\nThe game is quiting...\n");
+    quit_game(&game);
+    printf("Everything is done!\n");
+    printf("Bye!\n");
+    getchar();
 
     return 0;
 }
