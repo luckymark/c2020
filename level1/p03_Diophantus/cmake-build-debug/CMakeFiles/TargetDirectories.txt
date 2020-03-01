@@ -1,0 +1,3 @@
+C:/Users/surfaceCS/Desktop/pig/c2020/level1/p03_Diophantus/cmake-build-debug/CMakeFiles/p03_Diophantus.dir
+C:/Users/surfaceCS/Desktop/pig/c2020/level1/p03_Diophantus/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/surfaceCS/Desktop/pig/c2020/level1/p03_Diophantus/cmake-build-debug/CMakeFiles/rebuild_cache.dir

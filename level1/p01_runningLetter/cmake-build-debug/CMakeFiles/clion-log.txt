@@ -1,0 +1,7 @@
+"C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/MinGW/bin/mingw32-make.exe -DCMAKE_C_COMPILER=C:/MinGW/bin/gcc.exe -DCMAKE_CXX_COMPILER=C:/MinGW/bin/g++.exe -G "CodeBlocks - MinGW Makefiles" C:\Users\surfaceCS\Desktop\pig\c2020\level1\p01_runningLetter
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug
+
+Problems were encountered while collecting compiler information:
+	cc1.exe: error: unrecognized command line option "-fpch-preprocess"

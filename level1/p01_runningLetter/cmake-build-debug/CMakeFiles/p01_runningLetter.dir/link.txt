@@ -1,0 +1,1 @@
+C:\MinGW\bin\gcc.exe -g   -Wl,@CMakeFiles\p01_runningLetter.dir\objects1.rsp  -o p01_runningLetter.exe -Wl,--out-implib,libp01_runningLetter.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
