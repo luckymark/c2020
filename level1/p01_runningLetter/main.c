@@ -10,7 +10,7 @@ int main()
     char kin[10];
     int i, j = 0;
     int flag = 1;
-    printf("ÇëÊäÈëµ¥´Ê»ò×ÖÄ¸£º");
+    printf("Please enter a word or letter:");
     scanf("%s", kin);
     int len = strlen(kin);
     while (1)

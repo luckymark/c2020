@@ -11,20 +11,20 @@
 				<Option working_dir="C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="p01_runningLetter">
@@ -34,17 +34,15 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/MinGW/bin/../lib/gcc/mingw32/3.4.5/../../../../include"/>
-					<Add directory="C:/MinGW/bin/../lib/gcc/mingw32/3.4.5/include"/>
-					<Add directory="/mingw/lib/gcc/mingw32/3.4.5/../../../../include"/>
-					<Add directory="/mingw/include"/>
-					<Add directory="/mingw/lib/gcc/mingw32/3.4.5/include"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 p01_runningLetter"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 p01_runningLetter"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="p01_runningLetter/fast">
@@ -54,27 +52,25 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/MinGW/bin/../lib/gcc/mingw32/3.4.5/../../../../include"/>
-					<Add directory="C:/MinGW/bin/../lib/gcc/mingw32/3.4.5/include"/>
-					<Add directory="/mingw/lib/gcc/mingw32/3.4.5/../../../../include"/>
-					<Add directory="/mingw/include"/>
-					<Add directory="/mingw/lib/gcc/mingw32/3.4.5/include"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 p01_runningLetter/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 p01_runningLetter/fast"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/surfaceCS/Desktop/pig/c2020/level1/p01_runningLetter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>

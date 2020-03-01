@@ -59,15 +59,15 @@ include CMakeFiles/p01_runningLetter.dir/flags.make
 CMakeFiles/p01_runningLetter.dir/main.c.obj: CMakeFiles/p01_runningLetter.dir/flags.make
 CMakeFiles/p01_runningLetter.dir/main.c.obj: ../main.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\surfaceCS\Desktop\pig\c2020\level1\p01_runningLetter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/p01_runningLetter.dir/main.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\p01_runningLetter.dir\main.c.obj   -c C:\Users\surfaceCS\Desktop\pig\c2020\level1\p01_runningLetter\main.c
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\p01_runningLetter.dir\main.c.obj   -c C:\Users\surfaceCS\Desktop\pig\c2020\level1\p01_runningLetter\main.c
 
 CMakeFiles/p01_runningLetter.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/p01_runningLetter.dir/main.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\surfaceCS\Desktop\pig\c2020\level1\p01_runningLetter\main.c > CMakeFiles\p01_runningLetter.dir\main.c.i
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\surfaceCS\Desktop\pig\c2020\level1\p01_runningLetter\main.c > CMakeFiles\p01_runningLetter.dir\main.c.i
 
 CMakeFiles/p01_runningLetter.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/p01_runningLetter.dir/main.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\surfaceCS\Desktop\pig\c2020\level1\p01_runningLetter\main.c -o CMakeFiles\p01_runningLetter.dir\main.c.s
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\surfaceCS\Desktop\pig\c2020\level1\p01_runningLetter\main.c -o CMakeFiles\p01_runningLetter.dir\main.c.s
 
 # Object files for target p01_runningLetter
 p01_runningLetter_OBJECTS = \
@@ -78,6 +78,7 @@ p01_runningLetter_EXTERNAL_OBJECTS =
 
 p01_runningLetter.exe: CMakeFiles/p01_runningLetter.dir/main.c.obj
 p01_runningLetter.exe: CMakeFiles/p01_runningLetter.dir/build.make
+p01_runningLetter.exe: CMakeFiles/p01_runningLetter.dir/linklibs.rsp
 p01_runningLetter.exe: CMakeFiles/p01_runningLetter.dir/objects1.rsp
 p01_runningLetter.exe: CMakeFiles/p01_runningLetter.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\surfaceCS\Desktop\pig\c2020\level1\p01_runningLetter\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable p01_runningLetter.exe"
