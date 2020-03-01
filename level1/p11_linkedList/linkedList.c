@@ -39,7 +39,7 @@ void printList(Node *head) {
     printf("\n");
 }
 
-int changeList(Node *head, int n, int value) {
+int changeNodeValue(Node *head, int n, int value) {
     Node *node = head;
 
     for (int i = 0; i < n && node; i++) {
@@ -54,7 +54,7 @@ int changeList(Node *head, int n, int value) {
     }
 }
 
-int deleteList(Node *head, int n) {
+int deleteNode(Node *head, int n) {
     Node *node = head;
 
     for (int i = 0; i < n - 1 && node; i++) {
@@ -71,7 +71,7 @@ int deleteList(Node *head, int n) {
     }
 }
 
-int insertList(Node *head, int n, int value) {
+int insertNode(Node *head, int n, int value) {
     Node *node = head;
 
     for (int i = 0; i < n && node; i++) {
