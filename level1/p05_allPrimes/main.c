@@ -24,9 +24,5 @@ int is_prime(int x) {
         }
     }
 
-    if (factor == 2) {
-        return 1;
-    }
-
-    return 0;
+    return (factor == 2);
 }
