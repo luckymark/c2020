@@ -30,27 +30,24 @@ void init_game(Game *game) {
         for (int i = 0; i < game->height; i++) {
             for (int j = 0; j < game->width; j++) {
                 switch (game->map[i][j]) {
-                    case '#':
+                    case '5':
                         game->x = i;
                         game->y = j;
                         break;
-
-                    case '@':
+                    case '6':
                         game->boxes_x = (unsigned int*)realloc(game->boxes_x, sizeof(unsigned int) * ((game->boxes) + 1));
                         game->boxes_y = (unsigned int*)realloc(game->boxes_y, sizeof(unsigned int) * ((game->boxes) + 1));
                         game->boxes_x[game->boxes] = i;
                         game->boxes_y[game->boxes] = j;
                         (game->boxes)++;
                         break;
-
-                    case '*':
+                    case '9':
                         game->targets_x = (unsigned int*)realloc(game->targets_x, sizeof(unsigned int) * ((game->targets) + 1));
                         game->targets_y = (unsigned int*)realloc(game->targets_y, sizeof(unsigned int) * ((game->targets) + 1));
                         game->targets_x[game->targets] = i;
                         game->targets_y[game->targets] = j;
                         (game->targets)++;
                         break;
-
                     default:
                         break;
                 }
@@ -63,7 +60,28 @@ void init_game(Game *game) {
 
 void print_map(Game *game) {
     for (int i = 0; i < game->height; i++) {
-        printf("%s", game->map[i]);
+        for (int j = 0; j < game->width; j++) {
+            switch (game->map[i][j]) {
+                case '0':
+                    printf("  ");
+                    break;
+                case '1':
+                    printf("+ ");
+                    break;
+                case '5':
+                    printf("# ");
+                    break;
+                case '6':
+                    printf("@ ");
+                    break;
+                case '9':
+                    printf("* ");
+                    break;
+                default:
+                    break;
+            }
+        }
+        printf("\n");
     }
 }
 
@@ -71,52 +89,52 @@ void move(Game *game, int direction) {
     // direction:  0->Up  1->Down  2->Right  3->Left
     switch (direction) {
         case 0:
-            if (game->map[(game->x) - 1][game->y] != '+') {
-                if (game->map[(game->x) - 1][game->y] == '@' && !move_box(game, (game->x) - 1, game->y, 0)) {
+            if (game->map[(game->x) - 1][game->y] != '1') {
+                if (game->map[(game->x) - 1][game->y] == '6' && !move_box(game, (game->x) - 1, game->y, 0)) {
                     break;
                 }
 
-                game->map[game->x][game->y] = ' ';
+                game->map[game->x][game->y] = '0';
                 (game->x)--;
-                game->map[game->x][game->y] = '#';
+                game->map[game->x][game->y] = '5';
                 (game->moves)++;
             }
             break;
 
-        case 1:if (game->map[(game->x) + 1][game->y] != '+') {
-                if (game->map[(game->x) + 1][game->y] == '@' && !move_box(game, (game->x) + 1, game->y, 1)) {
+        case 1:if (game->map[(game->x) + 1][game->y] != '1') {
+                if (game->map[(game->x) + 1][game->y] == '6' && !move_box(game, (game->x) + 1, game->y, 1)) {
                     break;
                 }
 
-                game->map[game->x][game->y] = ' ';
+                game->map[game->x][game->y] = '0';
                 (game->x)++;
-                game->map[game->x][game->y] = '#';
+                game->map[game->x][game->y] = '5';
                 (game->moves)++;
             }
             break;
 
         case 2:
-            if (game->map[game->x][(game->y) + 2] != '+') {
-                if (game->map[game->x][(game->y) + 2] == '@' && !move_box(game, game->x, (game->y) + 2, 2)) {
+            if (game->map[game->x][(game->y) + 1] != '1') {
+                if (game->map[game->x][(game->y) + 1] == '6' && !move_box(game, game->x, (game->y) + 1, 2)) {
                     break;
                 }
 
-                game->map[game->x][game->y] = ' ';
-                (game->y) += 2;
-                game->map[game->x][game->y] = '#';
+                game->map[game->x][game->y] = '0';
+                (game->y) += 1;
+                game->map[game->x][game->y] = '5';
                 (game->moves)++;
             }
             break;
 
         case 3:
-            if (game->map[game->x][(game->y) - 2] != '+') {
-                if (game->map[game->x][(game->y) - 2] == '@' && !move_box(game, game->x, (game->y) - 2, 3)) {
+            if (game->map[game->x][(game->y) - 1] != '1') {
+                if (game->map[game->x][(game->y) - 1] == '6' && !move_box(game, game->x, (game->y) - 1, 3)) {
                     break;
                 }
 
-                game->map[game->x][game->y] = ' ';
-                (game->y) -= 2;
-                game->map[game->x][game->y] = '#';
+                game->map[game->x][game->y] = '0';
+                (game->y) -= 1;
+                game->map[game->x][game->y] = '5';
                 (game->moves)++;
             }
             break;
@@ -126,8 +144,8 @@ void move(Game *game, int direction) {
     }
 
     for (int i = 0; i < game->targets; i++) {
-        if (game->map[game->targets_x[i]][game->targets_y[i]] == ' ')
-            game->map[game->targets_x[i]][game->targets_y[i]] = '*';
+        if (game->map[game->targets_x[i]][game->targets_y[i]] == '0')
+            game->map[game->targets_x[i]][game->targets_y[i]] = '9';
     }
 }
 
@@ -141,34 +159,34 @@ int move_box(Game *game, unsigned int box_x, unsigned int box_y, unsigned int di
 
     switch (direction) {
         case 0:
-            if (game->map[box_x - 1][box_y] != '+' && game->map[box_x - 1][box_y] != '@') {
-                game->map[box_x][box_y] = ' ';
+            if (game->map[box_x - 1][box_y] != '1' && game->map[box_x - 1][box_y] != '6') {
+                game->map[box_x][box_y] = '0';
                 box_x--;
-                game->map[box_x][box_y] = '@';
+                game->map[box_x][box_y] = '6';
             }
             break;
 
         case 1:
-            if (game->map[box_x + 1][box_y] != '+' && game->map[box_x + 1][box_y] != '@') {
-                game->map[box_x][box_y] = ' ';
+            if (game->map[box_x + 1][box_y] != '1' && game->map[box_x + 1][box_y] != '6') {
+                game->map[box_x][box_y] = '0';
                 box_x++;
-                game->map[box_x][box_y] = '@';
+                game->map[box_x][box_y] = '6';
             }
             break;
 
         case 2:
-            if (game->map[box_x][box_y + 2] != '+' && game->map[box_x][box_y + 2] != '@') {
-                game->map[box_x][box_y] = ' ';
-                box_y += 2;
-                game->map[box_x][box_y] = '@';
+            if (game->map[box_x][box_y + 1] != '1' && game->map[box_x][box_y + 1] != '6') {
+                game->map[box_x][box_y] = '0';
+                box_y += 1;
+                game->map[box_x][box_y] = '6';
             }
             break;
 
         case 3:
-            if (game->map[box_x][box_y - 2] != '+' && game->map[box_x][box_y - 2] != '@') {
-                game->map[box_x][box_y] = ' ';
-                box_y -= 2;
-                game->map[box_x][box_y] = '@';
+            if (game->map[box_x][box_y - 1] != '1' && game->map[box_x][box_y - 1] != '6') {
+                game->map[box_x][box_y] = '0';
+                box_y -= 1;
+                game->map[box_x][box_y] = '6';
             }
             break;
 
