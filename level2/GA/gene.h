@@ -71,5 +71,6 @@ void initPopulation(unsigned seed);
 void evalution();
 void printMap();
 void printAns();
+void emulate(struct Gene* ptr,int *x,int *y,int *count,bool res);
 
 #endif //GA_GENE_H
