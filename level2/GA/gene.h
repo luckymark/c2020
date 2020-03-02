@@ -16,39 +16,53 @@
 
 
 #define MAXN 10
+//map size
 #define PATHLEN 25
+//path\gene length
+
 //need to change
 
 
 #define MAXWAIT 5
-#define FREQ 2000
+//经过多少次找到相同解，就视为最优解
 #define POOLSIZE 1000
+//population pool
 #define EPOCHSIZE 200000
+//epoch times
 #define CHOOSERATE 0.8
+//优势种群阈值
 #define MUTARATE 0.05
+//变异率
 #define LAMBDA 10
+//路径长度惩罚系数
 
 int resIdx=-1;
+//最优基因下标
+
 int begX,begY;
 int endX,endY;
 int epoch=0;
-int best;
-//循环数组
+int best=INT_MAX;
+//best_length
 FILE* fp;
 char map[MAXN][MAXN];
 struct Gene{
-    float mark;
+    int mark;
     bool code[PATHLEN][2];
     int count;
     bool reach;
 };
 float prob[POOLSIZE];
+//prefix sum of prob
+
 struct Gene population[3][POOLSIZE];
+//循环数组
+//0，1轮流为父种群和子种群，2为优势种群
 
 inline float randFloat(){
     return ((float)(rand()%30001))/30000;
 }
-float setMark(struct Gene* ptr);
+int setMark(struct Gene* ptr);
 void setProb();
 void mutate();
 void exchange();
