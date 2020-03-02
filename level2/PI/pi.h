@@ -16,12 +16,13 @@
 #define ACCURACY 21000
 //decimal part length
 //real accuracy is log10(MOD)*ACCURACY
-#define SHOWLEN 20005
+#define SHOWLEN 800
 //print length
 #define MAX(a,b) a>b?a:b
 //macro func
 #define MOD 10000
 //compressing status to reduce memory and time cost
+#define FILENAME "pi.txt"
 
 struct BigNum{
     int power;
@@ -36,6 +37,7 @@ void bigDiv(struct BigNum* numA,int numB,struct BigNum* numRes);
 void changePower(struct BigNum* num,int target);
 // change power into target
 void printNum(struct BigNum* num);
+void savePi(struct BigNum* num);
 struct BigNum* getBigNum(int num);
 
 #endif //PI_PI_H

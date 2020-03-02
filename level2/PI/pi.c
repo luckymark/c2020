@@ -30,6 +30,8 @@ int main() {
             bigSub(piNum,tempNum,piNum);
         }
     }
+
+    savePi(piNum);
     printNum(piNum);
     return 0;
 }
@@ -116,6 +118,15 @@ void printNum(struct BigNum* num){
     printf("\n\nEnding in %d s with precision %d\n",(int)(clock()/CLOCKS_PER_SEC),(int)log10(MOD)*ACCURACY);
     printf("Input any to quit\n");
     getch();
+}
+void savePi(struct BigNum* num){
+    int i;
+    FILE* fp=fopen(FILENAME,"w");
+    fprintf(fp,"%d.",num->digit[1]);
+    for(i=2;i<=ACCURACY;++i){
+        fprintf(fp,"%04d",num->digit[i]);
+    }
+    fclose(fp);
 }
 struct BigNum* getBigNum(int num){
     //in this case
