@@ -1,3 +1,0 @@
-C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/CMakeFiles/linkedList.dir
-C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug/CMakeFiles/rebuild_cache.dir

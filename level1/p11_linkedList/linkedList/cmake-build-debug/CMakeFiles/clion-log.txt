@@ -1,4 +1,6 @@
-"D:\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\asus\source\repos\c2020-1\level1\p11_linkedList\linkedList
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList/cmake-build-debug
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/c/Users/asus/source/repos/c2020-1/level1/p11_linkedList/linkedList
+CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
+  CMake 3.15 or higher is required.  You are running version 3.10.2
+
+
+-- Configuring incomplete, errors occurred!
