@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\surfaceCS\Desktop\pig\c2020\level1\p02_isPrime
+CMAKE_SOURCE_DIR = C:\Users\surfaceCS\Desktop\pig\c2020\level1\p09_maze
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\surfaceCS\Desktop\pig\c2020\level1\p02_isPrime\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\surfaceCS\Desktop\pig\c2020\level1\p09_maze\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\surfaceCS\Desktop\pig\c2020\level1\p02_isPrime\cmake-build-debug\CMakeFiles C:\Users\surfaceCS\Desktop\pig\c2020\level1\p02_isPrime\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\surfaceCS\Desktop\pig\c2020\level1\p09_maze\cmake-build-debug\CMakeFiles C:\Users\surfaceCS\Desktop\pig\c2020\level1\p09_maze\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\surfaceCS\Desktop\pig\c2020\level1\p02_isPrime\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\surfaceCS\Desktop\pig\c2020\level1\p09_maze\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -110,44 +110,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named p02_isPrime
+# Target rules for targets named p09_maze
 
 # Build rule for target.
-p02_isPrime: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 p02_isPrime
-.PHONY : p02_isPrime
+p09_maze: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 p09_maze
+.PHONY : p09_maze
 
 # fast build rule for target.
-p02_isPrime/fast:
-	$(MAKE) -f CMakeFiles\p02_isPrime.dir\build.make CMakeFiles/p02_isPrime.dir/build
-.PHONY : p02_isPrime/fast
+p09_maze/fast:
+	$(MAKE) -f CMakeFiles\p09_maze.dir\build.make CMakeFiles/p09_maze.dir/build
+.PHONY : p09_maze/fast
 
-main.obj: main.c.obj
+maze1.obj: maze1.c.obj
 
-.PHONY : main.obj
+.PHONY : maze1.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) -f CMakeFiles\p02_isPrime.dir\build.make CMakeFiles/p02_isPrime.dir/main.c.obj
-.PHONY : main.c.obj
+maze1.c.obj:
+	$(MAKE) -f CMakeFiles\p09_maze.dir\build.make CMakeFiles/p09_maze.dir/maze1.c.obj
+.PHONY : maze1.c.obj
 
-main.i: main.c.i
+maze1.i: maze1.c.i
 
-.PHONY : main.i
+.PHONY : maze1.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles\p02_isPrime.dir\build.make CMakeFiles/p02_isPrime.dir/main.c.i
-.PHONY : main.c.i
+maze1.c.i:
+	$(MAKE) -f CMakeFiles\p09_maze.dir\build.make CMakeFiles/p09_maze.dir/maze1.c.i
+.PHONY : maze1.c.i
 
-main.s: main.c.s
+maze1.s: maze1.c.s
 
-.PHONY : main.s
+.PHONY : maze1.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles\p02_isPrime.dir\build.make CMakeFiles/p02_isPrime.dir/main.c.s
-.PHONY : main.c.s
+maze1.c.s:
+	$(MAKE) -f CMakeFiles\p09_maze.dir\build.make CMakeFiles/p09_maze.dir/maze1.c.s
+.PHONY : maze1.c.s
+
+maze2.obj: maze2.c.obj
+
+.PHONY : maze2.obj
+
+# target to build an object file
+maze2.c.obj:
+	$(MAKE) -f CMakeFiles\p09_maze.dir\build.make CMakeFiles/p09_maze.dir/maze2.c.obj
+.PHONY : maze2.c.obj
+
+maze2.i: maze2.c.i
+
+.PHONY : maze2.i
+
+# target to preprocess a source file
+maze2.c.i:
+	$(MAKE) -f CMakeFiles\p09_maze.dir\build.make CMakeFiles/p09_maze.dir/maze2.c.i
+.PHONY : maze2.c.i
+
+maze2.s: maze2.c.s
+
+.PHONY : maze2.s
+
+# target to generate assembly for a file
+maze2.c.s:
+	$(MAKE) -f CMakeFiles\p09_maze.dir\build.make CMakeFiles/p09_maze.dir/maze2.c.s
+.PHONY : maze2.c.s
 
 # Help Target
 help:
@@ -155,12 +182,15 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... p02_isPrime
+	@echo ... p09_maze
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... maze1.obj
+	@echo ... maze1.i
+	@echo ... maze1.s
+	@echo ... maze2.obj
+	@echo ... maze2.i
+	@echo ... maze2.s
 .PHONY : help
 
 
