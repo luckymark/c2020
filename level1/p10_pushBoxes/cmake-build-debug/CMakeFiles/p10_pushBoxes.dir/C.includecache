@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/surfaceCS/Desktop/pig/c2020/level1/p10_pushBoxes/Pushboxes.h
+
+C:/Users/surfaceCS/Desktop/pig/c2020/level1/p10_pushBoxes/Pushboxes1.c
+stdio.h
+-
+stdlib.h
+-
+conio.h
+-
+Pushboxes.h
+C:/Users/surfaceCS/Desktop/pig/c2020/level1/p10_pushBoxes/Pushboxes.h
+
+C:/Users/surfaceCS/Desktop/pig/c2020/level1/p10_pushBoxes/Pushboxes2.c
+stdio.h
+-
+stdlib.h
+-
+Windows.h
+-
+conio.h
+-
+Pushboxes.h
+C:/Users/surfaceCS/Desktop/pig/c2020/level1/p10_pushBoxes/Pushboxes.h
+
