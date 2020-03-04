@@ -4,30 +4,23 @@
 #include "maze.h"
 
 int main(void) {
-    int ch;
-    int x = 1; // height
-    int y = 2; // width
-    int target_x = 14;
-    int target_y = 26;
-    char maze[HEIGHT][WIDTH] =
-            {{'+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+'},
-             {'+', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', '+', ' ', '+', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', '+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', '+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', '+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', '+', ' ', '+', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', '+', ' ', '+', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', '+', ' ', '+'},
-             {'+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', '+', ' ', '+', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+', ' ', '+', ' ', '+'},
-             {'+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', ' ', ' ', '+'},
-             {'+', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '+', ' ', ' ', ' ', '+'},
-             {'+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', '+', ' ', ' ', ' ', '+'}};
+    unsigned int ch;
+    Game game;
+
+    while (1) {
+        printf("Please enter the filename: ");
+        scanf("%s", game.filename);
+        getchar();
+        init_game(&game);
+        if (game.maze == NULL) {
+            printf("%s not found!\n", game.filename);
+        } else {
+            break;
+        }
+    }
 
     system("CLS");
-    print_maze(maze);
+    print_maze(&game);
     printf("Use arrow keys or wasd to move or enter q to quit.\n");
 
     while ((ch = getch()) != 'q') {
@@ -35,19 +28,19 @@ int main(void) {
             // Use arrow keys
             switch (getch()) {
                 case 72: // Up
-                    move(maze, &x, &y, 0);
+                    move(&game, 0);
                     break;
 
                 case 80: // Down
-                    move(maze, &x, &y, 1);
+                    move(&game, 1);
                     break;
 
                 case 77: // Right
-                    move(maze, &x, &y, 2);
+                    move(&game, 2);
                     break;
 
                 case 75: // Lift
-                    move(maze, &x, &y, 3);
+                    move(&game, 3);
                     break;
 
                 default:
@@ -58,22 +51,22 @@ int main(void) {
             switch (ch) {
                 case 'w':
                 case 'W': // Up
-                    move(maze, &x, &y, 0);
+                    move(&game, 0);
                     break;
 
                 case 's':
                 case 'S': // Down
-                    move(maze, &x, &y, 1);
+                    move(&game, 1);
                     break;
 
                 case 'd':
                 case 'D': // Right
-                    move(maze, &x, &y, 2);
+                    move(&game, 2);
                     break;
 
                 case 'a':
                 case 'A': // Lift
-                    move(maze, &x, &y, 3);
+                    move(&game, 3);
                     break;
 
                 default:
@@ -82,9 +75,9 @@ int main(void) {
         }
 
         system("CLS");
-        print_maze(maze);
+        print_maze(&game);
 
-        if (x == target_x && y == target_y) {
+        if (game.x == game.target_x && game.y == game.target_y) {
             printf("Success!\n");
             getchar();
             break;
@@ -92,6 +85,8 @@ int main(void) {
             printf("Use arrow keys or wasd to move or enter q to quit.\n");
         }
     }
+
+    quit_game(&game);
 
     return 0;
 }
