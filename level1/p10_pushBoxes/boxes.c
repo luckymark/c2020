@@ -6,6 +6,7 @@
 void init_game(Game *game) {
     char buf[255];
     FILE *fp = fopen(game->filename, "r");
+    game->map = NULL;
 
     if (fp) {
         game->boxes = 0;
@@ -16,7 +17,6 @@ void init_game(Game *game) {
         game->targets_y = NULL;
         game->height = 0;
         game->moves = 0;
-        game->map = NULL;
         while (fgets(buf, 255, fp) && buf[0] != '\n') {
             game->map = (char**)realloc(game->map, sizeof(char*) * ((game->height) + 1));
             game->map[game->height] = (char*)malloc(sizeof(char) * (strlen(buf) + 1));
