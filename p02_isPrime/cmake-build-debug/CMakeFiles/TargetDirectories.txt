@@ -1,0 +1,3 @@
+D:/Git/c2020/p02_isPrime/cmake-build-debug/CMakeFiles/_isprime.dir
+D:/Git/c2020/p02_isPrime/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Git/c2020/p02_isPrime/cmake-build-debug/CMakeFiles/rebuild_cache.dir

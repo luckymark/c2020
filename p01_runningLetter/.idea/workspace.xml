@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="p01_runningLetter" targetName="p01_runningLetter" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f320cb6c-a347-4450-aca0-7637def4da40" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/p01_runningLetter.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeRCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/.idea/_isprime.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/3.15.3/CMakeRCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/_isprime.dir/C.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/_isprime.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/_isprime.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/_isprime.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/_isprime.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/_isprime.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/_isprime.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/_isprime.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/_isprime.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/_isprime.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p02_isPrime/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/.idea/p03_Diophantus.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/3.15.3/CMakeRCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/p03_Diophantus.dir/C.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/p03_Diophantus.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/p03_Diophantus.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/p03_Diophantus.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/p03_Diophantus.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/p03_Diophantus.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/p03_Diophantus.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/p03_Diophantus.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/p03_Diophantus.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/cmake-build-debug/p03_Diophantus.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p03_Diophantus/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/.idea/p04_ narcissus.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/3.15.3/CMakeRCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/p04__narcissus.dir/C.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/p04__narcissus.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/p04__narcissus.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/p04__narcissus.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/p04__narcissus.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/p04__narcissus.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/p04__narcissus.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/p04__narcissus.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/p04__narcissus.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/cmake-build-debug/p04__narcissus.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p04_ narcissus/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/.idea/p05_allPrimes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/3.15.3/CMakeRCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/p05_allPrimes.dir/C.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/p05_allPrimes.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/p05_allPrimes.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/p05_allPrimes.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/p05_allPrimes.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/p05_allPrimes.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/p05_allPrimes.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/p05_allPrimes.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/p05_allPrimes.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/cmake-build-debug/p05_allPrimes.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p05_allPrimes/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/.idea/p06_Goldbach.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/3.15.3/CMakeRCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/p06_Goldbach.dir/C.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/p06_Goldbach.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/p06_Goldbach.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/p06_Goldbach.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/p06_Goldbach.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/p06_Goldbach.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/p06_Goldbach.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/p06_Goldbach.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/p06_Goldbach.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/cmake-build-debug/p06_Goldbach.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p06_Goldbach/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/.idea/p07_encrypt_decrypt.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/3.15.3/CMakeRCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/p07_encrypt_decrypt.dir/C.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/p07_encrypt_decrypt.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/p07_encrypt_decrypt.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/p07_encrypt_decrypt.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/p07_encrypt_decrypt.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/p07_encrypt_decrypt.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/p07_encrypt_decrypt.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/p07_encrypt_decrypt.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/p07_encrypt_decrypt.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/cmake-build-debug/p07_encrypt_decrypt.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p07_encrypt_decrypt/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/.idea/p08_hanoi.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/3.15.3/CMakeRCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/p08_hanoi.dir/C.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/p08_hanoi.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/p08_hanoi.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/p08_hanoi.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/p08_hanoi.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/p08_hanoi.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/p08_hanoi.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/p08_hanoi.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/p08_hanoi.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/cmake-build-debug/p08_hanoi.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p08_hanoi/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/.idea/p09_maze.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/3.15.3/CMakeRCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/p09_maze.dir/C.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/p09_maze.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/p09_maze.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/p09_maze.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/p09_maze.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/p09_maze.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/p09_maze.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/p09_maze.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/p09_maze.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/cmake-build-debug/p09_maze.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p09_maze/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/.idea/p10_pushBoxes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/3.15.3/CMakeRCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/p10_pushBoxes.dir/C.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/p10_pushBoxes.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/p10_pushBoxes.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/p10_pushBoxes.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/p10_pushBoxes.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/p10_pushBoxes.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/p10_pushBoxes.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/p10_pushBoxes.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/p10_pushBoxes.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/cmake-build-debug/p10_pushBoxes.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/map1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/map2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/map3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p10_pushBoxes/score.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/.idea/ListPractice.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/3.15.3/CMakeRCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/ListPractice.dir/C.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/ListPractice.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/ListPractice.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/ListPractice.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/ListPractice.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/ListPractice.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/ListPractice.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/ListPractice.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/ListPractice.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/ListPractice.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p11_linkedList/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/.idea/p12_warehouse.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/3.15.3/CMakeRCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/p12_warehouse.dir/C.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/p12_warehouse.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/p12_warehouse.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/p12_warehouse.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/p12_warehouse.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/p12_warehouse.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/p12_warehouse.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/p12_warehouse.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/p12_warehouse.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/data.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/cmake-build-debug/p12_warehouse.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/data.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p12_warehouse/main.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1Yh1rQsobUerLTqTdFF1kFsI5cG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="p01_runningLetter" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p01_runningLetter" TARGET_NAME="p01_runningLetter" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p01_runningLetter" RUN_TARGET_NAME="p01_runningLetter">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f320cb6c-a347-4450-aca0-7637def4da40" name="Default Changelist" comment="" />
+      <created>1583380210338</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583380210338</updated>
+      <workItem from="1583380211455" duration="993000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1146" height="174" key="GridCell.Tab.0.bottom" timestamp="1583381110787">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1146" height="174" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583381110787" />
+    <state width="1146" height="174" key="GridCell.Tab.0.center" timestamp="1583381110787">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1146" height="174" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583381110787" />
+    <state width="1146" height="174" key="GridCell.Tab.0.left" timestamp="1583381110787">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1146" height="174" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583381110787" />
+    <state width="1146" height="174" key="GridCell.Tab.0.right" timestamp="1583381110787">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1146" height="174" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583381110787" />
+  </component>
+</project>
