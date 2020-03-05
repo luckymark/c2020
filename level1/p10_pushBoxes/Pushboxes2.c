@@ -169,7 +169,7 @@ int startgame(void)                       //开始游戏。
             return 1;
         else if ('r' == ch)
             return 2;
-        else
+        else if (ch == 224)
         {
             ch = _getch();
             switch (ch)
