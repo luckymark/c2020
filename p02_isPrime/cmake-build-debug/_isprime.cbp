@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="_isprime"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/Git/c2020/p02_isPrime/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_isprime">
+				<Option output="D:/Git/c2020/p02_isPrime/cmake-build-debug/_isprime.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Git/c2020/p02_isPrime/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/x86_64-8.1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="D:/x86_64-8.1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="D:/x86_64-8.1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 _isprime"/>
+					<CompileFile command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_isprime/fast">
+				<Option output="D:/Git/c2020/p02_isPrime/cmake-build-debug/_isprime.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Git/c2020/p02_isPrime/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/x86_64-8.1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="D:/x86_64-8.1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="D:/x86_64-8.1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 _isprime/fast"/>
+					<CompileFile command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/Git/c2020/p02_isPrime/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Git/c2020/p02_isPrime/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/x86_64-8.1/mingw64/bin/mingw32-make.exe -f &quot;D:/Git/c2020/p02_isPrime/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/Git/c2020/p02_isPrime/main.c">
+			<Option target="_isprime"/>
+		</Unit>
+		<Unit filename="D:/Git/c2020/p02_isPrime/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
