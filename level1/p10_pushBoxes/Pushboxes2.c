@@ -4,6 +4,15 @@
 #include<conio.h>
 #include"Pushboxes.h"
 
+void readrecord(void)						//从文件中读取用户的信息。
+{
+    FILE* fp;
+    fp = fopen("record", "r");
+    for (int i = 1; i <= 4; i++)
+        fscanf(fp,"%d\n",&steps[i]);
+    fclose(fp);
+}
+
 void menu(void)							//游戏执行的主菜单。
 {
     system("cls");
@@ -17,19 +26,28 @@ void menu(void)							//游戏执行的主菜单。
 void scores(void)						//stdout列出record文件中的内容。
 {
     system("cls");
-    char ch;
-    FILE* fp;
-    if ((fp = fopen("record", "r")) == NULL)
+    for (int i = 1; i <= 4; i++)
     {
-        printf("Sorry,I cann't find your record...\n");
-        printf("Please enter any key to continue...");
+        printf(sp"Your least steps of map%d is %d...\n",i,steps[i]);
     }
+    printf(sp"(0 steps means not played...)\n");
+}
+
+int pass(void)                           //判断是否游戏通过。
+{
+    int flag_ = 1;
+    for (int i = 0; i <= 19; i++)
+    {
+        for (int j = 0; j <= 34; j++)
+        {
+            if (maze[i][j] == '3' || maze[i][j] == '6')
+                flag_ = 0;
+        }
+    }
+    if (flag_ == 1)
+        return 1;
     else
-    {
-        while ((ch = fgetc(fp)) != EOF)
-            fprintf(stdout, "%c", ch);
-        fclose(fp);
-    }
+        return 0;
 }
 
 void open(char sherry)					//根据用户的指令打开对应的map储存数据到数组maze里。
@@ -85,11 +103,10 @@ void record(void)						//将用户的游戏数据写入文件。
     }
     else
     {
-        fprintf(fp, sp"Your least steps of map1 is %d...\n", steps[1]);
-        fprintf(fp, sp"Your least steps of map2 is %d...\n", steps[2]);
-        fprintf(fp, sp"Your least steps of map3 is %d...\n", steps[3]);
-        fprintf(fp, sp"Your least steps of map4 is %d...\n", steps[4]);
-        fprintf(fp, sp"(0 steps means not played...)\n");
+        fprintf(fp, "%d\n", steps[1]);
+        fprintf(fp,"%d\n", steps[2]);
+        fprintf(fp, "%d\n", steps[3]);
+        fprintf(fp, "%d\n", steps[4]);
         fclose(fp);
     }
 }
@@ -140,7 +157,7 @@ void putmap(void)						//在console清屏显示游戏界面。
     printf(sp);
 }
 
-int startgame(void)
+int startgame(void)                       //开始游戏。
 {
     rood = 0;
     putmap();
@@ -507,21 +524,4 @@ int startgame(void)
         }
         ch = _getch();
     }
-}
-
-int pass(void)
-{
-    int flag_=1;
-    for (int i = 0; i <= 19; i++)
-    {
-        for (int j = 0; j <= 34; j++)
-        {
-            if (maze[i][j] == '3' || maze[i][j]=='6')
-                flag_ = 0;
-        }
-    }
-    if (flag_ == 1)
-        return 1;
-    else
-        return 0;
 }
