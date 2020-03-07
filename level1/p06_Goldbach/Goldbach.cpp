@@ -27,7 +27,7 @@ int main(void)
 		for(j = 1;j <= count && prime[j] <= i / 2;j++)
 		if(!isnprime[i - prime[j]])
 		{
-             printf("%d + %d = %d\n",prime[j], i - prime[j], i);
+             		 printf("%d + %d = %d\n",prime[j], i - prime[j], i);
 			 break;
 		}
 	}
