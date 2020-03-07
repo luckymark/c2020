@@ -31,7 +31,7 @@ int main(void)
 	init(count);
 	
 	for(i = 1;i <= count;i++)
-	printf("%d\n", prime[i]);
+		printf("%d\n", prime[i]);
 	
 	b = (double)clock();
 	printf("total time:%lf s", (b - a)/CLOCKS_PER_SEC);
