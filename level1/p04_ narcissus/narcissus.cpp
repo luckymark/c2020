@@ -7,7 +7,8 @@ int pw(int a, int b)
 	int ans = 1, t = a;
 	while(b)
 	{
-		if(b & 1) ans *= t;
+		if(b & 1) 
+			ans *= t;
 		t = t * t;
 		b >>= 1;
 	}
@@ -29,7 +30,7 @@ int main(void)
 {
 	int i;
 	for(i = minn;i <= maxn;i++)
-	if(judge(i))
-	printf("%d ", i);
+		if(judge(i))
+			printf("%d ", i);
 	return 0;
 }
