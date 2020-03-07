@@ -49,6 +49,31 @@ void pf_map(int (&pr)[50][50], HANDLE hOut)/*打印地图*/
 		WriteConsoleOutputCharacter(hOut, s, 1, pos, &a);
 	}
 }
+
+void creatMap(int (&pr)[50][50])
+{
+	for(int i = 1;i <= Height;i++)
+		{
+			for(int j = 1;j <= Len;j++)
+			{
+				int judge_j = (j == 1 || j == Len) , judge_i = (i == 1 || i == Height);
+				if(judge_i && judge_j) 
+					pr[i][j] = 4;
+				else if(judge_i) 
+					pr[i][j] = 3;
+				else if(judge_j) 
+					pr[i][j] = 2;
+				else
+				{
+					int rd = rand() % max;
+					if(rd >= lim)
+						pr[i][j] = 1;
+					else 
+						pr[i][j] = 0;
+				}   
+			}
+		}
+	
 int main()
 {
 	srand(time(0));
@@ -88,27 +113,11 @@ int main()
 	bool flag;
 	do
 	{
+		creatMap(pr);
 		for(i = 1;i <= Height;i++)
-		{
 			for(j = 1;j <= Len;j++)
-			{
-				int judge_j = (j == 1 || j == Len) , judge_i = (i == 1 || i == Height);
-				if(judge_i && judge_j) pr[i][j] = 4;
-				else if(judge_i) pr[i][j] = 3;
-				else if(judge_j) pr[i][j] = 2;
-				else
-				{
-					int rd = rand() % max;
-					if(rd >= lim)
-					pr[i][j] = 1;
-					else 
-					pr[i][j] = 0;
-				}   
-			}
-		}
-		for(i = 1;i <= Height;i++)
-		for(j = 1;j <= Len;j++)
-		vis[i][j] = false;
+				vis[i][j] = false;
+		
 		pr[Enter_x][Enter_y] = 0;
 		pr[Exit_x][Exit_y] = 0;
 		flag = judge_map(pr, vis, Enter_x, Enter_y);
