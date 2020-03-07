@@ -31,9 +31,11 @@ void build()
 	FILE *fin;
 	
 	fin = fopen("data.txt","r");
-	if(fin == NULL) printf("Î´ÕÒµ½data.txtÎÄ¼þÇëÊÖ¹¤ÊäÈë\n"),fin = stdin;
-	if(fin == NULL) printf("ÇëÊäÈë²åÈëµÄ½Úµã×ÜÊý\n");
-	if(fin == NULL) printf("ÇëÊäÈë²åÈëµÄ½Úµã±àºÅºÍÊýÄ¿\n");
+	if(fin == NULL) 
+	{
+		printf("未找到data.txt文件请手工输入\n请输入插入的节点总数\n请输入插入的节点编号和数目\n");
+		fin = stdin;
+	}
 	fscanf(fin,"%d", &n);
 	for(i = 1;i <= n;i++)
 	{
@@ -47,7 +49,7 @@ void build()
 
 void pf()
 {
-	printf("Á´±í¸÷½ÚµãµÄÐÅÏ¢ÈçÏÂ\n");
+	printf("链表各节点的信息如下\n");
 	node* p = rt;
 	while(p!=NULL)
 	{
@@ -81,21 +83,21 @@ void find()
 		p = p->nxt;
 	}
 	if(!flag)
-	printf("Î´ÕÒµ½ÖµÎª5µÄÔªËØ");
+	printf("未找到值为5的元素");
 }
 int main(void)
 {
 	rt = back = NULL;
-	printf("´Ódata.txtÖÐµ¼ÈëÁ´±í\n");
+	printf("从data.txt中导入链表\n");
 	build();
 	while(1)
 	{
-		printf("1Ê¹Á´±í·´Ðò²¢Êä³ö\n2Êä³öÁ´±íËùÓÐÔªËØ\n3²éÕÒÖµÎª5µÄÔªËØ\n4ÍË³ö³ÌÐò\n");
+		printf("1使链表反序并输出\n2输出链表所有元素\n3查找值为5的元素\n4退出程序\n");
 		char c = getch();
 		if(c == '1')
 		{
 			rev(rt, NULL);
-			printf("·´Ðòºó");
+			printf("反序后");
 			pf();
 		}
 		else if(c == '2')
@@ -107,7 +109,7 @@ int main(void)
 			find();
 		}
 		else if(c == '4') exit(0);
-		printf("°´ÈÎÒâ¼ü¼ÌÐø\n");
+		printf("按任意键继续\n");
 		char ch = getch();
 		system("cls");
 	}
