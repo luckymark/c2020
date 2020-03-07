@@ -27,23 +27,20 @@ int main(void)
 	cursor.bVisible = false;
 	SetConsoleCursorInfo(hOut, &cursor);
 	
-	
+	int d[2] = {1,-1};
+	int t = 0;
 	while(true)
 	{
-		while(Now.X + len != ConsoleInfo.dwSize.X)
+		while(Now.X + len != ConsoleInfo.dwSize.X && Now.X >= 0)
 		{
 			FillConsoleOutputCharacter(hOut, ' ', len, Now, &a);
-			Now.X++;
+			Now.X+= d[t];
 			WriteConsoleOutputCharacter(hOut, s, len, Now, &a);
 			Sleep(SLEEP_TIME);
 		}
-		while(Now.X >= 0)
-		{
-			FillConsoleOutputCharacter(hOut, ' ', len, Now, &a);
-			Now.X--;
-			WriteConsoleOutputCharacter(hOut, s, len, Now, &a);
-			Sleep(SLEEP_TIME);
-		}
+		t ^= 1;
+		FillConsoleOutputCharacter(hOut, ' ', len, Now, &a);
+		Now.X +=d[t];
 	}
 	CloseHandle(hOut);
 	return 0;
