@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="p09_maze" targetName="p09_maze" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="77918d56-cc3c-408b-8118-a3928546efec" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+    <option name="clangWarnings" value="-Wno-unused-variable,-Werror=implicit-function-declaration,-Wshadow,-Wno-shadow-field-in-constructor-modified,-Wno-shadow-ivar,-Wno--Wimplicit-function-declaration" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ProjectId" id="1YQFQTHsRdeq31BKYUVY2sNNbjb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="p09_maze" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p09_maze" TARGET_NAME="p09_maze" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p09_maze" RUN_TARGET_NAME="p09_maze">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="77918d56-cc3c-408b-8118-a3928546efec" name="Default Changelist" comment="" />
+      <created>1582866894956</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582866894956</updated>
+      <workItem from="1582866896157" duration="2599000" />
+      <workItem from="1582881230521" duration="11678000" />
+      <workItem from="1582958110889" duration="7000" />
+      <workItem from="1583049034040" duration="3920000" />
+      <workItem from="1583053820288" duration="59000" />
+      <workItem from="1583066569932" duration="223000" />
+      <workItem from="1583147187483" duration="35000" />
+      <workItem from="1583149675822" duration="36000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1583053878297">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583053878297" />
+    <state width="1493" height="91" key="GridCell.Tab.0.bottom" timestamp="1583052957173">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="91" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583052957173" />
+    <state width="1493" height="91" key="GridCell.Tab.0.center" timestamp="1583052957172">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="91" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583052957172" />
+    <state width="1493" height="91" key="GridCell.Tab.0.left" timestamp="1583052957171">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="91" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583052957171" />
+    <state width="1493" height="91" key="GridCell.Tab.0.right" timestamp="1583052957173">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="91" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583052957173" />
+    <state width="1493" height="275" key="GridCell.Tab.1.bottom" timestamp="1583052956228">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="275" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583052956228" />
+    <state width="1493" height="275" key="GridCell.Tab.1.center" timestamp="1583052956227">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="275" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1583052956227" />
+    <state width="1493" height="275" key="GridCell.Tab.1.left" timestamp="1583052956227">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="275" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1583052956227" />
+    <state width="1493" height="275" key="GridCell.Tab.1.right" timestamp="1583052956227">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="275" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583052956227" />
+    <state x="298" y="297" key="com.intellij.ide.util.TipDialog" timestamp="1583149675538">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="298" y="297" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583149675538" />
+    <state x="489" y="54" key="refactoring.ChangeSignatureDialog" timestamp="1583051134615">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="489" y="54" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1583051134615" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="maze" language="ObjectiveC" />
+        <watch expression="maze[L-3]" language="ObjectiveC" />
+        <watch expression="maze[L-3][L-3]" language="ObjectiveC" />
+        <watch expression="move" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
