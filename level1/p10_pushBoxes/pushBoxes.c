@@ -5,44 +5,138 @@
 #include <conio.h> //按键检测
 #include <malloc.h>
 #include <string.h>
-
-
 // ⊙●◎○▲△☉☆★ █ ■〇▼▽△▲◆◇○◎●◢◣■
-//还不知道怎么读取文件
-#define MAPHIGHT 8
+
+
+#define MAPHEIGHT 8
 #define MAPWIDTH 8
 #define NUM 10 //箱子最多数目
-int map1[MAPHIGHT][MAPHIGHT]={\
-1,1,1,1,1,1,1,1,\
-1,0,0,0,3,1,1,1,\
-1,0,2,0,0,1,1,1,\
-1,1,0,0,0,0,0,1,\
-1,1,0,0,0,0,0,1,\
-1,0,0,0,0,1,1,1,\
-1,0,4,5,0,1,1,1,\
-1,1,1,1,1,1,1,1,\
-};
+int map[MAPHEIGHT][MAPWIDTH];
+
 int boxnum=0,desnum=0;//箱子数目
-char ch;
+char ch; //按键
 int count=0;//已经成功的箱子数
+int isrestart=0;
 struct p{
     int x;
     int y;
     int flag;//箱子种类
-}box[NUM],des[NUM];//箱子和目的地
+}des[NUM],box[NUM];//箱子和目的地
 struct{
     int x;
     int y;
     int num; //走的次数 
 }YourPosition={4,4,-1};//用户数据，应该换个名字的
-
-void gotoxy(int x,int y);
-void drawMap(int map[MAPHIGHT][MAPWIDTH]);
+int flag[4]={0};//关卡是否成功
 
 
-void drawMap(int map[MAPHIGHT][MAPWIDTH]){ //1:墙 2：箱子 3：目标 4:箱子2号 5:目标2号 
+void gotoxy(int x,int y); 
+void drawMap(int map[MAPHEIGHT][MAPWIDTH],int level);//画地图
+void drawYou();//画用户
+void drawBox(struct p* box);//画箱子
+void clean(int map[MAPHEIGHT][MAPWIDTH]);//清除上一步
+void operate(int map[MAPHEIGHT][MAPWIDTH]);//处理推箱子操作
+int Game(int level);
+void HideCursor();//隐藏光标
+
+
+int main(){
+    for(int level=1;level<5;){
+        HideCursor();
+        Game(level);
+        if(level==4){
+            break;
+        }
+        if(flag[0]){
+            system("cls");
+            break;
+        }
+        if(flag[level]){
+            level++;
+        }
+    }
+    printf("游戏结束\n\n");
+    system("pause");
+    return 0;
+}
+
+
+int Game(int level){
+    //初始化数据
+    count=0;boxnum=0;desnum=0;isrestart=0;
+    YourPosition={4,4,-1};
+    system("cls");
+    FILE *fp=NULL;
+    switch(level){
+        case 1:
+            fp=fopen("C://Users//ZYW//temp//map1.txt","r");
+            break;
+        case 2:
+            fp=fopen("C://Users//ZYW//temp//map2.txt","r");
+            break;
+        case 3:
+            fp=fopen("C://Users//ZYW//temp//map3.txt","r");
+            break;
+        case 4:
+            printf("第4关\n敬请期待.\n\n");
+            return 0;
+            break;
+            
+    }
+    for(int i=0;i<MAPHEIGHT;i++){
+        for(int j=0;j<MAPWIDTH;j++){
+            fscanf(fp,"%d",&map[i][j]);
+        }
+    }int A,B;
+    fscanf(fp,"%d%d",&A,&B);
+    drawMap(map,level);
+    drawYou();
+    while(1){
+        if (isrestart){
+            break;
+        }
+        if(_kbhit){
+            operate(map);
+        }
+        if(count==boxnum){ //你赢了！
+            gotoxy(MAPHEIGHT+3,0);
+            printf("Congratulations!!!\n\n\n\n\n");
+            printf("\n您最终的得分是");
+            if(YourPosition.num<=A){
+                printf("★★★");
+            }else if(YourPosition.num<=B){
+                printf("★★");
+            }else printf("★");
+            printf("\n\n按'j'再来一次");
+            printf("\n\n按Space进入下一关\n\n");
+            char key=getch();
+            if(key!='j'){
+                flag[level]=1;
+            }
+            break;
+        }
+    }
+    fclose(fp);
+    //走到死路还得重来
+    return 0;    
+}
+
+void gotoxy(int x,int y){
+    //调用win32 API去设置控制台的光标位置
+    //找到控制台的这个窗口
+    HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+    //光标的结构体
+    COORD coord;
+    //设置坐标
+    coord.X=y*2; //跟想象中的矩阵不太一样，这里每个占了两个
+    coord.Y=x;
+    //同步到控制台
+    SetConsoleCursorPosition(handle,coord);
+}
+
+void drawMap(int map[MAPHEIGHT][MAPWIDTH],int level){ //1:墙 2：箱子 3：目标 4:箱子2号 5:目标2号 
     int n,m;
-    for(int i=0;i<MAPHIGHT;i++){
+    for(int i=0;i<MAPHEIGHT;i++){
         for(int j=0;j<MAPWIDTH;j++){
             switch(map[i][j]){
                 case 1:
@@ -76,14 +170,18 @@ void drawMap(int map[MAPHIGHT][MAPWIDTH]){ //1:墙 2：箱子 3：目标 4:箱�
 
             }
         }printf("\n");
-    }printf("\n宁已走%2d步",YourPosition.num);
-
+    }printf("\n您已走%2d步\n",YourPosition.num);
+    printf("第%d关\n\n",level);
+    printf("You are ⊙. ★&◆ are boxes. \n");
+    printf("Please press 'w''s''a''d' to move.\n\n");
+    printf("'j' to restart.\n'k' to game over.\n");
+    return ;
 }
 void drawYou(){
     gotoxy(YourPosition.x,YourPosition.y);
     printf("⊙");
     YourPosition.num++;//有效按键算一次操作（推动了），只要有按键就算一次操作也可以
-    gotoxy(MAPHIGHT+1,3);
+    gotoxy(MAPHEIGHT+1,3);
     printf("%2d",YourPosition.num);//实时更新步数
 }
 void drawBox(struct p* box){
@@ -95,7 +193,7 @@ void drawBox(struct p* box){
     }
     
 }
-void clean(int map[MAPHIGHT][MAPWIDTH]){
+void clean(int map[MAPHEIGHT][MAPWIDTH]){
     gotoxy(YourPosition.x,YourPosition.y);
     if(map[YourPosition.x][YourPosition.y]==3){ //如果是终点
         printf("☆");
@@ -104,36 +202,34 @@ void clean(int map[MAPHIGHT][MAPWIDTH]){
     }else printf("  ");
 }
 
-
-void operate(int map[MAPHIGHT][MAPWIDTH]){ //要把地图传进去
-    int tempx,tempy;//下一步
-    int tempx2,tempy2;//下两步.好像可以写函数，但是我不想写==,好麻烦呀
-
+void operate(int map[MAPHEIGHT][MAPWIDTH]){ //要把地图传进去
+    int tempx=YourPosition.x,tempy=YourPosition.y;//下一步
+    int tempx2=YourPosition.x,tempy2=YourPosition.y;//下两步.好像可以写函数，但是我不想写==,好麻烦呀
+    HideCursor();
     ch=getch(); //按键转换
     switch(ch){
+        case 'j':
+            isrestart=1;
+            return;
+        case 'k':
+            flag[0]=1; //游戏结束
+            isrestart=1;
+            return;
         case 'w':
-            tempx=YourPosition.x-1;
-            tempy=YourPosition.y;
-            tempx2=YourPosition.x-2;
-            tempy2=YourPosition.y;
+            tempx--; //比1.1优化了一点
+            tempx2-=2;
             break;
         case 's':
-            tempx=YourPosition.x+1;
-            tempy=YourPosition.y;
-            tempx2=YourPosition.x+2;
-            tempy2=YourPosition.y;
+            tempx++;
+            tempx2+=2;
             break;
         case 'a':
-            tempx=YourPosition.x;
-            tempy=YourPosition.y-1;
-            tempx2=YourPosition.x;
-            tempy2=YourPosition.y-2;
+            tempy--;
+            tempy2-=2;
             break;
         case 'd':
-            tempx=YourPosition.x;
-            tempy=YourPosition.y+1;
-            tempx2=YourPosition.x;
-            tempy2=YourPosition.y+2;
+            tempy++;
+            tempy2+=2;
             break;
         default:
             printf("\a");
@@ -148,7 +244,7 @@ void operate(int map[MAPHIGHT][MAPWIDTH]){ //要把地图传进去
         for(int i=0;i<boxnum;i++){
             if(box[i].x==tempx&&box[i].y==tempy){  //下一步是箱子
                 for(int j=0;j<desnum;j++){
-                    if(des[j].x==tempx&&des[j].y==tempy){ //箱子在终点
+                    if(des[j].x==tempx&&des[j].y==tempy&&des[j].flag==box[j].flag){ //箱子在终点
                         printf("\a"); //over
                         return;
                     }else if(des[j].x==tempx2&&des[j].y==tempy2&&box[i].flag==des[j].flag){  //下一步箱子在终点，太不容易了呜呜呜
@@ -159,7 +255,7 @@ void operate(int map[MAPHIGHT][MAPWIDTH]){ //要把地图传进去
                         YourPosition.x=tempx;
                         YourPosition.y=tempy;
                         drawYou();
-                        drawBox(&box[j]); //over
+                        drawBox(&box[i]); //over
                         return;
                     }
                 }
@@ -192,44 +288,15 @@ void operate(int map[MAPHIGHT][MAPWIDTH]){ //要把地图传进去
         YourPosition.y=tempy;
         drawYou();//over
         return;
-
     }
-    
     //其实总共也只有3种走的情况，如果走了原来位置还是终点还需要画上终点
-      
+ 
 }
-
-int main(){
-
-    drawMap(map1);
-    drawYou();
-
-    while(1){
-        if(_kbhit){
-            operate(map1);
-        }
-        if(count==boxnum){ //你赢了！
-            gotoxy(MAPHIGHT+3,0);
-            printf("Congratulations!!!\n\n\n");
-            break;
-        }
-    }
-
-    //走到死路还得重来
-    system("pause");
-    return 0;
-    
-}
-
-void gotoxy(int x,int y){
-    //调用win32 API去设置控制台的光标位置
-    //找到控制台的这个窗口
-    HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
-    //光标的结构体
-    COORD coord;
-    //设置坐标
-    coord.X=y*2; //跟想象中的矩阵不太一样，这里每个占了两个
-    coord.Y=x;
-    //同步到控制台
-    SetConsoleCursorPosition(handle,coord);
+void HideCursor() //隐藏光标
+{
+	CONSOLE_CURSOR_INFO cursor;    
+	cursor.bVisible = FALSE;    
+	cursor.dwSize = sizeof(cursor);    
+	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);    
+	SetConsoleCursorInfo(handle, &cursor);
 }
