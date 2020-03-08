@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList
+CMAKE_SOURCE_DIR = C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList\cmake-build-debug\CMakeFiles C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse\cmake-build-debug\CMakeFiles C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -110,71 +110,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named p11_linkedList
+# Target rules for targets named p12_warehouse
 
 # Build rule for target.
-p11_linkedList: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 p11_linkedList
-.PHONY : p11_linkedList
+p12_warehouse: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 p12_warehouse
+.PHONY : p12_warehouse
 
 # fast build rule for target.
-p11_linkedList/fast:
-	$(MAKE) -f CMakeFiles\p11_linkedList.dir\build.make CMakeFiles/p11_linkedList.dir/build
-.PHONY : p11_linkedList/fast
+p12_warehouse/fast:
+	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/build
+.PHONY : p12_warehouse/fast
 
-Linkedlist1.obj: Linkedlist1.c.obj
+main.obj: main.c.obj
 
-.PHONY : Linkedlist1.obj
-
-# target to build an object file
-Linkedlist1.c.obj:
-	$(MAKE) -f CMakeFiles\p11_linkedList.dir\build.make CMakeFiles/p11_linkedList.dir/Linkedlist1.c.obj
-.PHONY : Linkedlist1.c.obj
-
-Linkedlist1.i: Linkedlist1.c.i
-
-.PHONY : Linkedlist1.i
-
-# target to preprocess a source file
-Linkedlist1.c.i:
-	$(MAKE) -f CMakeFiles\p11_linkedList.dir\build.make CMakeFiles/p11_linkedList.dir/Linkedlist1.c.i
-.PHONY : Linkedlist1.c.i
-
-Linkedlist1.s: Linkedlist1.c.s
-
-.PHONY : Linkedlist1.s
-
-# target to generate assembly for a file
-Linkedlist1.c.s:
-	$(MAKE) -f CMakeFiles\p11_linkedList.dir\build.make CMakeFiles/p11_linkedList.dir/Linkedlist1.c.s
-.PHONY : Linkedlist1.c.s
-
-Linkedlist2.obj: Linkedlist2.c.obj
-
-.PHONY : Linkedlist2.obj
+.PHONY : main.obj
 
 # target to build an object file
-Linkedlist2.c.obj:
-	$(MAKE) -f CMakeFiles\p11_linkedList.dir\build.make CMakeFiles/p11_linkedList.dir/Linkedlist2.c.obj
-.PHONY : Linkedlist2.c.obj
+main.c.obj:
+	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/main.c.obj
+.PHONY : main.c.obj
 
-Linkedlist2.i: Linkedlist2.c.i
+main.i: main.c.i
 
-.PHONY : Linkedlist2.i
+.PHONY : main.i
 
 # target to preprocess a source file
-Linkedlist2.c.i:
-	$(MAKE) -f CMakeFiles\p11_linkedList.dir\build.make CMakeFiles/p11_linkedList.dir/Linkedlist2.c.i
-.PHONY : Linkedlist2.c.i
+main.c.i:
+	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/main.c.i
+.PHONY : main.c.i
 
-Linkedlist2.s: Linkedlist2.c.s
+main.s: main.c.s
 
-.PHONY : Linkedlist2.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-Linkedlist2.c.s:
-	$(MAKE) -f CMakeFiles\p11_linkedList.dir\build.make CMakeFiles/p11_linkedList.dir/Linkedlist2.c.s
-.PHONY : Linkedlist2.c.s
+main.c.s:
+	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/main.c.s
+.PHONY : main.c.s
 
 # Help Target
 help:
@@ -182,15 +155,12 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... p11_linkedList
+	@echo ... p12_warehouse
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Linkedlist1.obj
-	@echo ... Linkedlist1.i
-	@echo ... Linkedlist1.s
-	@echo ... Linkedlist2.obj
-	@echo ... Linkedlist2.i
-	@echo ... Linkedlist2.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 

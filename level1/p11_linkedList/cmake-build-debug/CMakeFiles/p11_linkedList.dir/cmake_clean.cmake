@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/p11_linkedList.dir/main.c.obj"
+  "CMakeFiles/p11_linkedList.dir/Linkedlist1.c.obj"
+  "CMakeFiles/p11_linkedList.dir/Linkedlist2.c.obj"
   "libp11_linkedList.dll.a"
   "p11_linkedList.exe"
   "p11_linkedList.exe.manifest"

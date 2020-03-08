@@ -56,32 +56,47 @@ include CMakeFiles/p11_linkedList.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/p11_linkedList.dir/flags.make
 
-CMakeFiles/p11_linkedList.dir/main.c.obj: CMakeFiles/p11_linkedList.dir/flags.make
-CMakeFiles/p11_linkedList.dir/main.c.obj: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/p11_linkedList.dir/main.c.obj"
-	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\p11_linkedList.dir\main.c.obj   -c C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList\main.c
+CMakeFiles/p11_linkedList.dir/Linkedlist1.c.obj: CMakeFiles/p11_linkedList.dir/flags.make
+CMakeFiles/p11_linkedList.dir/Linkedlist1.c.obj: ../Linkedlist1.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/p11_linkedList.dir/Linkedlist1.c.obj"
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\p11_linkedList.dir\Linkedlist1.c.obj   -c C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList\Linkedlist1.c
 
-CMakeFiles/p11_linkedList.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/p11_linkedList.dir/main.c.i"
-	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList\main.c > CMakeFiles\p11_linkedList.dir\main.c.i
+CMakeFiles/p11_linkedList.dir/Linkedlist1.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/p11_linkedList.dir/Linkedlist1.c.i"
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList\Linkedlist1.c > CMakeFiles\p11_linkedList.dir\Linkedlist1.c.i
 
-CMakeFiles/p11_linkedList.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/p11_linkedList.dir/main.c.s"
-	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList\main.c -o CMakeFiles\p11_linkedList.dir\main.c.s
+CMakeFiles/p11_linkedList.dir/Linkedlist1.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/p11_linkedList.dir/Linkedlist1.c.s"
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList\Linkedlist1.c -o CMakeFiles\p11_linkedList.dir\Linkedlist1.c.s
+
+CMakeFiles/p11_linkedList.dir/Linkedlist2.c.obj: CMakeFiles/p11_linkedList.dir/flags.make
+CMakeFiles/p11_linkedList.dir/Linkedlist2.c.obj: ../Linkedlist2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/p11_linkedList.dir/Linkedlist2.c.obj"
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\p11_linkedList.dir\Linkedlist2.c.obj   -c C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList\Linkedlist2.c
+
+CMakeFiles/p11_linkedList.dir/Linkedlist2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/p11_linkedList.dir/Linkedlist2.c.i"
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList\Linkedlist2.c > CMakeFiles\p11_linkedList.dir\Linkedlist2.c.i
+
+CMakeFiles/p11_linkedList.dir/Linkedlist2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/p11_linkedList.dir/Linkedlist2.c.s"
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList\Linkedlist2.c -o CMakeFiles\p11_linkedList.dir\Linkedlist2.c.s
 
 # Object files for target p11_linkedList
 p11_linkedList_OBJECTS = \
-"CMakeFiles/p11_linkedList.dir/main.c.obj"
+"CMakeFiles/p11_linkedList.dir/Linkedlist1.c.obj" \
+"CMakeFiles/p11_linkedList.dir/Linkedlist2.c.obj"
 
 # External object files for target p11_linkedList
 p11_linkedList_EXTERNAL_OBJECTS =
 
-p11_linkedList.exe: CMakeFiles/p11_linkedList.dir/main.c.obj
+p11_linkedList.exe: CMakeFiles/p11_linkedList.dir/Linkedlist1.c.obj
+p11_linkedList.exe: CMakeFiles/p11_linkedList.dir/Linkedlist2.c.obj
 p11_linkedList.exe: CMakeFiles/p11_linkedList.dir/build.make
 p11_linkedList.exe: CMakeFiles/p11_linkedList.dir/linklibs.rsp
 p11_linkedList.exe: CMakeFiles/p11_linkedList.dir/objects1.rsp
 p11_linkedList.exe: CMakeFiles/p11_linkedList.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable p11_linkedList.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\surfaceCS\Desktop\pig\c2020\level1\p11_linkedList\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable p11_linkedList.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\p11_linkedList.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

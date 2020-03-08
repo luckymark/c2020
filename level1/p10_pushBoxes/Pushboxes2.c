@@ -169,7 +169,7 @@ int startgame(void)                       //开始游戏。
             return 1;
         else if ('r' == ch)
             return 2;
-        else if (ch == 224)
+        else if(224==ch)
         {
             ch = _getch();
             switch (ch)
@@ -207,11 +207,19 @@ int startgame(void)                       //开始游戏。
                             rood++;
                             putmap();
                         }
-                        else if (maze[a - 1][b] == '7' && maze[a - 2][b] == ' ')	// 人推已复位的箱子。
+                        else if (maze[a - 1][b] == '7' && maze[a - 2][b] == ' ')	// 人推已复位的箱子推后未复位。
                         {
-                            maze[a][b] == ' ';
+                            maze[a][b] = ' ';
                             maze[a - 1][b] = '6';
-                            maze[a - 2][b] = '3';
+                            maze[a - 2][b] = '5';
+                            rood++;
+                            putmap();
+                        }
+                        else if (maze[a - 1][b] == '7' && maze[a - 2][b] == '3')     // 人推已复位的箱子推后复位。
+                        {
+                            maze[a][b] = ' ';
+                            maze[a - 1][b] = '6';
+                            maze[a - 2][b] = '7';
                             rood++;
                             putmap();
                         }
@@ -250,9 +258,17 @@ int startgame(void)                       //开始游戏。
                         }
                         else if (maze[a - 1][b] == '7' && maze[a - 2][b] == ' ')	// 人推已复位的箱子。
                         {
-                            maze[a][b] == '3';
+                            maze[a][b] = '3';
                             maze[a - 1][b] = '6';
-                            maze[a - 2][b] = '3';
+                            maze[a - 2][b] = '5';
+                            rood++;
+                            putmap();
+                        }
+                        else if (maze[a - 1][b] == '7' && maze[a - 2][b] == '3')     // 人推已复位的箱子推后复位。
+                        {
+                            maze[a][b] = '3';
+                            maze[a - 1][b] = '6';
+                            maze[a - 2][b] = '7';
                             rood++;
                             putmap();
                         }
@@ -295,9 +311,17 @@ int startgame(void)                       //开始游戏。
                         }
                         else if (maze[a + 1][b] == '7' && maze[a + 2][b] == ' ')	// 人推已复位的箱子。
                         {
-                            maze[a][b] == ' ';
+                            maze[a][b] = ' ';
                             maze[a + 1][b] = '6';
-                            maze[a + 2][b] = '3';
+                            maze[a + 2][b] = '5';
+                            rood++;
+                            putmap();
+                        }
+                        else if (maze[a + 1][b] == '7' && maze[a + 2][b] == '3')     // 人推已复位的箱子推后复位。
+                        {
+                            maze[a][b] = ' ';
+                            maze[a + 1][b] = '6';
+                            maze[a + 2][b] = '7';
                             rood++;
                             putmap();
                         }
@@ -336,9 +360,17 @@ int startgame(void)                       //开始游戏。
                         }
                         else if (maze[a + 1][b] == '7' && maze[a + 2][b] == ' ')	// 人推已复位的箱子。
                         {
-                            maze[a][b] == '3';
+                            maze[a][b] = '3';
                             maze[a + 1][b] = '6';
-                            maze[a + 2][b] = '3';
+                            maze[a + 2][b] = '5';
+                            rood++;
+                            putmap();
+                        }
+                        else if (maze[a + 1][b] == '7' && maze[a + 2][b] == '3')     // 人推已复位的箱子推后复位。
+                        {
+                            maze[a][b] = '3';
+                            maze[a + 1][b] = '6';
+                            maze[a + 2][b] = '7';
                             rood++;
                             putmap();
                         }
@@ -379,11 +411,19 @@ int startgame(void)                       //开始游戏。
                             rood++;
                             putmap();
                         }
-                        else if (maze[a][b - 1] == '7' && maze[a][b - 2] == ' ')	// 人推已复位的箱子。
+                        else if (maze[a][b-1] == '7' && maze[a][b-2] == ' ')	// 人推已复位的箱子推后未复位。
                         {
-                            maze[a][b] == ' ';
-                            maze[a][b - 1] = '6';
-                            maze[a][b - 2] = '3';
+                            maze[a][b] = ' ';
+                            maze[a][b-1] = '6';
+                            maze[a][b-2] = '5';
+                            rood++;
+                            putmap();
+                        }
+                        else if (maze[a - 1][b] == '7' && maze[a - 2][b] == '3')     // 人推已复位的箱子推后复位。
+                        {
+                            maze[a][b] = ' ';
+                            maze[a][b-1] = '6';
+                            maze[a][b-2] = '7';
                             rood++;
                             putmap();
                         }
@@ -420,11 +460,19 @@ int startgame(void)                       //开始游戏。
                             rood++;
                             putmap();
                         }
-                        else if (maze[a][b - 1] == '7' && maze[a][b - 2] == ' ')	// 人推已复位的箱子。
+                        else if (maze[a][b - 1] == '7' && maze[a][b - 2] == ' ')	// 人推已复位的箱子推后未复位。
                         {
-                            maze[a][b] == '3';
+                            maze[a][b] = '3';
                             maze[a][b - 1] = '6';
-                            maze[a][b - 2] = '3';
+                            maze[a][b - 2] = '5';
+                            rood++;
+                            putmap();
+                        }
+                        else if (maze[a][b-1] == '7' && maze[a][b-2] == '3')     // 人推已复位的箱子推后复位。
+                        {
+                            maze[a][b] = '3';
+                            maze[a][b - 1] = '6';
+                            maze[a][b - 2] = '7';
                             rood++;
                             putmap();
                         }
@@ -465,11 +513,19 @@ int startgame(void)                       //开始游戏。
                             rood++;
                             putmap();
                         }
-                        else if (maze[a][b + 1] == '7' && maze[a][b + 2] == ' ')	// 人推已复位的箱子。
+                        else if (maze[a][b + 1] == '7' && maze[a][b + 2] == ' ')	// 人推已复位的箱子推后未复位。
                         {
-                            maze[a][b] == ' ';
+                            maze[a][b] = ' ';
                             maze[a][b + 1] = '6';
-                            maze[a][b + 2] = '3';
+                            maze[a][b + 2] = '5';
+                            rood++;
+                            putmap();
+                        }
+                        else if (maze[a][b+1] == '7' && maze[a][b+2] == '3')     // 人推已复位的箱子推后复位。
+                        {
+                            maze[a][b] = ' ';
+                            maze[a][b + 1] = '6';
+                            maze[a][b + 2] = '7';
                             rood++;
                             putmap();
                         }
@@ -506,11 +562,19 @@ int startgame(void)                       //开始游戏。
                             rood++;
                             putmap();
                         }
-                        else if (maze[a][b + 1] == '7' && maze[a][b + 2] == ' ')	// 人推已复位的箱子。
+                        else if (maze[a][b + 1] == '7' && maze[a][b + 2] == ' ')	// 人推已复位的箱子推后未复位。
                         {
-                            maze[a][b] == '3';
+                            maze[a][b] = '3';
                             maze[a][b + 1] = '6';
-                            maze[a][b + 2] = '3';
+                            maze[a][b + 2] = '5';
+                            rood++;
+                            putmap();
+                        }
+                        else if (maze[a][b + 1] == '7' && maze[a][b + 2] == '3')     // 人推已复位的箱子推后复位。
+                        {
+                            maze[a][b] = '3';
+                            maze[a][b + 1] = '6';
+                            maze[a][b + 2] = '7';
                             rood++;
                             putmap();
                         }

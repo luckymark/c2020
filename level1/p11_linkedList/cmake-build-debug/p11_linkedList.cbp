@@ -74,7 +74,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/surfaceCS/Desktop/pig/c2020/level1/p11_linkedList/main.c">
+		<Unit filename="C:/Users/surfaceCS/Desktop/pig/c2020/level1/p11_linkedList/Linkedlist.h">
+			<Option target="p11_linkedList"/>
+		</Unit>
+		<Unit filename="C:/Users/surfaceCS/Desktop/pig/c2020/level1/p11_linkedList/Linkedlist1.c">
+			<Option target="p11_linkedList"/>
+		</Unit>
+		<Unit filename="C:/Users/surfaceCS/Desktop/pig/c2020/level1/p11_linkedList/Linkedlist2.c">
 			<Option target="p11_linkedList"/>
 		</Unit>
 		<Unit filename="C:/Users/surfaceCS/Desktop/pig/c2020/level1/p11_linkedList/CMakeLists.txt">
