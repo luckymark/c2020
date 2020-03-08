@@ -74,7 +74,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/surfaceCS/Desktop/pig/c2020/level1/p12_warehouse/main.c">
+		<Unit filename="C:/Users/surfaceCS/Desktop/pig/c2020/level1/p12_warehouse/warehouse.h">
+			<Option target="p12_warehouse"/>
+		</Unit>
+		<Unit filename="C:/Users/surfaceCS/Desktop/pig/c2020/level1/p12_warehouse/warehouse1.c">
+			<Option target="p12_warehouse"/>
+		</Unit>
+		<Unit filename="C:/Users/surfaceCS/Desktop/pig/c2020/level1/p12_warehouse/warehouse2.c">
 			<Option target="p12_warehouse"/>
 		</Unit>
 		<Unit filename="C:/Users/surfaceCS/Desktop/pig/c2020/level1/p12_warehouse/CMakeLists.txt">

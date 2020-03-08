@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/surfaceCS/Desktop/pig/c2020/level1/p12_warehouse/warehouse.h
+stdio.h
+-
+
+C:/Users/surfaceCS/Desktop/pig/c2020/level1/p12_warehouse/warehouse1.c
+stdio.h
+-
+warehouse.h
+C:/Users/surfaceCS/Desktop/pig/c2020/level1/p12_warehouse/warehouse.h
+Windows.h
+-
+string.h
+-
+
+C:/Users/surfaceCS/Desktop/pig/c2020/level1/p12_warehouse/warehouse2.c
+warehouse.h
+C:/Users/surfaceCS/Desktop/pig/c2020/level1/p12_warehouse/warehouse.h
+stdlib.h
+-
+Windows.h
+-
+string.h
+-
+

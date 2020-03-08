@@ -122,32 +122,59 @@ p12_warehouse/fast:
 	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/build
 .PHONY : p12_warehouse/fast
 
-main.obj: main.c.obj
+warehouse1.obj: warehouse1.c.obj
 
-.PHONY : main.obj
+.PHONY : warehouse1.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/main.c.obj
-.PHONY : main.c.obj
+warehouse1.c.obj:
+	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/warehouse1.c.obj
+.PHONY : warehouse1.c.obj
 
-main.i: main.c.i
+warehouse1.i: warehouse1.c.i
 
-.PHONY : main.i
+.PHONY : warehouse1.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/main.c.i
-.PHONY : main.c.i
+warehouse1.c.i:
+	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/warehouse1.c.i
+.PHONY : warehouse1.c.i
 
-main.s: main.c.s
+warehouse1.s: warehouse1.c.s
 
-.PHONY : main.s
+.PHONY : warehouse1.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/main.c.s
-.PHONY : main.c.s
+warehouse1.c.s:
+	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/warehouse1.c.s
+.PHONY : warehouse1.c.s
+
+warehouse2.obj: warehouse2.c.obj
+
+.PHONY : warehouse2.obj
+
+# target to build an object file
+warehouse2.c.obj:
+	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/warehouse2.c.obj
+.PHONY : warehouse2.c.obj
+
+warehouse2.i: warehouse2.c.i
+
+.PHONY : warehouse2.i
+
+# target to preprocess a source file
+warehouse2.c.i:
+	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/warehouse2.c.i
+.PHONY : warehouse2.c.i
+
+warehouse2.s: warehouse2.c.s
+
+.PHONY : warehouse2.s
+
+# target to generate assembly for a file
+warehouse2.c.s:
+	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/warehouse2.c.s
+.PHONY : warehouse2.c.s
 
 # Help Target
 help:
@@ -158,9 +185,12 @@ help:
 	@echo ... p12_warehouse
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... warehouse1.obj
+	@echo ... warehouse1.i
+	@echo ... warehouse1.s
+	@echo ... warehouse2.obj
+	@echo ... warehouse2.i
+	@echo ... warehouse2.s
 .PHONY : help
 
 

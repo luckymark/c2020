@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/p12_warehouse.dir/main.c.obj"
+  "CMakeFiles/p12_warehouse.dir/warehouse1.c.obj"
+  "CMakeFiles/p12_warehouse.dir/warehouse2.c.obj"
   "libp12_warehouse.dll.a"
   "p12_warehouse.exe"
   "p12_warehouse.exe.manifest"

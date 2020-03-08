@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/surfaceCS/Desktop/pig/c2020/level1/p12_warehouse/main.c" "C:/Users/surfaceCS/Desktop/pig/c2020/level1/p12_warehouse/cmake-build-debug/CMakeFiles/p12_warehouse.dir/main.c.obj"
+  "C:/Users/surfaceCS/Desktop/pig/c2020/level1/p12_warehouse/warehouse1.c" "C:/Users/surfaceCS/Desktop/pig/c2020/level1/p12_warehouse/cmake-build-debug/CMakeFiles/p12_warehouse.dir/warehouse1.c.obj"
+  "C:/Users/surfaceCS/Desktop/pig/c2020/level1/p12_warehouse/warehouse2.c" "C:/Users/surfaceCS/Desktop/pig/c2020/level1/p12_warehouse/cmake-build-debug/CMakeFiles/p12_warehouse.dir/warehouse2.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -56,32 +56,47 @@ include CMakeFiles/p12_warehouse.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/p12_warehouse.dir/flags.make
 
-CMakeFiles/p12_warehouse.dir/main.c.obj: CMakeFiles/p12_warehouse.dir/flags.make
-CMakeFiles/p12_warehouse.dir/main.c.obj: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/p12_warehouse.dir/main.c.obj"
-	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\p12_warehouse.dir\main.c.obj   -c C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse\main.c
+CMakeFiles/p12_warehouse.dir/warehouse1.c.obj: CMakeFiles/p12_warehouse.dir/flags.make
+CMakeFiles/p12_warehouse.dir/warehouse1.c.obj: ../warehouse1.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/p12_warehouse.dir/warehouse1.c.obj"
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\p12_warehouse.dir\warehouse1.c.obj   -c C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse\warehouse1.c
 
-CMakeFiles/p12_warehouse.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/p12_warehouse.dir/main.c.i"
-	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse\main.c > CMakeFiles\p12_warehouse.dir\main.c.i
+CMakeFiles/p12_warehouse.dir/warehouse1.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/p12_warehouse.dir/warehouse1.c.i"
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse\warehouse1.c > CMakeFiles\p12_warehouse.dir\warehouse1.c.i
 
-CMakeFiles/p12_warehouse.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/p12_warehouse.dir/main.c.s"
-	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse\main.c -o CMakeFiles\p12_warehouse.dir\main.c.s
+CMakeFiles/p12_warehouse.dir/warehouse1.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/p12_warehouse.dir/warehouse1.c.s"
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse\warehouse1.c -o CMakeFiles\p12_warehouse.dir\warehouse1.c.s
+
+CMakeFiles/p12_warehouse.dir/warehouse2.c.obj: CMakeFiles/p12_warehouse.dir/flags.make
+CMakeFiles/p12_warehouse.dir/warehouse2.c.obj: ../warehouse2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/p12_warehouse.dir/warehouse2.c.obj"
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\p12_warehouse.dir\warehouse2.c.obj   -c C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse\warehouse2.c
+
+CMakeFiles/p12_warehouse.dir/warehouse2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/p12_warehouse.dir/warehouse2.c.i"
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse\warehouse2.c > CMakeFiles\p12_warehouse.dir\warehouse2.c.i
+
+CMakeFiles/p12_warehouse.dir/warehouse2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/p12_warehouse.dir/warehouse2.c.s"
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse\warehouse2.c -o CMakeFiles\p12_warehouse.dir\warehouse2.c.s
 
 # Object files for target p12_warehouse
 p12_warehouse_OBJECTS = \
-"CMakeFiles/p12_warehouse.dir/main.c.obj"
+"CMakeFiles/p12_warehouse.dir/warehouse1.c.obj" \
+"CMakeFiles/p12_warehouse.dir/warehouse2.c.obj"
 
 # External object files for target p12_warehouse
 p12_warehouse_EXTERNAL_OBJECTS =
 
-p12_warehouse.exe: CMakeFiles/p12_warehouse.dir/main.c.obj
+p12_warehouse.exe: CMakeFiles/p12_warehouse.dir/warehouse1.c.obj
+p12_warehouse.exe: CMakeFiles/p12_warehouse.dir/warehouse2.c.obj
 p12_warehouse.exe: CMakeFiles/p12_warehouse.dir/build.make
 p12_warehouse.exe: CMakeFiles/p12_warehouse.dir/linklibs.rsp
 p12_warehouse.exe: CMakeFiles/p12_warehouse.dir/objects1.rsp
 p12_warehouse.exe: CMakeFiles/p12_warehouse.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable p12_warehouse.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\surfaceCS\Desktop\pig\c2020\level1\p12_warehouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable p12_warehouse.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\p12_warehouse.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
