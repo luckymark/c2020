@@ -1,0 +1,6 @@
+Total good types:5,total good nums:15kg
+1:1kg
+31:5kg
+52:1kg
+232:8kg
+10:0kg
