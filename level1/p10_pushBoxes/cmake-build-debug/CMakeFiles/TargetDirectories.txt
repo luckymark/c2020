@@ -1,3 +1,0 @@
-C:/Users/surfaceCS/Desktop/pig/c2020/level1/p10_pushBoxes/cmake-build-debug/CMakeFiles/p10_pushBoxes.dir
-C:/Users/surfaceCS/Desktop/pig/c2020/level1/p10_pushBoxes/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/surfaceCS/Desktop/pig/c2020/level1/p10_pushBoxes/cmake-build-debug/CMakeFiles/rebuild_cache.dir

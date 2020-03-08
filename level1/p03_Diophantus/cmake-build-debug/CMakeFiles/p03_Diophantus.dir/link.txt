@@ -1,1 +1,0 @@
-C:\MinGW\bin\gcc.exe -g   -Wl,@CMakeFiles\p03_Diophantus.dir\objects1.rsp  -o p03_Diophantus.exe -Wl,--out-implib,libp03_Diophantus.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
