@@ -172,8 +172,8 @@ int main()
 	{
 		switch(ch)
 		{
-		    case 72:move(1);break; 
-		    case 80:move(2);break; 
+			case 72:move(1);break; 
+			case 80:move(2);break; 
 			case 75:move(3);break; 
 			case 77:move(4);break;
 		}
