@@ -36,11 +36,14 @@ void drawYou();//画用户
 void drawBox(struct p* box);//画箱子
 void clean(int map[MAPHEIGHT][MAPWIDTH]);//清除上一步
 void operate(int map[MAPHEIGHT][MAPWIDTH]);//处理推箱子操作
-int Game(int level);
 void HideCursor();//隐藏光标
-
+int Game(int level);
 
 int main(){
+    FILE *file =NULL;
+    file = fopen("C://Users//ZYW//temp//grade.txt","w");//清空
+    fprintf(file,"推箱子\n");
+    fclose(file);
     for(int level=1;level<5;){
         HideCursor();
         Game(level);
@@ -102,11 +105,22 @@ int Game(int level){
             gotoxy(MAPHEIGHT+3,0);
             printf("Congratulations!!!\n\n\n\n\n");
             printf("\n您最终的得分是");
+            char grade;
             if(YourPosition.num<=A){
                 printf("★★★");
+                grade='A';
             }else if(YourPosition.num<=B){
                 printf("★★");
-            }else printf("★");
+                grade='B';
+            }else {
+                printf("★");
+                grade='C';
+            }
+            FILE *filep =NULL;
+            filep = fopen("C://Users//ZYW//temp//grade.txt","a+");
+            fprintf(filep,"第%d关的步数为%d，星级为%c.\n",level,YourPosition.num,grade);
+            fclose(filep);
+
             printf("\n\n按'j'再来一次");
             printf("\n\n按Space进入下一关\n\n");
             char key=getch();
