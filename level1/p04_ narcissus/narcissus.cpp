@@ -8,13 +8,13 @@ int main(void)
 {
 	int n,x,tmin,tmax,mid1,mid2,mid3,sum,flag;
 	tmin=tmax=flag=1;
-//	scanf("%d",&n);
-	n=3;
+//	scanf("%d",&n);     //原为计算n位水仙花数 
+	n=3;                //改为计算3位水仙花数 
 	for(i=1;i<n;i++){
 		tmin=tmin*10;
 	}
 	tmax=tmin*10-1;
-	for(x=tmin;x<=tmax;x++){
+	For(x,tmin,tmax){
 		mid1=mid2=x;
 		sum=0;
 		For(i1,1,n){
