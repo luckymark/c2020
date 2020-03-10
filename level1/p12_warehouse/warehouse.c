@@ -48,6 +48,7 @@ int main(){
         }
     }
     fp=fopen("C://Users//ZYW//temp//warehouse.txt","w+");
+    fprintf(fp,"库存列表\n型号\t数量\t进价\t商品名\t商家\n");
     for(int i=0;i<num;i++){
         fprintf(fp,"%s\t%.2f\t%.2f\t%s\t%s\n",cargo[i].modelNumber,cargo[i].stock,cargo[i].price,cargo[i].name,cargo[i].merchant);
     }fclose(fp);
