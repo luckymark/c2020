@@ -1,49 +1,24 @@
 #include <stdio.h>
-#include <string.h>
 
-int array[1000];                  //千位数字
-unsigned long long int time = 0;  //操作次数
-
-//移动n个圆盘
-void move(const int n) {
-    time++;  //移动自身
-    if (n == 1) {
-        return;
+void move(int a,int p1, int p2){
+    if(a == 0) return;
+    int p3;
+    if(p1 + p2 == 3){   //p1和p2是1或2
+        p3 = 3;
+    }else if(p1 + p2 == 5){ //p1和p2是2或3
+        p3 = 1;
+    }else{
+        p3 = 2;
     }
-    move(n - 1);  //移动上面n-1
-    move(n - 1);  //移回上面n-1
+    move(a-1,p1,p3);
+    printf("%d:%d-->%d\n",a,p1,p2);
+    move(a-1,p3,p2);
 }
 
-// a的n次幂,返回有效数组的长度
-int power(int a, int n) {
-    memset(array, 0, sizeof(array));
-    int p = 1;
-    array[0] = 1;
-    while (n--) {
-        int p0 = p;
-        while (p--) {
-            int num = array[p] * a;
-            array[p] = num % 10;
-            array[p + 1] += num / 10;
-        }
-        if (array[p0]) {
-            p = p0 + 1;
-        } else {
-            p = p0;
-        }
-    }
-    return p;
-}
-
-int main() {
-    int n;  //圆盘数量
-    //  move(n);  //64个圆盘时用函数速度过慢
-    printf("How many discs are there?\n");
-    scanf("%d", &n);
-    printf("Number of moves:\n");
-    int p = power(2, n);
-    while (p--) {
-        printf("%d", p ? array[p] : array[p] - 1);  // 2的n次方结尾不可能是0
-    }
-    return 0;
+int main(){
+    int n;
+    printf("input n:\n");
+    scanf("%d",&n);
+    move(n,1,3);
+    printf("A:p1-->p2   move A from p1 to p2\n");
 }
