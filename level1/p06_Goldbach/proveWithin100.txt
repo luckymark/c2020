@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main(){
+    int n=3,m,prime[30],dex=0,judge=1,count=0,total=0;
+    while(n<100){
+        m=2;
+        while(m*m<=n){
+            if(n%m==0){
+                judge=0;
+                break;
+            }
+            m++;
+        }
+        if(judge==0){
+            judge=1;
+        }else{
+            prime[dex]=n;
+            dex++;
+        }
+        n++;
+    }
+    for(int num=6;num<=100;num+=2){
+        judge=0;
+        for(int i=0;prime[i]<=(num/2);i++){
+            for(int j=i;j<=23;j++){
+                if(prime[i]+prime[j]==num){
+                    count ++;
+                    judge=1;
+                    break;
+                }
+            }
+            if(judge) break;
+        }
+        total ++;
+    }
+    for(int num=9;num<=99;num+=2){
+        judge=0;
+        for(int i=0;prime[i]<=(num/3);i++){
+            for(int j=i;prime[j]<=(num/2);j++){
+                for(int k=j;k<=23;k++){
+                    if(prime[i]+prime[j]+prime[k]==num){
+                        count ++;
+                        judge=1;
+                        break;
+                    }
+                }
+                if(judge) break;
+            }
+            if(judge) break;
+        }
+        total ++;
+    }
+    if(count==total) printf_s("yes");
+    else printf_s("no");
+    return 0;
+}

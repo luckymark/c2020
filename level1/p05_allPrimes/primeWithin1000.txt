@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <time.h>
+
+int main(){
+    clock_t start,finish;
+    start=clock();
+    printf_s("2 3 5 ");
+    int n=7,n_dex=4;
+    int judge=1;
+    while(n<=1000){
+        int m=5,m_dex=2;
+        while(m*m<=n){
+            if(!(n%m)){
+                judge=0;
+                break;
+            }
+            m+=m_dex;
+            if(m_dex-4) m_dex=4;
+            else m_dex=2;
+        }
+        if(judge-1) judge=1;
+        else printf_s("%d ",n);
+        n+=n_dex;
+        if(n_dex-2) n_dex=2;
+        else n_dex=4;
+    }
+    finish=clock();
+    printf_s("%.3f",(double)(finish-start)/CLOCKS_PER_SEC);
+    return 0;
+}
