@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(){
+    int x=10;
+    double a=1.0/6+1.0/12+1.0/7;
+    while((a*x+9)!=(0.5*x)){
+        x++;
+    }
+    printf_s("%d",x-4);
+    return 0;
+}

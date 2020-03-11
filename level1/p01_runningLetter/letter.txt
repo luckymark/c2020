@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <synchapi.h>
+
+const int wide=20;
+
+int main() {
+    int t=0;
+    int ind;
+    for(;;){
+        for(int i=0;i<t;i++){
+            printf_s(" ");
+        }
+        printf_s("s");
+        Sleep(1000);
+        system("cls");
+        if(t==0){ind=1;}
+        if(t==wide-1){ind=-1;}
+        t = t + ind;
+    }
+}

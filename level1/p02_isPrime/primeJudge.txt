@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(){
+    int a;
+    scanf("%d",&a);
+    if(a<=0){
+        printf_s("error");
+        return 0;
+    }
+    if(a==1||a==4||a==6){
+        printf_s("no");
+        return 0;
+    }
+    if(a==2||a==3||a==5){
+        printf_s("yes");
+        return 0;
+    }
+    if(a%6==0||a%6==2||a%6==3||a%6==4){
+        printf_s("no");
+        return 0;
+    }
+    int i=5;
+    while(i*i<=a){
+        if(a%i==0){
+            printf_s("no");
+            return 0;
+        }
+        i++;
+    }
+    printf_s("yes");
+    return 0;
+}
