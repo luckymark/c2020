@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(){
+    int num=100;
+    while(num<1000){
+        int x=num%10;
+        int y=(num%100)/10;
+        int z=num/100;
+        if(x*x*x+y*y*y+z*z*z==num){
+            printf_s("%d\n",num);
+        }
+        num++;
+    }
+    return 0;
+}
