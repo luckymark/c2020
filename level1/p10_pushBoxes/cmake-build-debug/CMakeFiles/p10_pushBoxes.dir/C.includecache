@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Dai/c2020/level1/p10_pushBoxes/Game.h
+
+C:/Users/Dai/c2020/level1/p10_pushBoxes/main.c
+stdio.h
+-
+Game.h
+C:/Users/Dai/c2020/level1/p10_pushBoxes/Game.h
+

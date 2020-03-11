@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Dai/c2020/level1/p09_maze/Game.c
+stdio.h
+-
+Game.h
+C:/Users/Dai/c2020/level1/p09_maze/Game.h
+
+C:/Users/Dai/c2020/level1/p09_maze/Game.h
+windows.h
+-
+
+C:/Users/Dai/c2020/level1/p09_maze/main.c
+stdio.h
+-
+stdlib.h
+-
+conio.h
+-
+Game.h
+C:/Users/Dai/c2020/level1/p09_maze/Game.h
+
