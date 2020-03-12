@@ -1,24 +1,20 @@
 #include <stdio.h>
 #include "Game.h"
 int main() {
-    int i, j;//循环变量
-    FILE * map = fopen("MapRes.txt", "r");
-    if (map == NULL)
+    int Choice;
+    while(1)
     {
-        printf("file to open such file!\n");
-        return -1;
-    }
-    int N, M;//地图的大小
-    fscanf(map, "%d %d", &N, &M);
-    int a[N][M];
-    for (i = 0; i < N; i++)
-    {
-        for (j = 0; j < M; j++)
+        PrfMenu();
+        scanf("%d", &Choice);
+        FILE * map = MapChoice(Choice);
+        if (map == NULL)
         {
-          fscanf(map, "%d", &a[i][j]);
+            fflush(stdin);
+            continue;
         }
+        //开始游戏
+        Start(map, Choice);
+        fclose(map);
     }
-    ShowMap(a, N, M);
-    fclose(map);
     return 0;
 }

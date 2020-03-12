@@ -2,7 +2,7 @@
 *.o
 *.a
 *.exe
-
+.idea
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
