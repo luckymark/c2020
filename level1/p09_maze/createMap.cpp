@@ -31,6 +31,7 @@ void writeMap(){
         }
         fprintf(file,"\n");
     }
+    fclose(file);
 }
 
 void creatMap(){

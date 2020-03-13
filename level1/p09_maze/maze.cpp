@@ -4,7 +4,7 @@
 #include <conio.h>
 using namespace std;
 
-char filePath[100] = "D:/chhokmah/c2020/level1/p09_maze/map.in";    //地图文件的位置，运行前请修改，不知道为啥相对路径没用
+char filePath[100] = "./map.in";    //地图文件的位置
 HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
 void initConsole(); //初始化控制台
 void printMap();    //绘制地图
