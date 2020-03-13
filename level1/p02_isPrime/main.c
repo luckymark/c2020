@@ -1,20 +1,24 @@
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 
+int isPrime(long long n);
+
 int main() {
-	long long n;
-	int isPrime = 1;
 	system("title isPrime");
 	printf("Positive Integer N = ");
+	long long n;
 	scanf("%lld", &n);
-	if (n == 1 || n != 2 && n % 2 == 0) isPrime = 0;
-	else
-		for (long long i = 3; i < n / 2; i += 2)
-			if (n % i == 0) {
-				isPrime = 0;
-				break;
-			}
-	printf("%lld %s a Prime Number\n", n, isPrime ? "IS" : "ISN'T");
+	printf("%lld %s a Prime Number\n", n, isPrime(n) ? " I S " : "ISN'T");
 	system("pause");
 	return 0;
+}
+
+int isPrime(long long n) {
+	if (n == 1 || (n != 2 && n % 2 == 0)) return 0;
+	long long sqrt_n = (long long)sqrt(n);
+	for (long long i = 3; i < sqrt_n; i += 2) {
+		if (n % i == 0) return 0;
+	}
+	return 1;
 }
