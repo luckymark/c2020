@@ -10,22 +10,8 @@
 const int TERMINAL = WIDTH - sizeof(WORD) / sizeof(char) + 1;
 int position = 0, delta = 1;
 
-void step() {
-	position += delta;
-	if (position < 0 || position > TERMINAL) {
-		position -= delta;
-		delta *= -1;
-		position += delta;
-	}
-}
-
-void render() {
-	system("cls");
-	for (int p = 0; p < position; p++)
-		printf(" ");
-	printf(WORD);
-	Sleep(SECOND / FPS); // usleep(SECOND / FPS * 1000)
-}
+void step();
+void render();
 
 int main() {
 	char command[100];
@@ -37,4 +23,22 @@ int main() {
 		step();
 	}
 	return 0;
+}
+
+void step() {
+	position += delta;
+	if (position < 0 || position > TERMINAL) {
+		position -= delta;
+		delta *= -1;
+		position += delta;
+	}
+}
+
+void render() {
+	system("cls");
+	for (int p = 0; p < position; p++) {
+		printf(" ");
+	}
+	printf(WORD);
+	Sleep(SECOND / FPS); // usleep(SECOND / FPS * 1000)
 }
