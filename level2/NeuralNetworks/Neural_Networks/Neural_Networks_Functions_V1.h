@@ -2,8 +2,8 @@
 // Created by asus on 2020/3/14.
 //
 
-#ifndef NEURAL_NETWORKS_NEURAL_NETWORKS_FUNCTIONS_H
-#define NEURAL_NETWORKS_NEURAL_NETWORKS_FUNCTIONS_H
+#ifndef NEURAL_NETWORKS_NEURAL_NETWORKS_FUNCTIONS_V1_H
+#define NEURAL_NETWORKS_NEURAL_NETWORKS_FUNCTIONS_V1_H
 
 #define LINE 8
 #define ROW 8
@@ -43,4 +43,4 @@ void train_node(node *pNode, int num_x);
 //double lost(double y_predict, double y_fact);
 //double cost(node* train1);
 
-#endif //NEURAL_NETWORKS_NEURAL_NETWORKS_FUNCTIONS_H
+#endif //NEURAL_NETWORKS_NEURAL_NETWORKS_FUNCTIONS_V1_H

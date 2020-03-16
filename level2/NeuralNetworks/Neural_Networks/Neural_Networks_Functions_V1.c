@@ -2,7 +2,7 @@
 // Created by asus on 2020/3/14.
 //
 
-#include "Neural_Networks_Functions.h"
+#include "Neural_Networks_Functions_V1.h"
 #include <math.h>
 #include <stdlib.h>
 

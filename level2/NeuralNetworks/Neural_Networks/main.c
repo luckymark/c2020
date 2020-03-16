@@ -1,25 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "Neural_Networks_Functions.h"
+#include "Neural_Networks_Functions_V2.h"
 
 int main()
 {
-    // input-output layer
-    sample samples1[SIMPLE_SIZE];
-    for(int i = 0; i < SIMPLE_SIZE; ++i) {
-        init_simple(&samples1[i],NUM_INPUT_NODE);
+    double **a0 = (double **) malloc(sizeof(double *) * NODE_L0_VAL);
+    for (int i = 0; i < NODE_L0_VAL; ++i) {
+        a0[i] = (double *) malloc(sizeof(double) * SIMPLE_VALUE);
     }
-    node nodes[NUM_OUTPUT_NODE];
-    for(int i = 0; i < NUM_OUTPUT_NODE; ++i) {
-        init_node(&nodes[i], SIMPLE_SIZE, NUM_INPUT_NODE, samples1);
+    layer layer1, layer2;
+    init_layer(&layer1, NODE_L1_VAL, NODE_L0_VAL);
+    init_layer(&layer2, NODE_L2_VAL, NODE_L1_VAL);
+
+    for (int count = 0; count < 10000; ++count) {
+        // L1
+        get_z(layer1.z, (const double **) layer1.w, (const double **) a0,
+              layer1.b, NODE_L1_VAL, NODE_L0_VAL);
+        get_a(layer1.a, (const double **) layer1.z, NODE_L1_VAL);
+
+        //L2
+        get_z(layer2.z, (const double **) layer2.w, (const double **) layer1.a,
+              layer2.b, NODE_L2_VAL, NODE_L1_VAL);
+        get_a(layer2.a, (const double **) layer2.z, NODE_L2_VAL);
     }
 
-    for (int count = 0; count < 1000; ++count) {
-        for(int i = 0; i < NUM_OUTPUT_NODE; ++i) {
-            train_node(&nodes[i], NUM_INPUT_NODE);
-        }
-    }
-
+    del_layer(&layer1, NODE_L1_VAL);
+    del_layer(&layer2, NODE_L2_VAL);
     return 0;
 }
-
