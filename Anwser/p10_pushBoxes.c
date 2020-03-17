@@ -1,3 +1,12 @@
+/*
+Please use up, down, left, right click to control the movement of character "T"
+You can't cross the barrier and push boxes aganist the barrier
+You can push boxes from one side to the oppsite side 
+Victory comes when you move all the boxes "O" onto "_"
+Besides you can press "Esc" to quit this game
+*/ 
+
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>

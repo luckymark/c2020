@@ -1,4 +1,3 @@
-//าฦฮปรÜย๋ 
 #include<stdio.h>
 #include<string.h>
 #define MAX 50000
@@ -11,24 +10,24 @@ int letter_not(char a)
 	if(a>'A' && a<='Z')   return 2;
 	return 0;
 }
-char encrypt(char a)
+char deal(char a)
 {
 	if(letter_not(a)==0)  return a;
 	int st;
 	if(letter_not(a)==1) st='a';
 	else   st='A';
-	
+}
+char encrypt(char a)
+{
+
+	char st=deal(a);
 	int tran=a-st;
 	tran=(tran+STEP)%26;
 	return tran+st;	
 }
 char decrypt(char a)
 {
-	if(letter_not(a)==0)  return a;
-	int st;
-	if(letter_not(a)==1) st='a';
-	else   st='A';
-	
+	char st=deal(a);	
 	int tran=a-st;
 	tran=(tran+26-STEP)%26;
 	return tran+st;		
@@ -38,7 +37,7 @@ int main()
 	char c,s[15];
 	int flag,i;
 
-	gets(s);
+	gets(s);   //input 'encrypt' or 'decrypt' to execute this code 
 	if(s[0]=='e')  flag=1;
 	else  flag=0;
 	

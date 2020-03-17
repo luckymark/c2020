@@ -10,6 +10,7 @@ struct data
     int to,value;
 };
 struct data point[MAX];
+int now=0,to;
 
 void reveal(int last,int now)
 {
@@ -18,26 +19,27 @@ void reveal(int last,int now)
     if(to==-1)  return;
     reveal(now,to);
 }
-int main()
+void init()
 {
-    int i,j;
+	int i,j;
 
     for(i=0;i<NUM-1;i++)
         point[i].to=i+1;
     point[NUM-1].to=-1;
 
-    int now=0;
+    
     while(now>=0)
     {
         point[now].value=rand()%100;
         now=point[now].to;
     }
 
-    int to=point[0].to;
+    to=point[0].to;
     point[0].to=-1;
-    reveal(0,to);
-
-    now=NUM-1;
+ } 
+void Find_first()
+{
+	now=NUM-1;
     int flag=0;
     while(now>=0)
     {
@@ -51,8 +53,10 @@ int main()
         now=point[now].to;
     }
     if(!flag)  printf("-1\n");
-
-    flag=0;
+}
+void Find_second()
+{
+ 	int flag=0;
     while(now>=0)
     {
         if(point[now].value==5)
@@ -64,6 +68,15 @@ int main()
         }
         now=point[now].to;
     }
-    if(!flag)  printf("-1\n");
+    if(!flag)  printf("-1\n");	
+}
+int main()
+{
+	init();
+    reveal(0,to);
+
+    Find_first();
+
+    Find_second();
     return 0;
 }

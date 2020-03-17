@@ -1,3 +1,11 @@
+/*
+Please use up, down, left, right click to control the movement of character "T"
+You can't cross the barrier
+Victory comes when you reach the "O"
+Besides you can press "Esc" to quit this game
+*/ 
+
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<windows.h>

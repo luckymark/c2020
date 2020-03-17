@@ -33,7 +33,7 @@ int main()
 	fclose(fpRead);
     while(1)
     {
-        printf("请输入选择的功能：");
+        printf("Please input the function you have chosen：");
         scanf("%d",&cho);
         int flag=0;
         switch(cho)

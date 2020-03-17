@@ -1,4 +1,4 @@
-#include<stdio.h>   //∆’Õ®…∏ 
+#include<stdio.h>   
 #include<time.h> 
 int notprime[1010];
 int main()
@@ -18,7 +18,10 @@ int main()
 	}
 	for(i=2;i<=1000;i++)
 	{
-		if(!notprime[i])  printf("%d ",i);
+		if(!notprime[i]) 
+		{
+			printf("%d ",i);
+		} 
 	}
 	printf("\n");
 	end=clock();

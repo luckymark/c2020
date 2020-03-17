@@ -15,8 +15,14 @@ int main()
 		for(i=1;i<=WIDTH-SIZE;i++)
 		{
 			
-			if(i==now)  printf(LETTER);
-			else  printf(" ");
+			if(i==now)  
+			{
+				printf(LETTER);
+			} 
+			else
+			{
+			  printf(" ");
+			} 
 		}
 		if(now==1 && direction<0)
 		{
@@ -29,7 +35,10 @@ int main()
 			direction=-1;
 			now--;
 		}
-		else  now+=direction;
+		else 
+		{
+			now+=direction;
+		} 
 		Sleep(100);
 		system("CLS");
 	}
