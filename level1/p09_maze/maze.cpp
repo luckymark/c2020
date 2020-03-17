@@ -46,7 +46,7 @@ int main(void)
 	while(x!=15||y!=22){
 		system("CLS");
 		printf("这是一个迷宫小游戏。请使用方向键（↑↓←→）进行控制。\n");
-		printf("“E”是入口位置，“O”是出口位置，M是您当前的位置。\n"); 
+		printf("“E”是入口位置，“O”是出口位置，“★”是您当前的位置。\n"); 
 		former=maze[x][y];//former用于存放玩家位置处的数字。 
 		maze[x][y]=88;//设定玩家位置
 		For(i1,0,22){
@@ -68,20 +68,20 @@ int main(void)
 //					case 88: printf("★"); break;
 //				}
 				switch(maze[i1][i2]){//加载地形  
-					case 0: printf(" "); break;	 
-					case 1: printf("-"); break;
-					case 2: printf("|"); break;
-					case 3: printf("E"); break;
-					case 4: printf("O"); break;
-					case 5: printf("."); break;
-					case 6: printf("."); break;
-					case 7: printf("."); break;
-					case 8: printf("."); break;
-					case 9: printf("."); break;
-					case 10: printf("."); break;
-					case 11: printf("."); break;
-					case 12: printf("."); break;
-					case 88: printf("M"); break;
+					case 0: printf("  "); break;	 
+					case 1: printf("—"); break;
+					case 2: printf(" |"); break;
+					case 3: printf(" E"); break;
+					case 4: printf(" O"); break;
+					case 5: printf(" ."); break;
+					case 6: printf(" ."); break;
+					case 7: printf(" ."); break;
+					case 8: printf(" ."); break;
+					case 9: printf(" ."); break;
+					case 10: printf(" ."); break;
+					case 11: printf(" ."); break;
+					case 12: printf(" ."); break;
+					case 88: printf("★"); break;
 				}
 			}
 			printf("\n");
@@ -99,7 +99,7 @@ int main(void)
 	}
 	finish=clock();
 	duration=(double)(finish-start)/CLOCKS_PER_SEC;
-	printf("恭喜您成功走出迷宫。\n您一共走了%d步，用时%.4f秒。\n",count,duration);
+	printf("恭喜您成功走出迷宫。\n您一共走了%d步，用时%.2f秒。\n",count,duration);
 	system("pause");
 	return 0;
 }
