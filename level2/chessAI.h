@@ -60,10 +60,6 @@ boardStatus evaluateBoard(int (&board)[CHESS_HEIGHT][CHESS_LENGTH])
     evalutation.score = score;
     evalutation.status = status;
     return evalutation;
-    //妯潃
-
-    //宸︿笂鍒板彸涓?
-    //鍙充笂鍒板乏涓?
 }
 
 
