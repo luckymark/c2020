@@ -11,6 +11,7 @@
 #define C_BOUND 3
 #define WIN 200000
 #define LOSE -10000000
+
 #define WHITE_LIVE_4 50000
 #define BLACK_LIVE_4 -300000
 
@@ -34,19 +35,19 @@
 #define BLACK_SLEEP_2 -2
 
 
-const int CHESS_HEIGHT = 17;
-const int CHESS_LENGTH = 17;
-const int depth_MAX    = 6;
-const int MAX_CHOICE   = 10;
-const int STEPS        = 3;/*局部搜索中沿非空点走的深度（步数）*/
+const int CHESS_HEIGHT                     = 17;
+const int CHESS_LENGTH                     = 17;
+const int depth_MAX                        = 6;
+const int MAX_CHOICE                       = 10;
+const int STEPS                            = 3;/*局部搜索中沿非空点走的深度（步数）*/
 
 
-const int PAINT_X = 7;
-const int PAINT_Y = 7;
-const int CHESS_LINE_PIECE = 15;
-const int CHESS_PIECE_LINE_DISTANCE = 5;
-const int CHESS_PIECE_HEIGHT_DISTANCE = 2;
-const int CHESS_PIECE_CHECK_POS_DIS_LINE = 3;
+const int PAINT_X                          = 7;
+const int PAINT_Y                          = 7;
+const int CHESS_LINE_PIECE                 = 15;
+const int CHESS_PIECE_LINE_DISTANCE        = 5;
+const int CHESS_PIECE_HEIGHT_DISTANCE      = 2;
+const int CHESS_PIECE_CHECK_POS_DIS_LINE   = 3;
 const int CHESS_PIECE_CHECK_POS_DIS_HEIGHT = 2;
 
 int chess_6_type[4][4][4][4][4][4];
