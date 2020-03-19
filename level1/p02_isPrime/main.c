@@ -9,7 +9,7 @@ int main() {
         printf("%ld²»ÊÇËØÊı", N);
         return 0;
     }
-    for (i = 2; i < pow(N, 0.5); i++)
+    for (i = 2; i <= pow(N, 0.5); i++)
     {
         if ((N % i == 0 && N != i) || N == 4)
         {

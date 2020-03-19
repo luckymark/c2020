@@ -54,6 +54,6 @@ int main() {
             printf("%d\t", temp2);
     }*/
     finish = clock();
-    printf("”√ ±%.3fseconds", (double)(finish - start)/CLOCKS_PER_SEC);
+    printf("%.3fseconds", (double)(finish - start)/CLOCKS_PER_SEC);
     return 0;
 }
