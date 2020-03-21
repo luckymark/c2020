@@ -88,6 +88,7 @@ int main(){
 		}
 	}
 }
+
 /*
 INPUT ACTION
 | if press enter then skip
@@ -95,6 +96,7 @@ INPUT ACTION
 | if press enter then echo "param is needed"
 | if there nokey then echo "input key first"
 */
+
 char get_cmd() {
 	char cmd[8] = {0};
 	bool endl = false;
@@ -151,25 +153,23 @@ void savekey() {
 }
 
 void encrypt() {
-	str[str_len] = 'e';
 	int end = (str_len - 1) / key_len + 1;
 	for (int i = 0; i < key_len; i++) {
 		for (int j = 0; j < end; j++) {
 			int t = j * key_len + key[i].num;
-			putchar(toupper(str[t < str_len ? t : str_len]));
+			putchar(toupper(t < str_len ? str[t] : 'e'));
 		}
 	}
 	putchar('\n');
 }
 
 void decrypt() {
-	char ans[MAX_STR_LEN];
+	char ans[MAX_STR_LEN] = {0};
 	int end = str_len / key_len;
 	for (int i = 0; i < key_len; i++) {
 		for (int j = 0; j < end; j++) {
 			ans[j * key_len + key[i].num] = str[i * end + j];
 		}
 	}
-	ans[str_len] = 0;
 	printf("%s\n", ans);
 }
