@@ -171,5 +171,5 @@ void decrypt() {
 			ans[j * key_len + key[i].num] = str[i * end + j];
 		}
 	}
-	printf("%s\n", ans);
+	puts(ans);
 }
