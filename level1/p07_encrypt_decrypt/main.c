@@ -31,24 +31,24 @@ char get_cmd();
 int main(){
 	system("title encrypt_decrypt");
 	puts("# key KEY_STRING");
-    puts("# encrypt STRING");
-    puts("# decrypt STRING");
-    puts("# halt (kill me)");
+	puts("# encrypt STRING");
+	puts("# decrypt STRING");
+	puts("# halt (kill me)");
 	puts("# Simply k/e/d/h");
 	puts("");
-    while(true) {
+	while(true) {
 		// get command
 		char cmd = get_cmd();
-        if (cmd == 0)
-            continue;
-        if (cmd == 'h')
-            return 0;
-        // get string
+		if (cmd == 0)
+			continue;
+		if (cmd == 'h')
+			return 0;
+		// get string
 		bool skip = false;
 		int len = 0;
 		while(true) {
-            char ch = getchar();
-            if (ch == '\r')
+			char ch = getchar();
+			if (ch == '\r')
 				continue;
 			if (ch == '\n') {
 				if (cmd > 0 && !len) {
@@ -58,9 +58,9 @@ int main(){
 				break;
 			}
 			if (ch != ' ') {
-                str[len++] = ch;
-            }
-        }
+				str[len++] = ch;
+			}
+		}
 		if (skip)
 			continue;
 		// execute
@@ -86,7 +86,7 @@ int main(){
 				break;
 			}
 		}
-    }
+	}
 }
 /*
 INPUT ACTION
@@ -99,22 +99,22 @@ char get_cmd() {
 	char cmd[8] = {0};
 	bool endl = false;
 	int p_cmd = 0;
-    printf("> ");
-    while(true) {
-        char ch = getchar();
-        if (ch == ' ') {
-            if (p_cmd)
-                break;
-            else
-                continue;
-        }
-        if (ch == '\r')
-            continue;
-        if (ch == '\n') {
-            endl = true;
-            break;
-        }
-        if (p_cmd < 7) {
+	printf("> ");
+	while(true) {
+		char ch = getchar();
+		if (ch == ' ') {
+			if (p_cmd)
+				break;
+			else
+				continue;
+		}
+		if (ch == '\r')
+			continue;
+		if (ch == '\n') {
+			endl = true;
+			break;
+		}
+		if (p_cmd < 7) {
 			cmd[p_cmd++] = tolower(ch);
 		}
 		else {
@@ -124,10 +124,10 @@ char get_cmd() {
 	if (!strcmp(cmd, "h") || !strcmp(cmd, "halt")) {
 		endl = false;
 	}
-    if (
+	if (
 		strcmp(cmd, "k") && strcmp(cmd,     "key") &&
-        strcmp(cmd, "e") && strcmp(cmd, "encrypt") &&
-        strcmp(cmd, "d") && strcmp(cmd, "decrypt") &&
+		strcmp(cmd, "e") && strcmp(cmd, "encrypt") &&
+		strcmp(cmd, "d") && strcmp(cmd, "decrypt") &&
 		strcmp(cmd, "h") && strcmp(cmd,    "halt")
 	) {
 		puts("no such command");
@@ -136,7 +136,7 @@ char get_cmd() {
 	if (endl && cmd[0] > 0) {
 		puts("param is needed");
 	}
-    return endl ? 0 : cmd[0];
+	return endl ? 0 : cmd[0];
 	//   0: unexpectedly receive enter and skip
 	//  -1: wrong command but try to absorb string
 	// 'a': successfully get one of the legel commands
