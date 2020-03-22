@@ -130,7 +130,7 @@ char get_cmd() {
 		strcmp(cmd, "k") && strcmp(cmd,     "key") &&
 		strcmp(cmd, "e") && strcmp(cmd, "encrypt") &&
 		strcmp(cmd, "d") && strcmp(cmd, "decrypt") &&
-		strcmp(cmd, "h") && strcmp(cmd,    "halt")
+		strcmp(cmd, "h") && strcmp(cmd,    "halt") && p_cmd
 	) {
 		puts("no such command");
 		cmd[0] = -1;
