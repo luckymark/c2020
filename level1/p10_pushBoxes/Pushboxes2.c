@@ -4,6 +4,8 @@
 #include<conio.h>
 #include"Pushboxes.h"
 
+int foot[4][2]={{-1,0},{1,0},{0,-1},{0,1}};     // 定义偏移变量。
+
 void readrecord(void)						//从文件中读取用户的信息。
 {
     FILE* fp;
@@ -157,6 +159,108 @@ void putmap(void)						//在console清屏显示游戏界面。
     printf(sp);
 }
 
+void move(int i,int j)
+{
+    if (maze[a][b] == '2')										// 人在普通通路上走过去。
+    {
+        if (maze[a+i][b+j] == ' ')								// 人走无障碍道路。
+        {
+            maze[a][b] = ' ';
+            maze[a+i][b+j] = '2';
+            rood++;
+            putmap();
+        }
+        else if (maze[a+i][b+j] == '3')							// 人走到箱子归位处。
+        {
+            maze[a][b] = ' ';
+            maze[a+i][b+j] = '6';
+            rood++;
+            putmap();
+        }
+        else if (maze[a+i][b+j] == '5' && maze[a+2*i][b+2*j] == ' ')     // 人推未复位的箱子推后未复位。
+        {
+            maze[a][b] = ' ';
+            maze[a+i][b+j] = '2';
+            maze[a+2*i][b+2*j] = '5';
+            rood++;
+            putmap();
+        }
+        else if (maze[a+i][b+j] == '5' && maze[a+2*i][b+2*j] == '3')     // 人推未复位的箱子推后复位。
+        {
+            maze[a][b] = ' ';
+            maze[a+i][b+j] = '2';
+            maze[a+2*i][b+2*j] = '7';
+            rood++;
+            putmap();
+        }
+        else if (maze[a+i][b+j] == '7' && maze[a+2*i][b+2*j] == ' ')	// 人推已复位的箱子推后未复位。
+        {
+            maze[a][b] = ' ';
+            maze[a+i][b+j] = '6';
+            maze[a+2*i][b+2*j] = '5';
+            rood++;
+            putmap();
+        }
+        else if (maze[a+i][b+j] == '7' && maze[a+2*i][b+2*j] == '3')     // 人推已复位的箱子推后复位。
+        {
+            maze[a][b] = ' ';
+            maze[a+i][b+j] = '6';
+            maze[a+2*i][b+2*j] = '7';
+            rood++;
+            putmap();
+        }
+    }
+    else if (maze[a][b] == '6')									// 人从箱子归位处走出去。
+    {
+        if (maze[a+i][b+j] == ' ')								// 人走无障碍道路。
+        {
+            maze[a][b] = '3';
+            maze[a+i][b+j] = '2';
+            rood++;
+            putmap();
+        }
+        else if (maze[a+i][b+j] == '3')							// 人走到箱子归位处。
+        {
+            maze[a][b] = '3';
+            maze[a+i][b+j] = '6';
+            rood++;
+            putmap();
+        }
+        else if (maze[a+i][b+j] == '5' && maze[a+2*i][b+2*j] == ' ')     // 人推未复位的箱子推后未复位。
+        {
+            maze[a][b] = '3';
+            maze[a+i][b+j] = '2';
+            maze[a+2*i][b+2*j] = '5';
+            rood++;
+            putmap();
+        }
+        else if (maze[a+i][b+j] == '5' && maze[a+2*i][b+2*j] == '3')     // 人推未复位的箱子推后复位。
+        {
+            maze[a][b] = '3';
+            maze[a+i][b+j] = '2';
+            maze[a+2*i][b+2*j] = '7';
+            rood++;
+            putmap();
+        }
+        else if (maze[a+i][b+j] == '7' && maze[a+2*i][b+2*j] == ' ')	// 人推已复位的箱子。
+        {
+            maze[a][b] = '3';
+            maze[a+i][b+j] = '6';
+            maze[a+2*i][b+2*j] = '5';
+            rood++;
+            putmap();
+        }
+        else if (maze[a+i][b+j] == '7' && maze[a+2*i][b+2*j] == '3')     // 人推已复位的箱子推后复位。
+        {
+            maze[a][b] = '3';
+            maze[a+i][b+j] = '6';
+            maze[a+2*i][b+2*j] = '7';
+            rood++;
+            putmap();
+        }
+    }
+}
+
 int startgame(void)                       //开始游戏。
 {
     rood = 0;
@@ -175,410 +279,22 @@ int startgame(void)                       //开始游戏。
             switch (ch)
             {
                 case 72:
-                    if (maze[a][b] == '2')										// 人在普通通路上走过去。
-                    {
-                        if (maze[a - 1][b] == ' ')								// 人走无障碍道路。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a - 1][b] = '2';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a - 1][b] == '3')							// 人走到箱子归位处。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a - 1][b] = '6';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a - 1][b] == '5' && maze[a - 2][b] == ' ')     // 人推未复位的箱子推后未复位。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a - 1][b] = '2';
-                            maze[a - 2][b] = '5';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a - 1][b] == '5' && maze[a - 2][b] == '3')     // 人推未复位的箱子推后复位。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a - 1][b] = '2';
-                            maze[a - 2][b] = '7';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a - 1][b] == '7' && maze[a - 2][b] == ' ')	// 人推已复位的箱子推后未复位。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a - 1][b] = '6';
-                            maze[a - 2][b] = '5';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a - 1][b] == '7' && maze[a - 2][b] == '3')     // 人推已复位的箱子推后复位。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a - 1][b] = '6';
-                            maze[a - 2][b] = '7';
-                            rood++;
-                            putmap();
-                        }
-                    }
-                    else if (maze[a][b] == '6')									// 人从箱子归位处走出去。
-                    {
-                        if (maze[a - 1][b] == ' ')								// 人走无障碍道路。
-                        {
-                            maze[a][b] = '3';
-                            maze[a - 1][b] = '2';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a - 1][b] == '3')							// 人走到箱子归位处。
-                        {
-                            maze[a][b] = '3';
-                            maze[a - 1][b] = '6';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a - 1][b] == '5' && maze[a - 2][b] == ' ')     // 人推未复位的箱子推后未复位。
-                        {
-                            maze[a][b] = '3';
-                            maze[a - 1][b] = '2';
-                            maze[a - 2][b] = '5';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a - 1][b] == '5' && maze[a - 2][b] == '3')     // 人推未复位的箱子推后复位。
-                        {
-                            maze[a][b] = '3';
-                            maze[a - 1][b] = '2';
-                            maze[a - 2][b] = '7';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a - 1][b] == '7' && maze[a - 2][b] == ' ')	// 人推已复位的箱子。
-                        {
-                            maze[a][b] = '3';
-                            maze[a - 1][b] = '6';
-                            maze[a - 2][b] = '5';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a - 1][b] == '7' && maze[a - 2][b] == '3')     // 人推已复位的箱子推后复位。
-                        {
-                            maze[a][b] = '3';
-                            maze[a - 1][b] = '6';
-                            maze[a - 2][b] = '7';
-                            rood++;
-                            putmap();
-                        }
-                    }
+                    move(foot[0][0],foot[0][1]);
                     if (pass())
                         return 0;
                     break;
                 case 80:
-                    if (maze[a][b] == '2')
-                    {
-                        if (maze[a + 1][b] == ' ')								// 人走无障碍道路。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a + 1][b] = '2';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a + 1][b] == '3')							// 人走到箱子归位处。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a + 1][b] = '6';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a + 1][b] == '5' && maze[a + 2][b] == ' ')     // 人推未复位的箱子推后未复位。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a + 1][b] = '2';
-                            maze[a + 2][b] = '5';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a + 1][b] == '5' && maze[a + 2][b] == '3')     // 人推未复位的箱子推后复位。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a + 1][b] = '2';
-                            maze[a + 2][b] = '7';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a + 1][b] == '7' && maze[a + 2][b] == ' ')	// 人推已复位的箱子。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a + 1][b] = '6';
-                            maze[a + 2][b] = '5';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a + 1][b] == '7' && maze[a + 2][b] == '3')     // 人推已复位的箱子推后复位。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a + 1][b] = '6';
-                            maze[a + 2][b] = '7';
-                            rood++;
-                            putmap();
-                        }
-                    }
-                    else if (maze[a][b] == '6')
-                    {
-                        if (maze[a + 1][b] == ' ')								// 人走无障碍道路。
-                        {
-                            maze[a][b] = '3';
-                            maze[a + 1][b] = '2';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a + 1][b] == '3')							// 人走到箱子归位处。
-                        {
-                            maze[a][b] = '3';
-                            maze[a + 1][b] = '6';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a + 1][b] == '5' && maze[a + 2][b] == ' ')     // 人推未复位的箱子推后未复位。
-                        {
-                            maze[a][b] = '3';
-                            maze[a + 1][b] = '2';
-                            maze[a + 2][b] = '5';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a + 1][b] == '5' && maze[a + 2][b] == '3')     // 人推未复位的箱子推后复位。
-                        {
-                            maze[a][b] = '3';
-                            maze[a + 1][b] = '2';
-                            maze[a + 2][b] = '7';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a + 1][b] == '7' && maze[a + 2][b] == ' ')	// 人推已复位的箱子。
-                        {
-                            maze[a][b] = '3';
-                            maze[a + 1][b] = '6';
-                            maze[a + 2][b] = '5';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a + 1][b] == '7' && maze[a + 2][b] == '3')     // 人推已复位的箱子推后复位。
-                        {
-                            maze[a][b] = '3';
-                            maze[a + 1][b] = '6';
-                            maze[a + 2][b] = '7';
-                            rood++;
-                            putmap();
-                        }
-                    }
+                    move(foot[1][0],foot[1][1]);
                     if (pass())
                         return 0;
                     break;
                 case 75:
-                    if (maze[a][b] == '2')
-                    {
-                        if (maze[a][b - 1] == ' ')								// 人走无障碍道路。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a][b - 1] = '2';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b - 1] == '3')							// 人走到箱子归位处。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a][b - 1] = '6';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b - 1] == '5' && maze[a][b - 2] == ' ')     // 人推未复位的箱子推后未复位。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a][b - 1] = '2';
-                            maze[a][b - 2] = '5';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b - 1] == '5' && maze[a][b - 2] == '3')     // 人推未复位的箱子推后复位。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a][b - 1] = '2';
-                            maze[a][b - 2] = '7';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b-1] == '7' && maze[a][b-2] == ' ')	// 人推已复位的箱子推后未复位。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a][b-1] = '6';
-                            maze[a][b-2] = '5';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a - 1][b] == '7' && maze[a - 2][b] == '3')     // 人推已复位的箱子推后复位。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a][b-1] = '6';
-                            maze[a][b-2] = '7';
-                            rood++;
-                            putmap();
-                        }
-                    }
-                    else if (maze[a][b] == '6')
-                    {
-                        if (maze[a][b - 1] == ' ')								// 人走无障碍道路。
-                        {
-                            maze[a][b] = '3';
-                            maze[a][b - 1] = '2';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b - 1] == '3')							// 人走到箱子归位处。
-                        {
-                            maze[a][b] = '3';
-                            maze[a][b - 1] = '6';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b - 1] == '5' && maze[a][b - 2] == ' ')     // 人推未复位的箱子推后未复位。
-                        {
-                            maze[a][b] = '3';
-                            maze[a][b - 1] = '2';
-                            maze[a][b - 2] = '5';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b - 1] == '5' && maze[a][b - 2] == '3')     // 人推未复位的箱子推后复位。
-                        {
-                            maze[a][b] = '3';
-                            maze[a][b - 1] = '2';
-                            maze[a][b - 2] = '7';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b - 1] == '7' && maze[a][b - 2] == ' ')	// 人推已复位的箱子推后未复位。
-                        {
-                            maze[a][b] = '3';
-                            maze[a][b - 1] = '6';
-                            maze[a][b - 2] = '5';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b-1] == '7' && maze[a][b-2] == '3')     // 人推已复位的箱子推后复位。
-                        {
-                            maze[a][b] = '3';
-                            maze[a][b - 1] = '6';
-                            maze[a][b - 2] = '7';
-                            rood++;
-                            putmap();
-                        }
-                    }
+                    move(foot[2][0],foot[2][1]);
                     if (pass())
                         return 0;
                     break;
                 case 77:
-                    if (maze[a][b] == '2')
-                    {
-                        if (maze[a][b + 1] == ' ')								// 人走无障碍道路。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a][b + 1] = '2';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b + 1] == '3')							// 人走到箱子归位处。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a][b + 1] = '6';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b + 1] == '5' && maze[a][b + 2] == ' ')     // 人推未复位的箱子推后未复位。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a][b + 1] = '2';
-                            maze[a][b + 2] = '5';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b + 1] == '5' && maze[a][b + 2] == '3')     // 人推未复位的箱子推后复位。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a][b + 1] = '2';
-                            maze[a][b + 2] = '7';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b + 1] == '7' && maze[a][b + 2] == ' ')	// 人推已复位的箱子推后未复位。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a][b + 1] = '6';
-                            maze[a][b + 2] = '5';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b+1] == '7' && maze[a][b+2] == '3')     // 人推已复位的箱子推后复位。
-                        {
-                            maze[a][b] = ' ';
-                            maze[a][b + 1] = '6';
-                            maze[a][b + 2] = '7';
-                            rood++;
-                            putmap();
-                        }
-                    }
-                    else if (maze[a][b] == '6')
-                    {
-                        if (maze[a][b + 1] == ' ')								// 人走无障碍道路。
-                        {
-                            maze[a][b] = '3';
-                            maze[a][b + 1] = '2';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b + 1] == '3')							// 人走到箱子归位处。
-                        {
-                            maze[a][b] = '3';
-                            maze[a][b + 1] = '6';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b + 1] == '5' && maze[a][b + 2] == ' ')     // 人推未复位的箱子推后未复位。
-                        {
-                            maze[a][b] = '3';
-                            maze[a][b + 1] = '2';
-                            maze[a][b + 2] = '5';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b + 1] == '5' && maze[a][b + 2] == '3')     // 人推未复位的箱子推后复位。
-                        {
-                            maze[a][b] = '3';
-                            maze[a][b + 1] = '2';
-                            maze[a][b + 2] = '7';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b + 1] == '7' && maze[a][b + 2] == ' ')	// 人推已复位的箱子推后未复位。
-                        {
-                            maze[a][b] = '3';
-                            maze[a][b + 1] = '6';
-                            maze[a][b + 2] = '5';
-                            rood++;
-                            putmap();
-                        }
-                        else if (maze[a][b + 1] == '7' && maze[a][b + 2] == '3')     // 人推已复位的箱子推后复位。
-                        {
-                            maze[a][b] = '3';
-                            maze[a][b + 1] = '6';
-                            maze[a][b + 2] = '7';
-                            rood++;
-                            putmap();
-                        }
-                    }
+                    move(foot[3][0],foot[3][1]);
                     if (pass())
                         return 0;
                     break;
