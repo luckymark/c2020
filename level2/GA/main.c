@@ -1,53 +1,33 @@
-#include <stdio.h>
-#include<string.h>
-#include<stdlib.h>
+#include<stdio.h>
+#include <time.h>
+#include"GA.h"
 
-#define LEN 100
+player players[PLAYERSNUMBER],sons[PLAYERSNUMBER];
+start begin;
+end target;
+greatest king;
+int map[HEIGHT][WIDTH];
+int maze[4][2]={{-1,0},{0,-1},{1,0},{0,1}};
 
-void inzhan(int m);
-
-void outzhan(void);
-
-int zhan[LEN];
-
-char op[LEN][LEN];
-
-int len=0,n=0;
-
-int main() {
-    while(scanf("%s",op[len])==1)
+int main()
+{
+    time_t timestart,timeend;
+    timestart=clock();
+    readinmap();
+    printmap();
+    printf("\nPlease wait for a moment...");
+    initial();
+    judgethegreat();
+    for(int i=1;i<=EVOLUTION;i++)
     {
-        len++;
+        evolution();
+        judgethegreat();
     }
-    for(int i=len-1;i>=0;i--)
-    {
-        if(strcmp(op[i],"+")==0)
-        {
-            zhan[n-2]=zhan[n-2]+zhan[n-1];
-            n--;
-        }
-        else if(strcmp(op[i],"-")==0)
-        {
-            zhan[n-2]=zhan[n-1]-zhan[n-2];
-            n--;
-        }
-        else
-        {
-            inzhan(atoi(op[i]));
-            n++;
-        }
-    }
-    printf("%d",zhan[0]);
+    printroad();
+    timeend=clock();
+    double runtime=(double)(timeend-timestart)/CLOCKS_PER_SEC;
+    printf("The least steps is:%d\nRunning time:%fs",king.steps,runtime);
     getchar();
 
     return 0;
-}
-void inzhan(int m)
-{
-    zhan[n]=m;
-}
-
-void outzhan(void)
-{
-    len--;
 }
