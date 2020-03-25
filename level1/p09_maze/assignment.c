@@ -35,7 +35,9 @@ int map[ROW][COLUMN] = {{4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4},
 void render() {
     //渲染地图：
     system("cls");
+    printf("\n\n\n\n\n\n\n");
     for (int x = 0; x < ROW; x++) {
+        printf("                                               ");
         for (int y = 0; y < COLUMN; y++) {
             switch (map[x][y]) {
                 case 4:
@@ -117,3 +119,4 @@ int main(void) {
 
     return 0;
 }
+
