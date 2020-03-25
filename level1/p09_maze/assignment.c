@@ -5,6 +5,8 @@
 #define COLUMN 15  // 15列
 
 void render();
+void startGame();
+void moveControler(int _Yp, int _Xp, int ch);
 
 //玩家 ♀   5
 //墙壁 ■   4
@@ -114,9 +116,11 @@ void startGame() {
 }
 
 int main(void) {
+    system("color 7C");
     system("chcp 65001");
     startGame();
 
     return 0;
 }
+
 
