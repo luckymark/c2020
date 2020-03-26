@@ -5,11 +5,12 @@
 #ifndef GA_GA_H
 #define GA_GA_H
 
-#define GENELENGTH 10000
-#define PLAYERSNUMBER 10000
-#define WIDTH 10
-#define HEIGHT 10
-#define EVOLUTION 1000
+#define GENELENGTH 100
+#define PLAYERSNUMBER 1000
+#define WIDTH 20
+#define HEIGHT 20
+#define EVOLUTION 20
+#define FATHER 60
 
 typedef struct player{
     int x;

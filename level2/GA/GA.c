@@ -15,6 +15,8 @@ extern greatest king;
 extern player players[PLAYERSNUMBER],sons[PLAYERSNUMBER];
 extern int map[HEIGHT][WIDTH];
 extern int maze[4][2];
+extern COORD coord;
+extern HANDLE haut;
 
 void initial(void)
 {
@@ -79,22 +81,39 @@ void printmap(void)
     }
 }
 
+int cmp(const void*a,const void*b)
+{
+    return ((player *)b)->adapt-((player *)a)->adapt;
+}
+
 void evolution(void)
 {
     srand((unsigned)(time(NULL)));
     int sonsum=0;
+    sons[0].adapt=0;
     for (int i = 0; i < PLAYERSNUMBER; ++i)
     {
-        if(players[i].adapt>0)
+        if(players[i].adapt>sons[0].adapt)
         {
             sons[sonsum]=players[i];
-            sonsum++;
         }
     }
+    if(sons[0].adapt!=0)
+        sonsum++;
+    qsort(players,PLAYERSNUMBER, sizeof(player),cmp);
     for (; sonsum<PLAYERSNUMBER ; ++sonsum)
     {
-        for (int j = 0; j < GENELENGTH; ++j)
-            sons[sonsum].gene[j]=rand()%4;
+        int dad=rand()%FATHER;
+        int mom=rand()%FATHER;
+        int temp=rand()%GENELENGTH;
+        for (int i = 0; i < temp; ++i)
+        {
+            sons[sonsum].gene[i]=players[dad].gene[i];
+        }
+        for (int k = temp; k < GENELENGTH; ++k)
+        {
+            sons[sonsum].gene[k]=players[mom].gene[k];
+        }
     }
     for (int k = 0; k < PLAYERSNUMBER; ++k)
     {
@@ -104,7 +123,6 @@ void evolution(void)
 
 void judgethegreat(void)
 {
-    king.adapt=-10000;
     for (int i = 0; i < PLAYERSNUMBER; ++i)
     {
         int steps=0;
@@ -127,7 +145,7 @@ void judgethegreat(void)
                 break;
             }
         }
-        if(players[i].adapt>king.adapt)
+        if(players[i].adapt>=king.adapt)
         {
             king.num=i;
             king.steps=steps;
@@ -138,11 +156,9 @@ void judgethegreat(void)
 
 void printroad(void)
 {
+    int steps=1;
     players[king.num].x=begin.x;
     players[king.num].y=begin.y;
-    HANDLE haut;
-    haut=GetStdHandle(STD_OUTPUT_HANDLE);
-    COORD coord;
     for (int i = 0; i < GENELENGTH ; ++i)
     {
         coord.Y=players[king.num].x;
@@ -153,6 +169,7 @@ void printroad(void)
         {
             players[king.num].x+=maze[players[king.num].gene[i]][0];
             players[king.num].y+=maze[players[king.num].gene[i]][1];
+            steps++;
         }
         else if (map[players[king.num].x+maze[players[king.num].gene[i]][0]][players[king.num].y+maze[players[king.num].gene[i]][1]]==3)
         {
@@ -162,8 +179,13 @@ void printroad(void)
             printf("a");
             break;
         }
+        coord.X=0;
+        coord.Y=HEIGHT+3;
+        SetConsoleCursorPosition(haut,coord);
+        printf("%d",steps);
+        Sleep(100);
     }
-    coord.Y=13;
+    coord.Y=HEIGHT+4;
     coord.X=0;
     SetConsoleCursorPosition(haut,coord);
 }
