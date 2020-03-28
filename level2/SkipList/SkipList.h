@@ -6,6 +6,7 @@
 /*********************************************************************************
   For convenience, it is assumed that every value is greater than zero and unique.
  *********************************************************************************/
+
 typedef struct node {
     unsigned int value;
     unsigned int level; // between 0 and MAX_LEVEL
