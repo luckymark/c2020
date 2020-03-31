@@ -43,21 +43,21 @@ RM = "D:\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Dai\c2020\level1\untitled
+CMAKE_SOURCE_DIR = C:\Users\Dai\c2020\level1\p12_warehouse
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Dai\c2020\level1\untitled\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Dai\c2020\level1\p12_warehouse\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/untitled.dir/all
+all: CMakeFiles/p12_warehouse.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
-clean: CMakeFiles/untitled.dir/clean
+clean: CMakeFiles/p12_warehouse.dir/clean
 
 .PHONY : clean
 
@@ -67,31 +67,31 @@ preinstall:
 .PHONY : preinstall
 
 #=============================================================================
-# Target rules for target CMakeFiles/untitled.dir
+# Target rules for target CMakeFiles/p12_warehouse.dir
 
 # All Build rule for target.
-CMakeFiles/untitled.dir/all:
-	$(MAKE) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/depend
-	$(MAKE) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Dai\c2020\level1\untitled\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target untitled"
-.PHONY : CMakeFiles/untitled.dir/all
+CMakeFiles/p12_warehouse.dir/all:
+	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/depend
+	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Dai\c2020\level1\p12_warehouse\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target p12_warehouse"
+.PHONY : CMakeFiles/p12_warehouse.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/untitled.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Dai\c2020\level1\untitled\cmake-build-debug\CMakeFiles 2
-	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/untitled.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Dai\c2020\level1\untitled\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/untitled.dir/rule
+CMakeFiles/p12_warehouse.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Dai\c2020\level1\p12_warehouse\cmake-build-debug\CMakeFiles 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/p12_warehouse.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Dai\c2020\level1\p12_warehouse\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/p12_warehouse.dir/rule
 
 # Convenience name for target.
-untitled: CMakeFiles/untitled.dir/rule
+p12_warehouse: CMakeFiles/p12_warehouse.dir/rule
 
-.PHONY : untitled
+.PHONY : p12_warehouse
 
 # clean rule for target.
-CMakeFiles/untitled.dir/clean:
-	$(MAKE) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/clean
-.PHONY : CMakeFiles/untitled.dir/clean
+CMakeFiles/p12_warehouse.dir/clean:
+	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/clean
+.PHONY : CMakeFiles/p12_warehouse.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

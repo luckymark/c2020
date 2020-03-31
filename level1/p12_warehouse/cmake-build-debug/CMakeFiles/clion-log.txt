@@ -1,4 +1,4 @@
-"D:\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Dai\c2020\level1\untitled
+"D:\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Dai\c2020\level1\p12_warehouse
 -- The C compiler identification is GNU 4.9.2
 -- Check for working C compiler: D:/CodeBlocks/MinGW/bin/gcc.exe
 -- Check for working C compiler: D:/CodeBlocks/MinGW/bin/gcc.exe -- works
@@ -8,4 +8,4 @@
 -- Detecting C compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/Dai/c2020/level1/untitled/cmake-build-debug
+-- Build files have been written to: C:/Users/Dai/c2020/level1/p12_warehouse/cmake-build-debug

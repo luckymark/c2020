@@ -15,7 +15,7 @@ void Hanoi (int n, char a, char c, char b)
     return;
 }
 int main() {
-    int n = 64;
+    int n = 11;
     char a = '1';
     char b = '2';
     char c = '3';

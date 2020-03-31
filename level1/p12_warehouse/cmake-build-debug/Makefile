@@ -47,10 +47,10 @@ RM = "D:\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Dai\c2020\level1\untitled
+CMAKE_SOURCE_DIR = C:\Users\Dai\c2020\level1\p12_warehouse
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Dai\c2020\level1\untitled\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Dai\c2020\level1\p12_warehouse\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Dai\c2020\level1\untitled\cmake-build-debug\CMakeFiles C:\Users\Dai\c2020\level1\untitled\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Dai\c2020\level1\p12_warehouse\cmake-build-debug\CMakeFiles C:\Users\Dai\c2020\level1\p12_warehouse\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Dai\c2020\level1\untitled\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Dai\c2020\level1\p12_warehouse\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -110,17 +110,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named untitled
+# Target rules for targets named p12_warehouse
 
 # Build rule for target.
-untitled: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 untitled
-.PHONY : untitled
+p12_warehouse: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 p12_warehouse
+.PHONY : p12_warehouse
 
 # fast build rule for target.
-untitled/fast:
-	$(MAKE) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/build
-.PHONY : untitled/fast
+p12_warehouse/fast:
+	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/build
+.PHONY : p12_warehouse/fast
 
 main.obj: main.c.obj
 
@@ -128,7 +128,7 @@ main.obj: main.c.obj
 
 # target to build an object file
 main.c.obj:
-	$(MAKE) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/main.c.obj
+	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/main.c.obj
 .PHONY : main.c.obj
 
 main.i: main.c.i
@@ -137,7 +137,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/main.c.i
+	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -146,7 +146,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/main.c.s
+	$(MAKE) -f CMakeFiles\p12_warehouse.dir\build.make CMakeFiles/p12_warehouse.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -155,8 +155,8 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
+	@echo ... p12_warehouse
 	@echo ... edit_cache
-	@echo ... untitled
 	@echo ... rebuild_cache
 	@echo ... main.obj
 	@echo ... main.i

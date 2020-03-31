@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/Dai/c2020/level1/untitled/main.c" "C:/Users/Dai/c2020/level1/untitled/cmake-build-debug/CMakeFiles/untitled.dir/main.c.obj"
+  "C:/Users/Dai/c2020/level1/p12_warehouse/main.c" "C:/Users/Dai/c2020/level1/p12_warehouse/cmake-build-debug/CMakeFiles/p12_warehouse.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
