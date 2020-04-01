@@ -5,13 +5,13 @@
 #include<time.h>
 #include<malloc.h>
 #include<string.h>
-#define MAPH 50//3Â¤ 
-#define MAPW 50// ?Ã­ 
-#define PNUM 10000//??Ã¬?Ãªy 
-#define FNUM 50//??â€²ÃºÃªy 
-#define GNUM 150//?Ã¹Ã²Ã²Ãªy
-#define VNUM 5//Ã­?Â±?Ãªy 
-#define ENUM 100//???Ë‰â€²ÃºÃªy
+#define MAPH 50//3¡è 
+#define MAPW 50// ?¨ª 
+#define PNUM 10000//??¨¬?¨ºy 
+#define FNUM 50//??¡ä¨²¨ºy 
+#define GNUM 150//?¨´¨°¨°¨ºy
+#define VNUM 5//¨ª?¡À?¨ºy 
+#define ENUM 100//???¡¥¡ä¨²¨ºy
 #define MINVAL -100000//?o?T?? 
 #define MAXVAL 100000//?y?T?? 
 struct
@@ -26,7 +26,7 @@ struct person
 }p[PNUM+5],son[PNUM+5];
 struct
 {
-	int id,h,step;//DÃ²o? 
+	int id,h,step;//D¨°o? 
 }mx;
 void init()
 {
@@ -79,7 +79,7 @@ void cal()
 			else if(p[i].g[j]==1)tmpy++;
 			else if(p[i].g[j]==2)tmpy--;
 			else if(p[i].g[j]==3)tmpx++;
-			if((j>=2&&p[i].g[j]+p[i].g[j-1]==3)||map.mp[tmpx][tmpy]==2)p[i].h-=1000;//??Ã­Â·?Â· 
+			if((j>=2&&p[i].g[j]+p[i].g[j-1]==3)||map.mp[tmpx][tmpy]==2)p[i].h-=1000;//??¨ª¡¤?¡¤ 
 			if(map.mp[tmpx][tmpy]==0)p[i].x=tmpx,p[i].y=tmpy;
 			else if(map.mp[tmpx][tmpy]==1)p[i].h-=1000;//?? 
 			else if(map.mp[tmpx][tmpy]==3)
@@ -199,3 +199,4 @@ int main()
 	printf("total steps:%d\ncal sec:%d",mx.step,(ed-st)/CLOCKS_PER_SEC);
 	return 0;
 }
+
