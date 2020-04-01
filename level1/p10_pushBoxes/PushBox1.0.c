@@ -6,9 +6,18 @@
 #define PLAYER 5
 #define BOX 6
 
-// void render();
-// void startGame();
-// void moveControler(int _Yp, int _Xp, int ch,);
+void render();
+void moveControler_Box(int _Yp, int _Xp, int ch, int object);
+void moveControler_Player(int _Yp, int _Xp, int ch, int object);
+void readScore(int* score1, int* score2);
+void writeScore();
+void latestScoreList();
+void loadMap(FILE *level);
+void importMap();
+int isWin();
+void innerCourse();
+int mainMenu();
+void startGame();
 
 //玩家 ㋡   5
 //墙壁 ■   4
@@ -154,7 +163,7 @@ void readScore(int* score1,int* score2) {
     fclose(Score);
 }
 
-void writeScore(void) {
+void writeScore() {
     FILE *Score;
     switch (nowlevel) {
         case 1:
