@@ -1,19 +1,21 @@
 
 #ifndef _WARELIST_H_
 	#define _WARELIST_H_
+	
 #include<string> 
-
+//下次的类名第一个一定大写，这次真的不想改了 
+const int maxs = 1024;
 using namespace std;
 struct ware{
 	
 	string name;
 	string type;
 	int num;
-	int price;
+	float price;
 	
 	ware *next, *last;
 	
-	ware(char* name, char* type, int num, int price){
+	ware(char* name, char* type, int num, float price){
 		this->name = name;
 		this->type = type;
 		this->num = num;
@@ -43,26 +45,26 @@ struct wareList{
 	ware* end;
 	int len;
 	
-	wareList(char* name, char* type, int num, int price){
+	wareList(char* name, char* type, int num, float price){
 		ware* f = new ware(name, type, num, price);
 		father  = f;
 		end = f;
 		len = 1;
 	}
 	
-	ware* _findWare(ware* n, char* name, char* type, int price){
+	ware* _findWare(ware* n, char* name, char* type, float price){
 		if(n->name == name && n->type == type && n->price == price)	return n;
 		if(n->isEnd()) return NULL;
 		return _findWare(n->next, name, type, price);
 	}
 	
 	
-	ware* findWare(char* name, char* type, int price){
+	ware* findWare(char* name, char* type, float price){
 		return _findWare(father, name, type, price);
 	}
 	
 	
-	void addWare(char* name, char* type, int num, int price){
+	void addWare(char* name, char* type, int num, float price){
 		ware* n = findWare(name, type, price);
 		if(n == NULL){
 			n = new ware(name, type, num, price);
@@ -93,6 +95,29 @@ struct wareList{
 	}
 	
 };
+
+
+wareList* makeList(FILE* wareHouse){
+ 
+	wareList* list = NULL;
+	char u = fgetc(wareHouse);
+	while(u != '!' && u != EOF){
+		if(u == '#'){
+			char name[maxs], type[maxs];
+			int num;
+			float price;
+			
+			fscanf(wareHouse, "%s%s%f%d", name, type, &price, &num);
+			
+			if(list == NULL)
+				list = new wareList(name, type, num, price);
+			else list->addWare(name, type, num, price);
+		}
+		u = fgetc(wareHouse);
+	}
+	fclose(wareHouse);
+	return list;
+} 
 
 	//1 根据跟文件路径和模式获取文件指针	<- 这一点我不懂为什么要获取文件路径和指针 
 	FILE* getFILE(char* filePath,char* mode);
