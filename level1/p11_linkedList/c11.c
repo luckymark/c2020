@@ -21,43 +21,21 @@ LinkList* creat(int n) {
 	return head;
 }
 LinkList* reverse(LinkList* head) {
-	LinkList* p1 = head;
-	LinkList* p2 = head;
-	LinkList* p3 = head;
+	LinkList* p1 = NULL;
+	LinkList* p2 = NULL;
+	LinkList* p3 = NULL;
 	
-	p1 = p1->next;
-	p1 = p1->next;
-	if (p1->next==NULL)//如果链表只有两项
+	p1 = head->next;
+	p2 = p1;
+	while (p2 != NULL)
 	{
-		p2 = p2->next;
-		p1->next = p2;
-		p2->next = NULL;
-		head->next = p1;
-		return head;
-	}
-	p1 = p1->next;
-	if (p1->next == NULL)//如果链表有三项
-	{
-		p2 = p2->next;
-		p1->next = p2;
-		p2->next = p3;
-		head->next = p1;
-		p3->next = NULL;
-		return head;
-	}
-	p2 = p2->next;
-	p2 = p2->next;
-	p3 = p3->next;//前三项链表
-	p3->next=NULL;//将原第一项指向空指针
-	while (p1->next != NULL) {	//结束条件为最后三项
+		p1 = p1->next;
 		p2->next = p3;
 		p3 = p2;
 		p2 = p1;
-		p1 = p1->next;
-	}
-	p2->next = p3;
-	p1->next = p2;//倒数三项的链表反序
-	head->next = p1;//头指针指向最后一项
+		
+	};
+	head->next = p3;//头指针指向最后一项
 	return head;
 }
 int find5(LinkList* head) {
