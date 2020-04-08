@@ -19,12 +19,12 @@ int map[X][Y]=
 
 
 void remakemap();
-int find();
+int find(int *m,int *n);
 int move();
-int up();
-int down();
-int left();
-int right();
+int up(int q,int p);
+int down(int q,int p);
+int left(int q,int p);
+int right(int q,int p);
 
 int main()
 {
