@@ -30,6 +30,12 @@ int main()
 {
 	printf("请按任意键开始迷宫游戏\n"); 
 	printf("请按w、s、a、d进行上下左右移动");
+	while(getch())
+	{
+	system("cls");
+	remakemap();
+	break;
+	}
 	while(move()){
 		system("cls");
 	    remakemap();
@@ -41,8 +47,8 @@ int main()
 void remakemap()
 {
 	int i,j;
-	for(i=0;i<=9;i++){
-		for(j=0;j<=9;j++){
+	for(i=0;i<=X-1;i++){
+		for(j=0;j<=Y-1;j++){
 			switch (map[i][j])
 			{
 				case 0 : printf("■");
@@ -64,9 +70,9 @@ void remakemap()
 int find(int *m,int *n)
 {
 	int i,j;	
-	for(i=0;i<=9;i++)
+	for(i=0;i<=X-1;i++)
 	{
-		for(j=0;j<=9;j++)
+		for(j=0;j<=Y-1;j++)
 		{
 			if (map[i][j]==1)
 			{
