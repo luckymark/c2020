@@ -74,24 +74,24 @@ void loadScene(const char dir[]) {
 		fread(&t, 1, 1, fp);
 		for (int k = 7; k >= 0; k--) {
 			int x = i, y = j + k;
-			if (y >= 25) {
-				y -= 25;
+			if (y >= SHAPE_Y) {
+				y -= SHAPE_Y;
 				x++;
 			}
 			map[x][y] = t & 1;
 			t >>= 1;
 		}
-		if ((j += 8) >= 25) {
-			j -= 25;
+		if ((j += 8) >= SHAPE_Y) {
+			j -= SHAPE_Y;
 			i++;
 		}
 	}
+	// when SHAPE_X * SHAPE_Y % 8 == 1
 	fread(&t, 1, 1, fp);
-	map[24][24] = ((t >> 7) & 1);
+	map[SHAPE_X - 1][SHAPE_Y - 1] = ((t >> 7) & 1);
 	fclose(fp);
-
-	for (i = 0; i < 25; i++) {
-		for (j = 0; j < 25; j++) {
+	for (i = 0; i < SHAPE_X; i++) {
+		for (j = 0; j < SHAPE_Y; j++) {
 			if (map[i][j]) {
 				print(i, j, 1);
 			}
