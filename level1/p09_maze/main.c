@@ -67,7 +67,8 @@ void print(short x, short y, int n) {
 }
 
 void loadScene(const char dir[]) {
-	unsigned char i = 0, j = 0, t;
+	unsigned char t;
+	int i = 0, j = 0;
 	FILE *fp = fopen(dir, "rb");
 	for (int loop = SHAPE_X * SHAPE_Y / 8; loop; loop--) {
 		fread(&t, 1, 1, fp);
@@ -85,10 +86,10 @@ void loadScene(const char dir[]) {
 			i++;
 		}
 	}
-
 	fread(&t, 1, 1, fp);
 	map[24][24] = ((t >> 7) & 1);
 	fclose(fp);
+
 	for (i = 0; i < 25; i++) {
 		for (j = 0; j < 25; j++) {
 			if (map[i][j]) {
