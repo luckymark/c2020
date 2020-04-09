@@ -1,55 +1,38 @@
 #include<stdio.h>
-#include<string.h>
+#include<math.h>
 #include<stdlib.h>
 
-int main(){ 
-    int n;
-    scanf("%d",&n);
-    //number to check
+int n;
 
-    int *prime=(int*)malloc(sizeof(int)*(n+2));
-    int *visit=(int*)malloc(sizeof(int)*(n+2)); 
-    //prime array consists of the primes
-    //visit array is used to check
-
-    memset(prime,0,sizeof(int)*(n+2));
-    memset(visit,0,sizeof(int)*(n+2));
-    
-    int i=2;
-    //1既不是素数也不是合数
+inline int getNumber(){ 
     int temp;
-    
-    while(i<=n/2){ 
-        //最小质因数筛法,第n个数如果被筛，肯定是被前n/2个数筛掉的
-        if(visit[i]==0){ 
-            //没被筛的情况，素数
-            prime[++prime[0]]=i;
-            //更新素数列表
-        }
-
-        int j;
-        for(j=1;j<=prime[0];++j){ 
-            //i作为素数的倍数筛合数
-            temp=prime[j]*i;
-            if(temp>n)break;
-            //列表是递增的
-
-            visit[temp]=1;
-            if(temp==n)goto ans;
-            //被检测数已经被筛
-            if(i%prime[j]==0)break;
-            //用最小质因数筛
-
-        }
-        ++i;
+    scanf("%d",&temp);
+    if(temp<=0){ 
+        printf("Invalid Input!\n");
+        exit(-1);
     }
+    return temp;
+}
+void checkNumber(int x);
 
-    //最终未被筛除
-    puts("Yes");
-    return 0;
-ans:
-    //n被筛
-    puts("No");
+int main(){ 
+    n=getNumber();
+    checkNumber(n);
     return 0;
 }
+void checkNumber(int x){ 
+    if(1==x)goto no;
+    if(2==x)goto yes;
 
+    int top=(int)sqrt(x);
+    register int i;
+    for(i=2;i<top;++i){ 
+        if((x%i)==0)goto no;
+    }
+
+yes:
+    printf("Yes!\n");
+    return;
+no:
+    printf("No!\n");
+}

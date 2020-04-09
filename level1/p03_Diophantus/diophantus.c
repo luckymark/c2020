@@ -1,32 +1,42 @@
+//binary search + tolerance
 #include<stdio.h>
 #include<math.h>
-float agel=0,ageh=1000,agen,temp;
-//用int会丢失精度
-//agel is the lowest age
-//ageh is the highest age
-//agen is the median age
 
-const float distinct=0.1;
-//the deviation to bear
+double ageL=0,ageH=1000,ageM=500,temp;
+//integer can result in implicit conversion
+//ageL is the lowest age
+//ageH is the highest age
+//ageM is the intermediate age
+
+
+inline int isGood(double x){ 
+    static const double distinct=0.1;
+    //the deviation to bear
+
+    return x<distinct && x>(-1*distinct);
+}
+inline void updateRange(){ 
+    if(temp<0){ 
+        ageH=ageM;
+    }
+    else{ 
+        ageL=ageM;
+    }
+    ageM=(ageL+ageH)/2;
+}
 
 int main(){ 
-    agen=500;
-    //init
+    //binary search
     while(1){ 
-        temp=agen/6+agen/12+agen/7+5+agen/2+4-agen;
-        
-        if(temp<distinct&&temp>(-1*distinct))break;
-        //find it
+        temp=ageM/6+ageM/12+ageM/7+5+ageM/2+4-ageM;
+        //compute formulation deviation
 
-        if(temp<0){ 
-            ageh=agen;
-        }
-        else{ 
-            agel=agen;
-        }
-        agen=(agel+ageh)/2;
-        
+
+        if(isGood(temp))break; 
+        //found 
+
+        updateRange();
     }
-    printf("%d",(int)round(agen));
+    printf("%d",(int)round(ageM));
+    //四舍五入
 }
-//二分搜索+容许误差

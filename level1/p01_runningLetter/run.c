@@ -4,39 +4,66 @@
 #include<stdlib.h>
 #include<stdbool.h>
 
-
-char str[]="MiaoMiaoMiao";
-//string to run
-int len=strlen(str);
+HANDLE hOut;
+//stdout's handle
 
 CONSOLE_SCREEN_BUFFER_INFO screen_info;
-//windowAPI ,to get screen size in character
+//screen's size in character
 
-int i;
+int len=-1;
+int xLimit=-1;
+int leftDis=0;
+bool forward=true;
+
+inline HANDLE getStdHandle(){ 
+    //get stdout handle
+    HANDLE handle= GetStdHandle(STD_OUTPUT_HANDLE);
+    if(NULL==handle){ 
+        printf("Error: Cann't get stdout handle\n");
+        exit(-1);
+    }
+    return handle;
+}
+inline void updateXLimit(){ 
+    GetConsoleScreenBufferInfo(hOut,&screen_info);
+    //get screeninfo
+    xLimit=screen_info.dwSize.X;
+    //get width in chars
+}
+void updateMove();
+void run(char *);
+
 int main()
 {
-HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
-//get stdout handle
-int x_limit;
-int left=0;
-bool forward=true;
-while(1){
-	system("cls");
-	
-	GetConsoleScreenBufferInfo(hOut,&screen_info);
-	x_limit=screen_info.dwSize.X;
-	//get screeninfo
-	
-	for(i=0;i<left;++i)printf(" ");
-	printf("%s",str);
-	
-	if(len+left==x_limit)forward=false;
-	if(left==0)forward=true;
-	
-	if(forward)left++;
-	else left--;
+    hOut=getStdHandle();
+    run("MiaoMiaoMiao");
+    CloseHandle(hOut); 
+    return 0;
 }
+void run(char *str){ 
+    len=strlen(str);
+    while(1){
+        system("cls");
+        //clean screen
 
-CloseHandle(hOut); 
-return 0;
+        updateXLimit();
+        //get width(resizable)
+
+        int i;
+        for(i=0;i<leftDis;++i)printf(" ");
+        printf("%s",str);
+        //show words
+
+        updateMove();
+        //update move policy
+    }
+}
+void updateMove(){ 
+    if(len+leftDis==xLimit)forward=false;
+    if(leftDis==0)forward=true;
+    //reorient
+
+    if(forward)leftDis++;
+    else leftDis--;
+    //update left margin
 }
