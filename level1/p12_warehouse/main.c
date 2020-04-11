@@ -9,13 +9,13 @@
 struct Item {
 	int n;
 	char id[ID_LEN];
-	struct Item* next;
+	struct Item *next;
 };
 
-struct Item* add(char id[], int n);
-struct Item** find(char id[]);
+struct Item *add(char id[], int n);
+struct Item **find(char id[]);
 void print(struct Item item);
-void del(struct Item* item);
+void del(struct Item *item);
 void in(char cmd);
 void printAll();
 void save();
@@ -33,7 +33,7 @@ inline void menu() {
 
 const char csv_format[20] = "%s , %d\n";
 char format[20] = "\t%16s%16d\n";
-struct Item* header = NULL;
+struct Item *header = NULL;
 
 int main() {
 	system("title warehouse");
@@ -54,20 +54,20 @@ int main() {
 	}
 }
 
-struct Item* add(char id[], int n) {
-	struct Item* p = (struct Item*) malloc(sizeof(struct Item));
+struct Item *add(char id[], int n) {
+	struct Item *p = (struct Item *) malloc(sizeof(struct Item));
 	memcpy(p->id, id, sizeof(char) * ID_LEN);
 	p->next = NULL;
 	p->n = n;
 	return p;
 }
 
-void del(struct Item* p) {
+void del(struct Item *p) {
 	if (header == p) {
 		header = p->next;
 	}
 	else {
-		struct Item* prev = header;
+		struct Item *prev = header;
 		while (prev->next != p) {
 			prev = prev->next;
 		}
@@ -88,7 +88,7 @@ void in(char cmd) {
 	if (cmd == '3') {
 		n = -n;
 	}
-	struct Item** p = find(id);
+	struct Item **p = find(id);
 	if (*p == NULL) {
 		if (n > 0) {
 			*p = add(id, 0);
@@ -122,8 +122,8 @@ void in(char cmd) {
 	}
 }
 
-struct Item** find(char id[]) {
-	struct Item** p = &header;
+struct Item **find(char id[]) {
+	struct Item **p = &header;
 	while (*p != NULL) {
 		if (!strcmp((*p)->id, id))
 			return p;
@@ -137,7 +137,7 @@ void print(struct Item item) {
 }
 
 void printAll() {
-	struct Item* p = header;
+	struct Item *p = header;
 	if (strcmp(format, csv_format)) {
 		puts(p == NULL ? "\n\t列表为空" : FORMAT);
 	}
@@ -157,7 +157,7 @@ void save() {
 void read() {
 	int n;
 	char id[ID_LEN];
-	struct Item** item = &header;
+	struct Item **item = &header;
 	freopen(FILENAME, "r", stdin);
 	while(scanf(csv_format, id, &n) == 2) {
 		*item = add(id, n);
