@@ -15,8 +15,8 @@
 
 
 
-bool maze[MAXN][MAXN];
-int aJ,aI;
+static bool maze[MAXN][MAXN];
+static int aJ,aI;
 //player's positon
 
 void createMaze();

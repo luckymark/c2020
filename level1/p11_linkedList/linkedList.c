@@ -1,76 +1,56 @@
-#include <stdio.h>
+#include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
 #include<stdbool.h>
+#define DEFAULT -1
 
 struct node{
-	//std linked list
     int value;
     struct  node* next;
 };
 struct node *head=NULL;
-//head ptr
 
-void reverseList(struct node *now,struct node *before);
+void makeList();
+struct node* findEnd();
+void insertList(int target);
+void showList();
+int findNext(int target,int pos);
+void reverseList(struct node *this,struct node *prev);
 //recursively reverse
 
-struct node* findEnd();
-//would like to insert node to the end,every time
-
-void insertList(int target);
-//insert node
-
-int findNext(int target);
-//find node of target
-
-void showList();
-
-int tempvalue,i;
-//temp
-int main() {
-    int num;
-    puts("Please input the number of elements");
-    scanf("%d",&num);
-    puts("Pleae input elements:");
-	for(i=0;i<num;++i){
-        scanf("%d",&tempvalue);
-        insertList(tempvalue);
-    }
-    //make list
+int main(){
+    makeList();
 
     printf("\nIn order:\n");
     showList();
-    //show in order
 
     printf("\n\nFind 5 firstly:\n");
-    printf("%d",findNext(5));
-    //find 5
+    printf("%d",findNext(5,DEFAULT));
+
     printf("\nFind 5 secondly:\n");
-    printf("%d\n",findNext(5));
-    //find 5
+    printf("%d\n",findNext(5,DEFAULT));
 
     reverseList(head,NULL);
-    printf("\nReverse:\n");
+    printf("\nReversed:\n");
     showList();
-    //show reversed list
+
     return 0;
 }
-void reverseList(struct node *now,struct node *before){
-    if(now->next==NULL){
-    	//change the end into head
-        head=now;
+void reverseList(struct node *this,struct node *prev){
+    if(this->next==NULL){
+        head=this;
         return;
     }
-    reverseList(now->next,now);
-    //reverse the part behind now
-    now->next->next=now;
-    now->next=before;
-    //reverse now
+    reverseList(this->next,this);
+    //reverse the part behind this
+    this->next->next=this;
+    this->next=prev;
+    //reverse this
 }
 void insertList(int value){
-	//insert to the end 
+	//insert to end 
     struct node* now=findEnd(head);
-    if(now==NULL){
+    if(NULL==now){
     	//empty list
         head=(struct node*)malloc(sizeof(struct node));
         head->value=value;
@@ -83,7 +63,7 @@ void insertList(int value){
 }
 struct node* findEnd(){
     struct node * now=head;
-    if(now==NULL)return NULL;
+    if(NULL==now)return NULL;
     while(now->next)now=now->next;
     return now;
 }
@@ -92,23 +72,35 @@ void showList(){
     while(now){
         printf("%d ",now->value);
         now=now->next;
-        //renew
     }
+    printf("\n");
 }
-int findNext(int target){
-    //find target number
+int findNext(int target,int pos){
     if(head==NULL)return -1;
     static int ptr=0;
     //save old moves
+    if(pos>=0)ptr=pos;
     struct node* now=head;
-    for(i=1;i<ptr+1;++i)now=now->next;
-   	//repeat old moves
+    int i;
+    for(i=1;i<=ptr;++i)now=now->next;
+   	//repeat old moves and skip the old values
     while(now){
-        ptr++;
+        ++ptr;
         if(now->value==target){
             return ptr;
         }
         now=now->next;
     }
     return -1;
+}
+void makeList(){ 
+    int num;
+    puts("Please input the number of elements");
+    scanf("%d",&num);
+    puts("Pleae input elements:");
+    int i,tmp;
+    for(i=0;i<num;++i){
+        scanf("%d",&tmp);
+        insertList(tmp);
+    }
 }

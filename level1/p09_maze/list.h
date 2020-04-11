@@ -8,9 +8,9 @@ struct node{
     struct  node* next;
     //std linked list
 };
-struct node *head=NULL;
+static struct node *head=NULL;
 //head ptr
-int listSize=0;
+static int listSize=0;
 
 void insertList(int x,int y);
 void delList(int pos);
