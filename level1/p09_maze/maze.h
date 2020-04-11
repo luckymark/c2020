@@ -7,22 +7,24 @@
 
 #define MAXN 20
 #define SEED 0
+#define BI 2
+#define BJ 1
+#define ROAD 1
+#define WALL 0
+//destination's positon
+
 
 
 bool maze[MAXN][MAXN];
-//0-wall 1-road
-int aX,aY;
+int aJ,aI;
 //player's positon
 
 void createMaze();
 void printMaze();
-void move(char mode);
+void moveChar(char mode);
 inline bool isWin();
 inline void win();
-inline void moveA();
-inline void moveD();
-inline void moveS();
-inline void moveW();
+inline void move(int i,int j);
 inline void moveQ();
 inline void moveDefault();
 inline void initSeed(int _seed);
@@ -32,7 +34,7 @@ inline void setOutlineRoad();
 inline bool isConvertable(int x,int y);
 inline void addNeighbors(int x,int y);
 inline void printNode(int i,int j);
-
+inline bool isValid(int i,int j);
 
 
 void createMaze(){
@@ -56,7 +58,7 @@ void createMaze(){
         delList(r);
 
         if (isConvertable(x,y)) {
-            maze[x][y]=1;
+            maze[x][y]=ROAD;
             //change wall into road
             addNeighbors(x,y);
             //add new walls to list
@@ -78,26 +80,22 @@ void printMaze(){
     }
     puts("\n!!Using WSAD to get B!!\n");
 }
-void move(char mode){ 
+void moveChar(char mode){ 
+    mode=toupper(mode);
     switch(mode){
         case 'W':
-        case 'w':
-            moveW();
+            move(-1,0);
             break;
         case 'S':
-        case 's':
-            moveS();
+            move(1,0);
             break;
         case 'A':
-        case 'a':
-            moveA();
+            move(0,-1);
             break;
         case 'D':
-        case 'd':
-            moveD();
+            move(0,1);
             break;
         case 'Q':
-        case 'q':
             moveQ();
             break;
         default:
@@ -105,33 +103,18 @@ void move(char mode){
     }
 }
 inline void win(){ 
+    printMaze();
     printf("\n\nYou Win!!!\nInput any to Quit\n");
     getch();
     exit(0);
 }
 inline bool isWin(){ 
-    return 1==aX&&2==aY;
+    return BJ==aJ&&BI==aI;
 }
-inline void moveA(){ 
-    if((aX>1)&&1==maze[aY][aX-1]){
-        aX-=1;
-    }
-
-}
-inline void moveD(){ 
-    if((aX<MAXN-2)&&1==maze[aY][aX+1]){
-        aX+=1;
-    }
-}
-inline void moveW(){ 
-    if((aY>1)&&1==(maze[aY-1][aX])){
-        aY-=1;
-    }
-}
-inline void moveS(){ 
-    if(((aY<MAXN-2)&&1==(maze[aY+1][aX])))
-    {
-        aY+=1;
+inline void move(int i,int j){ 
+    if(isValid(aI+i,aJ+j)&&ROAD==maze[aI+i][aJ+j]){
+        aI+=i;
+        aJ+=j;
     }
 }
 inline void moveQ(){ 
@@ -147,15 +130,15 @@ inline void initSeed(int _seed){
     else srand(_seed);
 }
 inline void setOutlet(){ 
-    maze[2][1] = 1;
+    maze[2][1] = ROAD;
 }
 inline void setEntrance(){ 
     int i;
     for(i=MAXN-3;i>=0;i--) {
-        if (1==maze[i][MAXN-1-2]) {
-            aY=i;
-            aX=MAXN-1-1;
-            maze[i][MAXN-1-1]=1;
+        if (ROAD==maze[i][MAXN-1-2]) {
+            aI=i;
+            aJ=MAXN-1-1;
+            maze[i][MAXN-1-1]=ROAD;
             break;
         }
     }
@@ -163,7 +146,7 @@ inline void setEntrance(){
 inline void setOutlineRoad(){ 
     int i;
     for(i=0;i<MAXN;++i) {
-        maze[i][MAXN-1]=maze[MAXN-1][i]=maze[0][i]=maze[i][0]=1;
+        maze[i][MAXN-1]=maze[MAXN-1][i]=maze[0][i]=maze[i][0]=ROAD;
     }
 }
 inline bool isConvertable(int x,int y){ 
@@ -171,7 +154,7 @@ inline bool isConvertable(int x,int y){
     int i,j,cnt=0;
     for(i=x-1;i<x+2;i++){
         for(j=y-1;j<y+2;j++){
-            if(1==abs(x-i)+abs(y-j)&&1==maze[i][j]){
+            if(1==abs(x-i)+abs(y-j)&&ROAD==maze[i][j]){
                 ++cnt;
             }
         }
@@ -183,21 +166,24 @@ inline void addNeighbors(int x,int y){
     int i,j;
     for(i=x-1;i<x+2;i++){
         for(j=y-1;j<y+2;j++){
-            if(1==abs(x-i)+abs(y-j)&&0==maze[i][j]){
+            if(1==abs(x-i)+abs(y-j)&&WALL==maze[i][j]){
                 insertList(i,j);
             }
         }
     }
 }
 inline void printNode(int i,int j){ 
-    if(!maze[i][j]){
+    if(WALL==maze[i][j]){
         printf("%c ",3);
         //baffle : somewhat weird char
     }
-    else if(i==aY&&j==aX)printf("A ");
+    else if(i==aI&&j==aJ)printf("A ");
     //You are Here
-    else if(2==i&&1==j)printf("B ");
+    else if(BI==i&&BJ==j)printf("B ");
     //Destination
     else printf("  ");
     //road
+}
+inline bool isValid(int i,int j){ 
+    return (i<MAXN-1)&&(i>0)&&(j<MAXN-1)&&(j>0);
 }

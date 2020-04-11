@@ -7,7 +7,7 @@ int main(){
     while(1){
         printMaze();
         temp=getch();
-        move(temp);
+        moveChar(temp);
         if(isWin())win();
     }
 }
