@@ -110,17 +110,10 @@ LinkList NewLinkList_WithHeadNode(int length)
     return head_node;
 }
 
-
 LinkList GetReversedLinkList(LinkList headNode)
 {
     //init
-    LinkList current_p = headNode,backup_p = NULL,pioneer_p = NULL;
-    int length = 1;
-    while(current_p->next != NULL)
-    {
-        length++;
-        current_p = current_p->next;
-    }
+    LinkList current_p = NULL,backup_p = NULL,pioneer_p = NULL;
 
     //reverse
     current_p = headNode->next;
