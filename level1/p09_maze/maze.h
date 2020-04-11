@@ -3,88 +3,37 @@
 #include<stdlib.h>
 #include<string.h>
 #include<conio.h>
+#include"list.h"
 
 #define MAXN 20
 #define SEED 0
-static int listsize=0;
-//kill magic number
 
-int aX,aY;
-//now positon
+
 bool maze[MAXN][MAXN];
+//0-wall 1-road
+int aX,aY;
+//player's positon
 
-struct node{
-    //std linked list
-    int x;
-    int y;
-    //position
-    struct  node* next;
-};
-struct node *head=NULL;
-//head ptr
-
-void insertList(int x,int y);
-void showList();
 void createMaze();
+void printMaze();
+void move(char mode);
+inline bool isWin();
+inline void win();
+inline void moveA();
+inline void moveD();
+inline void moveS();
+inline void moveW();
+inline void moveQ();
+inline void moveDefault();
+inline void initSeed(int _seed);
+inline void repair();
 
 
-void insertList(int x,int y){
-	//insert to the head
-    struct node* temp=head;
-    head=(struct node*)malloc(sizeof(struct node));
-    head->next=temp;
-    head->x=x;
-    head->y=y;
-    listsize++;
-}
-
-void delList(int pos){
-    if(pos>listsize){
-    	//out of range
-        puts("Error on delele!! No such position!!");
-        exit(0);
-    }
-    struct node *now=head,*temp;
-    if(pos==1){
-    	//special
-        temp=head;
-        head=head->next;
-        free(temp);
-        listsize--;
-        return;
-    }
-    int i;
-    for(i=0;i<pos-2;++i)now=now->next;
-    temp=now->next;
-    now->next=temp->next;
-    free(temp);
-    listsize--;
-}
-void showList(){
-    struct node* now =head;
-    while(now){
-        printf("%d %d\n",now->x,now->y);
-        now=now->next;
-        //renew
-    }
-}
 void createMaze(){
-	//prime
-
-    if(SEED==0)srand(time(NULL));
-    else srand(SEED);
-    //seed
-
-    memset(maze,0,sizeof(bool)*MAXN*MAXN);
-    //set all to wall
-    //0-wall 1-road
-
+    //prime algorithm
     int i;
-    for (i = 0; i < MAXN; i++) {
-        maze[i][0] = 1;
-        maze[0][i] = 1;
-        maze[MAXN - 1][i] = 1;
-        maze[i][MAXN - 1] = 1;
+    for(i=0;i<MAXN;++i) {
+        maze[i][MAXN-1]=maze[MAXN-1][i]=maze[0][i]=maze[i][0]=1;
     }
     //make the outline to be road
 
@@ -92,9 +41,8 @@ void createMaze(){
     //initialize maze's first road
 
     int x,y,cnt,j,r;
-
-    while (listsize>0) {
-        r = rand()%listsize+1;
+    while (getListSize()>0) {
+        r = rand()%getListSize()+1;
         struct node* ptr=head;
         for(i=0;i<r-1;++i)ptr=ptr->next;
         x=ptr->x;
@@ -105,7 +53,7 @@ void createMaze(){
         cnt=0;
         for(i=x-1;i<x+2;i++){
             for(j=y-1;j<y+2;j++){
-                if(abs(x-i)+abs(y-j)==1&&maze[i][j]==1){
+                if(1==abs(x-i)+abs(y-j)&&1==maze[i][j]){
                     ++cnt;
                 }
             }
@@ -117,7 +65,7 @@ void createMaze(){
             //add new walls to list
             for (i=x-1;i<x+2;i++) {
                 for (j=y-1;j<y+2;j++) {
-                    if (abs(x-i)+abs(y-j)==1&&maze[i][j] == 0) {
+                    if (1==abs(x-i)+abs(y-j)&& 0==maze[i][j] ) {
                         insertList(i,j);
                     }
                 }
@@ -126,22 +74,112 @@ void createMaze(){
     }
 
     maze[2][1] = 1;
-    //set out
+    //set outlet
 
     for (i = MAXN - 3; i >= 0; i--) {
-        if (maze[i][MAXN -1-2] == 1) {
-        	aY=i;
-        	aX=MAXN-1-1;
-            maze[i][MAXN -1-1] = 1;
+        if (1==maze[i][MAXN -1-2]) {
+            aY=i;
+            aX=MAXN-1-1;
+            maze[i][MAXN-1-1] = 1;
             break;
         }
     }
-    //set in
+    //set entrance
 
     for(i=0;i<MAXN;++i){
         for(j=0;j<MAXN;++j){
-            maze[i][j]=1^maze[i][j];
+            maze[i][j]^=1;
         }
     }
-    //solve confliction with the next print part
+    //solve confliction with the next part
+}
+void printMaze(){ 
+    system("cls");
+    //flush
+
+    int i,j;
+    for(i=0;i<MAXN;++i){
+        for(j=0;j<MAXN;++j){
+            if(maze[i][j]){
+                printf("%c ",3);
+                //baffle : somewhat weird char
+            }
+            else if(i==aY&&j==aX)printf("A ");
+            //You are Here
+            else if(2==i&&1==j)printf("B ");
+            //Destination
+            else printf("  ");
+            //road
+        }
+        printf("\n");
+    }
+    puts("\n!!Using WSAD to get B!!\n");
+}
+void move(char mode){ 
+    switch(mode){
+        case 'W':
+        case 'w':
+            moveW();
+            break;
+        case 'S':
+        case 's':
+            moveS();
+            break;
+        case 'A':
+        case 'a':
+            moveA();
+            break;
+        case 'D':
+        case 'd':
+            moveD();
+            break;
+        case 'Q':
+        case 'q':
+            moveQ();
+            break;
+        default:
+            moveDefault();
+    }
+}
+inline void win(){ 
+    printf("\n\nYou Win!!!\nInput any to Quit\n");
+    getch();
+    exit(0);
+}
+inline bool isWin(){ 
+    return 1==aX&&2==aY;
+}
+inline void moveA(){ 
+    if((aX>1)&&maze[aY][aX-1]!=1){
+        aX-=1;
+    }
+
+}
+inline void moveD(){ 
+    if((aX<MAXN-2)&&maze[aY][aX+1]!=1){
+        aX+=1;
+    }
+}
+inline void moveW(){ 
+    if((aY>1)&&(maze[aY-1][aX]!=1)){
+        aY-=1;
+    }
+}
+inline void moveS(){ 
+    if(((aY<MAXN-2)&&(maze[aY+1][aX]!=1)))
+    {
+        aY+=1;
+    }
+}
+inline void moveQ(){ 
+    puts("Quit~");
+    exit(0);
+}
+inline void moveDefault(){ 
+    puts("Unknown Input!");
+    getch();
+}
+inline void initSeed(int _seed){ 
+    if(0==_seed)srand(time(NULL));
+    else srand(_seed);
 }
