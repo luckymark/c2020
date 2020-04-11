@@ -26,72 +26,44 @@ inline void moveW();
 inline void moveQ();
 inline void moveDefault();
 inline void initSeed(int _seed);
-inline void repair();
+inline void setOutlet();
+inline void setEntrance();
+inline void setOutlineRoad();
+inline bool isConvertable(int x,int y);
+inline void addNeighbors(int x,int y);
+inline void printNode(int i,int j);
+
 
 
 void createMaze(){
     //prime algorithm
-    int i;
-    for(i=0;i<MAXN;++i) {
-        maze[i][MAXN-1]=maze[MAXN-1][i]=maze[0][i]=maze[i][0]=1;
-    }
-    //make the outline to be road
+    //具体我也不懂，就是好像这个算法的思想就是最小生成树
+    //导致了每两个可行点之间有且仅有一条路径
 
+    setOutlineRoad();
     insertList(2,2);
-    //initialize maze's first road
+    //list是墙的collective，这个list中的墙在一定条件下为变化为路
+    //(2,2)满足变化为路的条件
 
-    int x,y,cnt,j,r;
+    int x,y,r;
     while (getListSize()>0) {
+
         r = rand()%getListSize()+1;
-        struct node* ptr=head;
-        for(i=0;i<r-1;++i)ptr=ptr->next;
+        struct node* ptr=NULL;
+        ptr=getElement(r);
         x=ptr->x;
         y=ptr->y;
         delList(r);
 
-        //判读上下左右四个方向是否为路
-        cnt=0;
-        for(i=x-1;i<x+2;i++){
-            for(j=y-1;j<y+2;j++){
-                if(1==abs(x-i)+abs(y-j)&&1==maze[i][j]){
-                    ++cnt;
-                }
-            }
-        }
-        if (cnt <= 1) {
-            maze[x][y] = 1;
-            //change into road
-
+        if (isConvertable(x,y)) {
+            maze[x][y]=1;
+            //change wall into road
+            addNeighbors(x,y);
             //add new walls to list
-            for (i=x-1;i<x+2;i++) {
-                for (j=y-1;j<y+2;j++) {
-                    if (1==abs(x-i)+abs(y-j)&& 0==maze[i][j] ) {
-                        insertList(i,j);
-                    }
-                }
-            }
         }
     }
-
-    maze[2][1] = 1;
-    //set outlet
-
-    for (i = MAXN - 3; i >= 0; i--) {
-        if (1==maze[i][MAXN -1-2]) {
-            aY=i;
-            aX=MAXN-1-1;
-            maze[i][MAXN-1-1] = 1;
-            break;
-        }
-    }
-    //set entrance
-
-    for(i=0;i<MAXN;++i){
-        for(j=0;j<MAXN;++j){
-            maze[i][j]^=1;
-        }
-    }
-    //solve confliction with the next part
+    setOutlet();
+    setEntrance();
 }
 void printMaze(){ 
     system("cls");
@@ -100,16 +72,7 @@ void printMaze(){
     int i,j;
     for(i=0;i<MAXN;++i){
         for(j=0;j<MAXN;++j){
-            if(maze[i][j]){
-                printf("%c ",3);
-                //baffle : somewhat weird char
-            }
-            else if(i==aY&&j==aX)printf("A ");
-            //You are Here
-            else if(2==i&&1==j)printf("B ");
-            //Destination
-            else printf("  ");
-            //road
+            printNode(i,j);
         }
         printf("\n");
     }
@@ -150,23 +113,23 @@ inline bool isWin(){
     return 1==aX&&2==aY;
 }
 inline void moveA(){ 
-    if((aX>1)&&maze[aY][aX-1]!=1){
+    if((aX>1)&&1==maze[aY][aX-1]){
         aX-=1;
     }
 
 }
 inline void moveD(){ 
-    if((aX<MAXN-2)&&maze[aY][aX+1]!=1){
+    if((aX<MAXN-2)&&1==maze[aY][aX+1]){
         aX+=1;
     }
 }
 inline void moveW(){ 
-    if((aY>1)&&(maze[aY-1][aX]!=1)){
+    if((aY>1)&&1==(maze[aY-1][aX])){
         aY-=1;
     }
 }
 inline void moveS(){ 
-    if(((aY<MAXN-2)&&(maze[aY+1][aX]!=1)))
+    if(((aY<MAXN-2)&&1==(maze[aY+1][aX])))
     {
         aY+=1;
     }
@@ -182,4 +145,59 @@ inline void moveDefault(){
 inline void initSeed(int _seed){ 
     if(0==_seed)srand(time(NULL));
     else srand(_seed);
+}
+inline void setOutlet(){ 
+    maze[2][1] = 1;
+}
+inline void setEntrance(){ 
+    int i;
+    for(i=MAXN-3;i>=0;i--) {
+        if (1==maze[i][MAXN-1-2]) {
+            aY=i;
+            aX=MAXN-1-1;
+            maze[i][MAXN-1-1]=1;
+            break;
+        }
+    }
+}
+inline void setOutlineRoad(){ 
+    int i;
+    for(i=0;i<MAXN;++i) {
+        maze[i][MAXN-1]=maze[MAXN-1][i]=maze[0][i]=maze[i][0]=1;
+    }
+}
+inline bool isConvertable(int x,int y){ 
+    //判读上下左右四个方向是否为路
+    int i,j,cnt=0;
+    for(i=x-1;i<x+2;i++){
+        for(j=y-1;j<y+2;j++){
+            if(1==abs(x-i)+abs(y-j)&&1==maze[i][j]){
+                ++cnt;
+            }
+        }
+    }
+    if(cnt<=1)return true;
+    else return false;
+}
+inline void addNeighbors(int x,int y){ 
+    int i,j;
+    for(i=x-1;i<x+2;i++){
+        for(j=y-1;j<y+2;j++){
+            if(1==abs(x-i)+abs(y-j)&&0==maze[i][j]){
+                insertList(i,j);
+            }
+        }
+    }
+}
+inline void printNode(int i,int j){ 
+    if(!maze[i][j]){
+        printf("%c ",3);
+        //baffle : somewhat weird char
+    }
+    else if(i==aY&&j==aX)printf("A ");
+    //You are Here
+    else if(2==i&&1==j)printf("B ");
+    //Destination
+    else printf("  ");
+    //road
 }

@@ -16,6 +16,7 @@ void insertList(int x,int y);
 void delList(int pos);
 void showList();
 int getListSize();
+struct node *getElement(int index);
 
 
 void insertList(int x,int y){
@@ -58,4 +59,15 @@ void showList(){
 }
 inline int getListSize(){ 
     return listSize;
+}
+struct node *getElement(int index){ 
+    if(index<=0||index>listSize){ 
+        printf("Error on %s : %s : %s ! Out of Range!!",__FILE__,__func__,__LINE__); 
+        exit(-1);
+    }
+    //1 to listSize
+    struct node* ptr=head;
+    int i;
+    for(i=0;i<index-1;++i)ptr=ptr->next;
+    return ptr;
 }
