@@ -1,17 +1,16 @@
 #include <stdio.h>
-int f(int n){
-    switch(n){
-        case 1:
-            return 1;
-        case 2:
-            return 3;
-        default:
-            return 2*f(n-1)+1;
-    }
+int cnt=0;
+void f(int n,char x,char y){
+    if(n<1) return;
+    f(n-1,'A','B');
+    printf("%c->%c\n",x,y);
+    cnt++;
+    f(n-1,'B','C');
 }
 int main() {
     int n;
     scanf("%d",&n);
-    printf("%d",f(n));
+    f(n,'A','C');
+    printf("%d",cnt);
     return 0;
 }
