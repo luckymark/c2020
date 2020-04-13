@@ -2,158 +2,188 @@
 #include <stdlib.h>
 #include "conio.h"
 #include <time.h>
+
 #define MAX_SIZE 99
 
 //structure define
 typedef enum
 {
     space = 0,
-    wall = 1,
-    player = 2
+    wall,
+    player,
+    startSignal,
+    endSignal
 } MapBitType;
-char mapBit[3] = {' ','#','*'};
+char mapBit[5] = {' ','#','P','A','B'};
 typedef struct
 {
     int x;
     int y;
 } Point;
+typedef enum
+{
+    StatePlay = 1,
+    StateQuitGame
+} MenuState;
 typedef struct
 {
     char map[MAX_SIZE][MAX_SIZE];
-    int m,n;
-    Point point, start_point, end_point;
+    Point point, startPoint, endPoint,mapSize,tmpPoint;
+    char standOn;
 } GameEngine;
-typedef struct
-{
-    GameEngine* engine;
-    int list[MAX_SIZE * MAX_SIZE];
-    int list_tail;
-} GameEngineGenerator;
 
-//global
-Point MOVEMENT[23] = {
-        (Point){.x = -1,.y =  0}, //key a, go left
-        (Point){.x =  0,.y =  0},
-        (Point){.x =  0,.y =  0},
-        (Point){.x =  1,.y =  0}, //key d, go right
-        (Point){.x =  0,.y =  0},
-        (Point){.x =  0,.y = -1}, //arrow up    -> getch = 72
-        (Point){.x =  0,.y =  0},
-        (Point){.x =  0,.y =  0},
-        (Point){.x = -1,.y =  0}, //arrow left  -> getch = 75
-        (Point){.x =  0,.y =  0},
-        (Point){.x =  1,.y =  0}, //arrow right -> getch = 77
-        (Point){.x =  0,.y =  0},
-        (Point){.x =  0,.y =  0},
-        (Point){.x =  0,.y =  1}, //arrow down  -> getch = 80
-        (Point){.x =  0 ,.y = 0},
-        (Point){.x =  0,.y =  0},
-        (Point){.x =  0,.y =  0},
-        (Point){.x =  0,.y =  0},
-        (Point){.x =  0,.y =  1}, //key s, go down
-        (Point){.x =  0,.y =  0},
-        (Point){.x =  0,.y =  0},
-        (Point){.x =  0,.y =  0},
-        (Point){.x =  0,.y = -1}  //key w, go up
-};
+//prototype of object method
+GameEngine *generateEngine(Point mapSize);
+Point pointPlus(Point left, Point right);
+GameEngine * NewEngine(Point mapSize);
+GameEngine *disposeEngine(GameEngine *engine);
 
-//prototype
-GameEngine * generateMap(int m, int n);
-int getRandomInt(int ubound);
-int isOutOfMap(GameEngine *engine, Point point);
+//prototype of game logic
+int isPlayerBlocked(GameEngine *engine);
 void drawMap(GameEngine *engine);
-void initGameEngine(GameEngine *engine, int m, int n);
 void playGame(GameEngine *engine);
 int isWon(GameEngine *engine);
-void move(GameEngine *engine, int ch);
+Point getMovement(int ch);
+void walk(GameEngine *engine);
+
+//prototype of general method
+int getRandomInt(int ubound);
+MenuState showMainMenu();
+Point getSucceededMapSizeFromUser();
 
 int main()
 {
-    //get m n and generate game engine
-    int m,n;
-    printf("请输入迷宫的长，最大值%d：",MAX_SIZE);
-    scanf("%d",&m);
-    printf("\n请输入迷宫的宽，最大值%d：",MAX_SIZE);
-    scanf("%d",&n);
-    putchar('\n');
-    GameEngine* engine = generateMap(m, n);
+    //init
+    MenuState state = 0;
+    GameEngine * engine = NULL;
+    Point mapSize;
+
+    while(1)
+    {
+        system("cls");
+        state = showMainMenu();
+        switch(state)
+        {
+            case StatePlay:
+                mapSize = getSucceededMapSizeFromUser();
+                engine = generateEngine(mapSize);
+                if(NULL == engine)
+                {
+                    printf("\n【错误】游戏加载失败\n");
+                    system("pause");
+                    break;
+                }
+                playGame(engine);
+                engine = disposeEngine(engine);
+                break;
+            case StateQuitGame:
+                engine = disposeEngine(engine);
+                exit(0);
+            default:
+                printf("请正确输入序号！\n");
+                system("pause");
+        }
+    }
+
+}
+void playGame(GameEngine *engine)
+{
+    //init
+    int ch;
+    Point tmpMove;
     drawMap(engine);
 
     //play
-    playGame(engine);
-
-    //quit game
-    free(engine);
-
-    return 0;
-}
-
-void playGame(GameEngine *engine)
-{
-    int ch;
     while (1)
     {
         ch = _getch();
-        move(engine,ch);
+        tmpMove = getMovement(ch);
+        engine->tmpPoint = pointPlus(engine->point, tmpMove);
+
+        if(isPlayerBlocked(engine))
+            continue;
+        walk(engine);
         if(isWon(engine))
             break;
     }
 
+    //show win message
+
 }
 
-void move(GameEngine *engine, int ch)
+void walk(GameEngine *engine)
 {
-    /* TODO add remark to this function and fix magic number
-     *
-     * */
+    engine->map[engine->point.x][engine->point.y] = engine->standOn;
+    engine->standOn = engine->map[engine->tmpPoint.x][engine->tmpPoint.y];
+    engine->map[engine->tmpPoint.x][engine->tmpPoint.y] = mapBit[player];
+    engine->point = engine->tmpPoint;
 
-    //get tmp point
-    Point tmpPoint;
-    if(0 == ch || 224 == ch)
-        tmpPoint = MOVEMENT[_getch() - 72 + 5];
-    else if(ch < 'a')
-        tmpPoint = MOVEMENT[ch - 'a' - 26];
-    else
-        tmpPoint = MOVEMENT[ch - 'a'];
-    tmpPoint = (Point){.x= tmpPoint.x + engine->point.x, .y = tmpPoint.y + engine->point.y};
-
-    // don't move when meets wall
-    if(mapBit[wall] == engine->map[tmpPoint.x][tmpPoint.y])
-        return;
-
-    engine->point = tmpPoint;
-
+    drawMap(engine);
 }
 
 int isWon(GameEngine *engine)
 {
-    if(engine->end_point.x != engine->point.x)
+    if(engine->endPoint.x != engine->point.x)
         return 0;
-    if(engine->end_point.y != engine->point.y)
+    if(engine->endPoint.y != engine->point.y)
         return 0;
     return 1;
 }
 
-GameEngine * generateMap(int m, int n)
+int isPlayerBlocked(GameEngine *engine)
+{
+    if(engine->map[engine->tmpPoint.x][engine->tmpPoint.y] == mapBit[wall])
+        return 1;
+
+    if(!(engine->point.x > 0 && engine->point.x < 2 * engine->mapSize.x
+         && engine->point.y > 0 && engine->point.y < 2 * engine->mapSize.y))
+        return 1;
+
+    return 0;
+}
+
+GameEngine * generateEngine(Point mapSize)
 {
     /// using Randomized Prim's Algorithm to generate a m*n map
 
     //init
-    GameEngine *  result = malloc(sizeof(GameEngine));
-    initGameEngine(result, m, n);
-    GameEngineGenerator generator;
-    generator.engine = result;
-    generator.list_tail = 0;
+    GameEngine * engine = NewEngine(mapSize);
 
     //generate
 
-    return result;
+
+
+    return engine;
 }
 
-void initGameEngine(GameEngine *engine, int m, int n)
+Point getSucceededMapSizeFromUser()
 {
-    engine->m = m;
-    engine->n = n;
+    //init
+    Point mapSize;
+    int m,n;
+
+    do
+    {
+        system("cls");
+        printf("请输入迷宫的长，最大值%d：",MAX_SIZE);
+        scanf("%d",&m);
+        printf("\n请输入迷宫的宽，最大值%d：",MAX_SIZE);
+        scanf("%d",&n);
+        putchar('\n');
+    } while (m > 0 && n > 0 && m < MAX_SIZE && n < MAX_SIZE);
+
+    mapSize = (Point){m, n};
+    return mapSize;
+}
+
+GameEngine * NewEngine(Point mapSize)
+{
+    GameEngine *engine = malloc(sizeof(GameEngine));
+
+    int m = mapSize.x;
+    int n = mapSize.y;
+    engine->mapSize = mapSize;
+    engine->standOn = mapBit[space];
 
     //init map
     int i = 0,j = 0;
@@ -167,33 +197,20 @@ void initGameEngine(GameEngine *engine, int m, int n)
         }
 
     //set Start Node And End Node
-    if(0 == getRandomInt(1))
-    {
-        i = getRandomInt(m);
-        engine->start_point.x = 2 * i + 1;
-        engine->start_point.y = 0;
-        engine->map[2 * i + 1][0] = mapBit[space];
-    }
-    else
-    {
-        j = getRandomInt(n);
-        engine->start_point.x = 0;
-        engine->start_point.y = 2 * j + 1;
-        engine->map[0][2 * j + 1] = mapBit[wall];
-    }
+    engine->startPoint = (Point){1,0};
+    engine->endPoint = (Point){2*m+1,2*n};
+    engine->map[engine->startPoint.x][engine->startPoint.y] = mapBit[startSignal];
+    engine->map[engine->startPoint.x][engine->startPoint.y] = mapBit[endSignal];
 
+    return engine;
 }
 
-int isOutOfMap(GameEngine *engine, Point point)
+MenuState showMainMenu()
 {
-    if(point.x > 0 && point.x < 2 * engine->m && point.y > 0 && point.y < 2 * engine->n)
-        return 0;
-    else
-        return 1;
+    printf("1. 开始新游戏\n2.退出游戏\n");
+    return StateQuitGame;
 }
 
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "cert-msc50-cpp"
 int getRandomInt(int ubound)
 {
     //printf("start get random int\n");
@@ -201,19 +218,95 @@ int getRandomInt(int ubound)
         return 0;
     int a;
     srand((unsigned)time(NULL)+1-1);
-    a = rand() % (ubound+1); // NOLINT(cert-msc30-c)
+    a = rand() % (ubound+1);
     return a;
 }
-#pragma clang diagnostic pop
 
 void drawMap(GameEngine *engine)
 {
     int i,j;
-    for(i = 0;i <= 2 * engine->m; i++)
+    for(i = 0;i <= 2 * engine->mapSize.x; i++)
     {
-        for(j = 0;j <= 2 * engine->n; j++)
+        for(j = 0;j <= 2 * engine->mapSize.y; j++)
             printf("%c ", engine->map[i][j]);
         printf("\n");
     }
     printf("\n\n");
+}
+
+Point pointPlus(Point left, Point right)
+{
+    Point result;
+    result.x = left.x + right.x;
+    result.y = left.y + right.y;
+    return result;
+}
+
+GameEngine *disposeEngine(GameEngine *engine)
+{
+    if(NULL != engine)
+        free(engine);
+    return NULL;
+}
+
+Point getMovement(int ch)
+{
+    //get tmp point
+    Point tmpPoint = {0,0};
+
+    if (0 == ch || 224 == ch)
+    {
+        // Use arrow keys
+        switch (getch())
+        {
+            case 72: // Up
+                tmpPoint = (Point) {.x = -1, .y =  0};
+                break;
+
+            case 80: // Down
+                tmpPoint = (Point) {.x =  1, .y =  0};
+                break;
+
+            case 77: // Right
+                tmpPoint = (Point) {.x =  0, .y =  1};
+                break;
+
+            case 75: // Left
+                tmpPoint = (Point) {.x =  0, .y = -1};
+                break;
+
+            default:
+                break;
+        }
+    }
+    else
+    {
+        // Use w a s d
+        switch (ch)
+        {
+            case 'w':
+            case 'W': // Up
+                tmpPoint = (Point) {.x = -1, .y =  0};
+                break;
+
+            case 's':
+            case 'S': // Down
+                tmpPoint = (Point) {.x =  1, .y =  0};
+                break;
+
+            case 'd':
+            case 'D': // Right
+                tmpPoint = (Point) {.x =  0, .y =  1};
+                break;
+
+            case 'a':
+            case 'A': // Left
+                tmpPoint = (Point) {.x =  0, .y = -1};
+                break;
+
+            default:
+                break;
+        }
+    }
+    return tmpPoint;
 }
