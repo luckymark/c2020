@@ -8,14 +8,15 @@
 #include <algorithm>
 using namespace std;
 
+char filePath[50] = "C://Users//ZYW//temp//map.txt";
 #define MAPH 100 //高
 #define MAPW 100 //宽
 #define PLAYERSNUMBER 10000 //每代个数
-#define FATHER 50 //父代个数  //小一点效果更好
-#define GENESNUMBER 80 //gene个数，走的最多步数   //不要设太高，低一点更容易进化
-#define Evolution 100 //进化代数
+#define FATHER 50 //父代个数   //越少优化结果越好
+#define GENESNUMBER 200 //gene个数，走的最多步数   //设置多了优化不了，不能太多  //不同的地图大小还需要更改
+#define Evolution 200 //进化代数   //感觉后100代都没用
 HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
-
+int height,width;
 struct {
     int map[MAPH][MAPW];
     int startx,starty;
@@ -72,9 +73,8 @@ int main(){
 }
 
 void readinMap(){ //1墙 2起点 3终点
-    FILE *fp=fopen("C:\\Users\\ZYW\\Documents\\GitHub\\c2020\\level2\\GA\\map.in","r");
-    int height,width;
-    fscanf(fp,"%d*%d",&height,&width);
+    FILE *fp=fopen(filePath,"r");
+    fscanf(fp,"size:%d*%d",&height,&width);
     Map.height=height;
     Map.width=width;
     char str[MAPW];
@@ -168,7 +168,6 @@ void adaptionCal(){ //第num个player
             Greatest.adapt=players[i].adapt;
             Greatest.step=players[i].step;
         }
-
     }
 }
 
@@ -226,6 +225,8 @@ void printMap(){
                 printf(" ");
             }else if(Map.map[i][j]==3){
                 printf("o");
+            }else{
+                printf("▲");
             }
         }printf("\n");
     }
@@ -276,9 +277,9 @@ void printPath(player p){
             setpos(p.x,p.y);
             printf("▲");
         }if(Map.map[tempx][tempy]==3){
-            setpos(21,0);
-            printf("共用%d步\n",p.step);
             break;
         }        
-    }
+    }setpos(height+2,0);
+    printf("共用%d步\n",p.step);
+    return ;
 }

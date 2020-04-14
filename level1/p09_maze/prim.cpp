@@ -24,16 +24,8 @@ void creatMap();
 int main() {
     printf("please input the number of column and row:");
     scanf("%d%d",&column,&row);
-    srand((unsigned)time(nullptr));
-    memset(map,0,sizeof(map));
-    memset(visited,0,sizeof(visited));
 
-    map[1][0] = 1;
-    X.push_back(1);
-    Y.push_back(1);
     creatMap();
-    map[1][0] = 0;
-    map[1][1] = 2;
 
     writeMap();
     printMap();
@@ -45,15 +37,19 @@ bool inside(int x,int y){
     return (x >= 1 && x < row-1 && y >= 1 && y < column -1);
 }
 
-
 void writeMap(){
-    FILE* file = fopen("C://Users//ZYW//temp//map.txt","w");
-    fprintf(file," %d*%d\n",column,row);
+    FILE* file = fopen(filePath,"w");
+    fprintf(file,"size:%d*%d\n",column,row);
     for (int i = 0; i < row; ++i) {
         for (int j = 0; j < column; j++) {
-            fprintf(file,"%d",map[i][j]);
-        }
-        fprintf(file,"\n");
+            if (map[i][j]==1){
+                fprintf(file,"%d",0);
+            }else if (map[i][j]==0){
+                fprintf(file,"%d",1);
+            }else{
+                fprintf(file,"%d",map[i][j]);
+            }            
+        }fprintf(file,"\n");
     }fclose(file);
 }
 void printMap(){
@@ -67,7 +63,13 @@ void printMap(){
 }           
 
 void creatMap(){
+    srand((unsigned)time(nullptr));
+    memset(map,0,sizeof(map));
+    memset(visited,0,sizeof(visited));
+    X.push_back(1);
+    Y.push_back(1);
     int x0,y0;
+    map[1][2]=1;
     while(X.size()){
         int r = rand() % X.size();
         int x = X[r];
@@ -82,12 +84,12 @@ void creatMap(){
                 }
             }
         }
-        if(count == 1) {//如果只有一条路，就把周围都设成通路
+        if(count == 1) {
             x0 = x;y0 = y;
             map[x][y] = 1;
             for (int i = -1; i <= 1; i++){
                 for (int j = -1; j <= 1;j++){
-                    if (inside(x + i, y + j) && abs(i) + abs(j) == 1){
+                    if (inside(x + i, y + j) && abs(i) + abs(j) == 1){//为了防止闭环，不能只选取一部分打通
                         if(!map[x+i][y+j] && !visited[x+i][y+j]){
                             X.push_back(x+i);
                             Y.push_back(y+j);
@@ -100,7 +102,10 @@ void creatMap(){
         X.erase(X.begin() + r);
         Y.erase(Y.begin() + r);
         if(!X.size()){
-            map[x0][y0] = 3; //终点
+            if(map[row-2][column-2]) map[row-2][column-2]=3;
+            else map[x0][y0] = 3; //终点
         }
-    }return;
+    }
+    map[1][1] = 2;
+    return;
 }
