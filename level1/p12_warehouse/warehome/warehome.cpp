@@ -67,24 +67,12 @@ node* create(FILE* fp)
 	fscanf_s(fp, "%d", &p->seq);
 	fscanf_s(fp, "%d", &p->data);
 	header = p;
-	//printf("请输入需要存储的数字(如果想退出输入，请输入-1):");
-	/*if (scanf_s("%d", &(p->data)) == 0) {
-		free(p);
-		return NULL;
-	}*/
 	while (fgetc(fp) != EOF)
 	{
 		p->next = (node*)malloc(sizeof(node));
 		p = p->next;
 		fscanf_s(fp, "%d", &p->seq);
 		fscanf_s(fp, "%d", &p->data);
-		/*	printf("请输入需要存储的数字(如果想退出输入，请输入-1):");
-			if (p == NULL)
-			{
-				exit(-11);
-			}
-			scanf_s("%d", &(p->data)); */
-
 	}
 	p->next = NULL;
 	return header;
@@ -132,23 +120,6 @@ void append(node * header)
 		scanf_s("%d", &p->data);
 		p -> next = NULL;
 	}
-
-
-	//node* p = (node*)malloc(sizeof(node));
-	//p = header;
-	//while (p->data == -1)
-	//{
-	//	p->next = (node*)malloc(sizeof(node));
-	//	p = p->next;
-	/*	printf("请输入需要存储的数字(如果想退出输入，请输入-1):");
-		if (p == NULL)
-		{
-			exit(-11);
-		}
-		scanf_s("%d", &(p->data)); */
-
-	//} 
-	//return header;
 }
 
 
