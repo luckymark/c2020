@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -Wl,--enable-auto-import CMakeFiles/warehouse.dir/main.c.o  -o warehouse.exe -Wl,--out-implib,libwarehouse.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

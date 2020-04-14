@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/25966/CLionProjects/warehouse/getch.h
+stdio.h
+-
+termio.h
+-
+
+/cygdrive/c/Users/25966/CLionProjects/warehouse/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+getch.h
+/cygdrive/c/Users/25966/CLionProjects/warehouse/getch.h
+
