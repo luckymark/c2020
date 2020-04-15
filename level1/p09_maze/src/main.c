@@ -1,8 +1,9 @@
-#include"maze.h"
+#include "maze.h"
+#define SEED 0
+
 int main(){
     initSeed(SEED);
     createMaze();
-     
     register char temp;
     while(1){
         printMaze();

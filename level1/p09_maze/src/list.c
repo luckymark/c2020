@@ -1,23 +1,7 @@
-//for maze generate
-#include<stdio.h>
-#include<stdlib.h>
-struct node{
-    int x;
-    int y;
-    //position
-    struct  node* next;
-    //std linked list
-};
-static struct node *head=NULL;
+#include "list.h"
+struct node *head=NULL;
 //head ptr
-static int listSize=0;
-
-void insertList(int x,int y);
-void delList(int pos);
-void showList();
-int getListSize();
-struct node *getElement(int index);
-
+int listSize=0;
 
 void insertList(int x,int y){
 	//insert to the head
@@ -57,12 +41,9 @@ void showList(){
         //update
     }
 }
-inline int getListSize(){ 
-    return listSize;
-}
 struct node *getElement(int index){ 
     if(index<=0||index>listSize){ 
-        printf("Error on %s : %s : %s ! Out of Range!!",__FILE__,__func__,__LINE__); 
+        printf("Error on %s : %s : %d ! Out of Range!!",__FILE__,__func__,__LINE__); 
         exit(-1);
     }
     //1 to listSize
