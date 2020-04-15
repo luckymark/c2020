@@ -1,41 +1,5 @@
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
-#include<stdbool.h>
-#define DEFAULT -1
-
-struct node{
-    int value;
-    struct  node* next;
-};
+#include"linkedList.h"
 struct node *head=NULL;
-
-void makeList();
-struct node* findEnd();
-void insertList(int target);
-void showList();
-int findNext(int target,int pos);
-void reverseList(struct node *this,struct node *prev);
-//recursively reverse
-
-int main(){
-    makeList();
-
-    printf("\nIn order:\n");
-    showList();
-
-    printf("\n\nFind 5 firstly:\n");
-    printf("%d",findNext(5,DEFAULT));
-
-    printf("\nFind 5 secondly:\n");
-    printf("%d\n",findNext(5,DEFAULT));
-
-    reverseList(head,NULL);
-    printf("\nReversed:\n");
-    showList();
-
-    return 0;
-}
 void reverseList(struct node *this,struct node *prev){
     if(this->next==NULL){
         head=this;
