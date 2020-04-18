@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="pushBoxes"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pushBoxes">
+				<Option output="/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/pushBoxes.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.2.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.2.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 pushBoxes"/>
+					<CompileFile command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pushBoxes/fast">
+				<Option output="/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/pushBoxes.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.2.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.2.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 pushBoxes/fast"/>
+					<CompileFile command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/cygdrive/c/Strawberry/c/bin/gmake.exe -j8 -f &quot;/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/cygdrive/c/Users/25966/CLionProjects/pushBoxes/main.c">
+			<Option target="pushBoxes"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/25966/CLionProjects/pushBoxes/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

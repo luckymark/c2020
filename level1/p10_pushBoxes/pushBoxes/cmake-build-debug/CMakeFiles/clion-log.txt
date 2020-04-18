@@ -1,0 +1,11 @@
+C:\Users\25966\AppData\Local\JetBrains\CLion2020.1\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_SH=CMAKE_SH-NOTFOUND -G "CodeBlocks - Unix Makefiles" /cygdrive/c/Users/25966/CLionProjects/pushBoxes
+-- The C compiler identification is GNU 9.2.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug

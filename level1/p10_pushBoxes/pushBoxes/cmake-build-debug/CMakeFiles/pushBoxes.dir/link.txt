@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -Wl,--enable-auto-import CMakeFiles/pushBoxes.dir/main.c.o  -o pushBoxes.exe -Wl,--out-implib,libpushBoxes.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
