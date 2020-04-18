@@ -17,7 +17,7 @@ int main()
     while(1)
     {
         system("CLS");
-        printf("You are '@',try to push all 'a' to 's'\nYou can press'p'to break");
+        printf("You are '@',try to push all 'a' to 's'\nYou can press'p'to break\n");
         for(i=0;i<=9;i++)
         {
             for(j=0;j<=9;j++)
