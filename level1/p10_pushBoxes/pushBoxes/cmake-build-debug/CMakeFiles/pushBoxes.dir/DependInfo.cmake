@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/cygdrive/c/Users/25966/CLionProjects/pushBoxes/main.c" "/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/CMakeFiles/pushBoxes.dir/main.c.o"
+  "/cygdrive/c/Users/25966/Documents/github/c2020/level1/p10_pushBoxes/pushBoxes/main.c" "/cygdrive/c/Users/25966/Documents/github/c2020/level1/p10_pushBoxes/pushBoxes/cmake-build-debug/CMakeFiles/pushBoxes.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

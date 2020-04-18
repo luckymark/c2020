@@ -1,4 +1,4 @@
-C:\Users\25966\AppData\Local\JetBrains\CLion2020.1\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_SH=CMAKE_SH-NOTFOUND -G "CodeBlocks - Unix Makefiles" /cygdrive/c/Users/25966/CLionProjects/pushBoxes
+C:\Users\25966\AppData\Local\JetBrains\CLion2020.1\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_SH=CMAKE_SH-NOTFOUND -G "CodeBlocks - Unix Makefiles" /cygdrive/c/Users/25966/Documents/github/c2020/level1/p10_pushBoxes/pushBoxes
 -- The C compiler identification is GNU 9.2.0
 -- Check for working C compiler: /usr/bin/cc
 -- Check for working C compiler: /usr/bin/cc -- works
@@ -8,4 +8,10 @@ C:\Users\25966\AppData\Local\JetBrains\CLion2020.1\cygwin_cmake\bin\cmake.exe -D
 -- Detecting C compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_SH
+
+
+-- Build files have been written to: /cygdrive/c/Users/25966/Documents/github/c2020/level1/p10_pushBoxes/pushBoxes/cmake-build-debug

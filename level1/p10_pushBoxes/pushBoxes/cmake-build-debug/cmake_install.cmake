@@ -1,4 +1,4 @@
-# Install script for directory: /cygdrive/c/Users/25966/CLionProjects/pushBoxes
+# Install script for directory: /cygdrive/c/Users/25966/Documents/github/c2020/level1/p10_pushBoxes/pushBoxes
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/cygdrive/c/Users/25966/Documents/github/c2020/level1/p10_pushBoxes/pushBoxes/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

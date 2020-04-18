@@ -44,10 +44,10 @@ RM = /cygdrive/c/Users/25966/AppData/Local/JetBrains/CLion2020.1/cygwin_cmake/bi
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/Users/25966/CLionProjects/pushBoxes
+CMAKE_SOURCE_DIR = /cygdrive/c/Users/25966/Documents/github/c2020/level1/p10_pushBoxes/pushBoxes
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug
+CMAKE_BINARY_DIR = /cygdrive/c/Users/25966/Documents/github/c2020/level1/p10_pushBoxes/pushBoxes/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -74,14 +74,14 @@ clean: CMakeFiles/pushBoxes.dir/clean
 CMakeFiles/pushBoxes.dir/all:
 	$(MAKE) -f CMakeFiles/pushBoxes.dir/build.make CMakeFiles/pushBoxes.dir/depend
 	$(MAKE) -f CMakeFiles/pushBoxes.dir/build.make CMakeFiles/pushBoxes.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target pushBoxes"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/cygdrive/c/Users/25966/Documents/github/c2020/level1/p10_pushBoxes/pushBoxes/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target pushBoxes"
 .PHONY : CMakeFiles/pushBoxes.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pushBoxes.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/25966/Documents/github/c2020/level1/p10_pushBoxes/pushBoxes/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pushBoxes.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/25966/CLionProjects/pushBoxes/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/25966/Documents/github/c2020/level1/p10_pushBoxes/pushBoxes/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/pushBoxes.dir/rule
 
 # Convenience name for target.
