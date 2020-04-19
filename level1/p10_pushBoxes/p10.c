@@ -2,31 +2,14 @@
 #include <synchapi.h>
 
 static char data[3][1024];
-static int choice;
-static int count=0;
-static int count0;
-static int direct;
-
-static int firstScore;
-static int secondScore;
-static int thirdScore;
+static int theCount,count,choice,direct,score;
 
 static int play_x,play_y;
-
 static int box1_x,box1_y;
 static int box2_x,box2_y;
-
 static int destination1_x,destination1_y;
 static int destination2_x,destination2_y;
-
-static int layer7[8];
-static int layer6[8];
-static int layer5[8];
-static int layer4[8];
-static int layer3[8];
-static int layer2[8];
-static int layer1[8];
-
+static int layer[7][8];
 static int wall_top[8]={8,1,1,1,1,1,1,1};
 static int wall_bottom[8]={0,1,1,1,1,1,1,1};
 
@@ -34,26 +17,10 @@ static int isWall(int x,int y){
     if(x<1||x>7||y<1||y>7){
         return 1;
     }
-    if(layer1[0]==y && layer1[x]==1){
-        return 1;
-    }
-    if(layer2[0]==y && layer2[x]==1){
-        return 1;
-    }
-    if(layer3[0]==y && layer3[x]==1){
-        return 1;
-    }
-    if(layer4[0]==y && layer4[x]==1){
-        return 1;
-    }
-    if(layer5[0]==y && layer5[x]==1){
-        return 1;
-    }
-    if(layer6[0]==y && layer6[x]==1){
-        return 1;
-    }
-    if(layer7[0]==y && layer7[x]==1){
-        return 1;
+    for(int i=6;i>=0;i--){
+        if(layer[i][0]==y && layer[i][x]==1){
+            return 1;
+        }
     }
     return 0;
 }
@@ -73,99 +40,55 @@ static int isDestination(int x,int y){
 }
 
 static void move(){
+    int x_add,y_add;
     switch(direct){
         case 1:
-            if(isWall(play_x+1,play_y)){
-                printf("墙！不可移动！\n");
-            }else{
-                if(isBox(play_x+1,play_y)){
-                    if(isWall(play_x+2,play_y) || isBox(play_x+2,play_y)){
-                        printf("不可推动！\n");
-                    }else{
-                        if(play_x+1==box1_x && play_y==box1_y){
-                            box1_x++;
-                        }else{
-                            box2_x++;
-                        }
-                        play_x++;
-                    }
-                }else{
-                    play_x++;
-                }
-            }
+            x_add=1;
+            y_add=0;
             break;
         case 2:
-            if(isWall(play_x-1,play_y)){
-                printf("墙！不可移动！\n");
-            }else{
-                if(isBox(play_x-1,play_y)){
-                    if(isWall(play_x-2,play_y) || isBox(play_x-2,play_y)){
-                        printf("不可推动！\n");
-                    }else{
-                        if(play_x-1==box1_x && play_y==box1_y){
-                            box1_x--;
-                        }else{
-                            box2_x--;
-                        }
-                        play_x--;
-                    }
-                }else{
-                    play_x--;
-                }
-            }
+            x_add=-1;
+            y_add=0;
             break;
         case 3:
-            if(isWall(play_x,play_y+1)){
-                printf("墙！不可移动！\n");
-            }else{
-                if(isBox(play_x,play_y+1)){
-                    if(isWall(play_x,play_y+2) || isBox(play_x,play_y+2)){
-                        printf("不可推动！\n");
-                    }else{
-                        if(play_x==box1_x && play_y+1==box1_y){
-                            box1_y++;
-                        }else{
-                            box2_y++;
-                        }
-                        play_y++;
-                    }
-                }else{
-                    play_y++;
-                }
-            }
+            x_add=0;
+            y_add=1;
             break;
         case 4:
-            if(isWall(play_x,play_y-1)){
-                printf("墙！不可移动！\n");
-            }else{
-                if(isBox(play_x,play_y-1)){
-                    if(isWall(play_x,play_y-2) || isBox(play_x,play_y-2)){
-                        printf("不可推动！\n");
-                    }else{
-                        if(play_x==box1_x && play_y-1==box1_y){
-                            box1_y--;
-                        }else{
-                            box2_y--;
-                        }
-                        play_y--;
-                    }
-                }else{
-                    play_y--;
-                }
-            }
-            break;
-        default:
-            printf("非法输入！请重新输入！\n");
+            x_add=0;
+            y_add=-1;
             break;
     }
-    count ++;
+    if(isWall(play_x+x_add,play_y+y_add)){
+        printf("墙！不可移动！\n");
+    }else{
+        if(isBox(play_x+x_add,play_y+y_add)){
+            if(isWall(play_x+2*x_add,play_y+2*y_add) || isBox(play_x+2*x_add,play_y+2*y_add)){
+                printf("不可推动！\n");
+            }else{
+                if(play_x+x_add==box1_x && play_y+y_add==box1_y){
+                    box1_x += x_add;
+                    box1_y += y_add;
+                }else{
+                    box2_x += x_add;
+                    box2_y += y_add;
+                }
+                play_x += x_add;
+                play_y += y_add;
+                count ++;
+            }
+        }else{
+            play_x += x_add;
+            play_y += y_add;
+            count ++;
+        }
+    }
 }
 
 static void drawLayer(int layer[]){
     printf("#");
     for(int i=1;i<8;i++){
         if(i==play_x && layer[0]==play_y){
-            printf("");
             printf("▲");
             continue;
         }
@@ -188,177 +111,86 @@ static void drawLayer(int layer[]){
 
 static void drawMaze(){
     drawLayer(wall_top);
-    drawLayer(layer7);
-    drawLayer(layer6);
-    drawLayer(layer5);
-    drawLayer(layer4);
-    drawLayer(layer3);
-    drawLayer(layer2);
-    drawLayer(layer1);
+    for(int i=6;i>=0;i--){
+        drawLayer(layer[i]);
+    }
     drawLayer(wall_bottom);
 }
 
-static void score(int n){
-    switch (choice){
-        case 0:
-            firstScore=n;
-            break;
-        case 1:
-            secondScore=n;
-            break;
-        case 2:
-            thirdScore=n;
-            break;
-        default:
-            break;
-    }
+static int readData(){
+    int theData=data[choice][theCount]-'0';
+    theCount ++;
+    return theData;
 }
 
 static void apply(){
-    int count2=2;
-
-    play_x=data[choice][count2]-'0';
-    count2 ++;
-    play_y=data[choice][count2]-'0';
-    count2 ++;
-
-    box1_x=data[choice][count2]-'0';
-    count2 ++;
-    box1_y=data[choice][count2]-'0';
-    count2 ++;
-    box2_x=data[choice][count2]-'0';
-    count2 ++;
-    box2_y=data[choice][count2]-'0';
-    count2 ++;
-
-    destination1_x=data[choice][count2]-'0';
-    count2 ++;
-    destination1_y=data[choice][count2]-'0';
-    count2 ++;
-    destination2_x=data[choice][count2]-'0';
-    count2 ++;
-    destination2_y=data[choice][count2]-'0';
-    count2 ++;
-
-    for(int k=0;k<8;k++){
-        layer7[k]=data[choice][count2]-'0';
-        count2 ++;
+    theCount=2;
+    play_x=readData();
+    play_y=readData();
+    box1_x=readData();
+    box1_y=readData();
+    box2_x=readData();
+    box2_y=readData();
+    destination1_x=readData();
+    destination1_y=readData();
+    destination2_x=readData();
+    destination2_y=readData();
+    for(int i=6;i>=0;i--){
+        for(int k=0;k<8;k++){
+            layer[i][k]=data[choice][theCount]-'0';
+            theCount ++;
+        }
     }
-    for(int k=0;k<8;k++){
-        layer6[k]=data[choice][count2]-'0';
-        count2 ++;
-    }
-    for(int k=0;k<8;k++){
-        layer5[k]=data[choice][count2]-'0';
-        count2 ++;
-    }
-    for(int k=0;k<8;k++){
-        layer4[k]=data[choice][count2]-'0';
-        count2 ++;
-    }
-    for(int k=0;k<8;k++){
-        layer3[k]=data[choice][count2]-'0';
-        count2 ++;
-    }
-    for(int k=0;k<8;k++){
-        layer2[k]=data[choice][count2]-'0';
-        count2 ++;
-    }
-    for(int k=0;k<8;k++){
-        layer1[k]=data[choice][count2]-'0';
-        count2 ++;
-    }
+    count=0;
 }
 
-static void record(){
+static void writeFile(int start,int group){
     char temp[2];
     temp[0]='\0';
     temp[1]='\0';
-
-    FILE* fpw=fopen("pushBox.txt","w+");
-
-    switch(choice){
-        case 0:
-
-            itoa(firstScore/10,temp,10);
-            fwrite((const void *)&temp[0],1,1,fpw);
-            itoa(firstScore%10,temp,10);
-            fwrite((const void *)&temp[0],1,1,fpw);
-
-            for(int i=2;i<count0;i++){
-                temp[0]=data[0][i];
-                fwrite((const void *)&temp[0],1,1,fpw);
-            }
-            fwrite("*",1,1,fpw);
-            for(int i=0;i<count0;i++){
-                temp[0]=data[1][i];
-                fwrite((const void *)&temp[0],1,1,fpw);
-            }
-            fwrite("*",1,1,fpw);
-            for(int i=0;i<count0;i++){
-                temp[0]=data[2][i];
-                fwrite((const void *)&temp[0],1,1,fpw);
-            }
-            break;
-        case 1:
-            for(int i=0;i<count0;i++){
-                temp[0]=data[0][i];
-                fwrite((const void *)&temp[0],1,1,fpw);
-            }
-            fwrite("*",1,1,fpw);
-
-            itoa(secondScore/10,temp,10);
-            fwrite((const void *)&temp[0],1,1,fpw);
-            itoa(secondScore%10,temp,10);
-            fwrite((const void *)&temp[0],1,1,fpw);
-
-            for(int i=2;i<count0;i++){
-                temp[0]=data[1][i];
-                fwrite((const void *)&temp[0],1,1,fpw);
-            }
-            fwrite("*",1,1,fpw);
-            for(int i=0;i<count0;i++) {
-                temp[0] = data[2][i];
-                fwrite((const void *)&temp[0], 1, 1, fpw);
-            }
-            break;
-        case 2:
-            for(int i=0;i<count0;i++){
-                temp[0]=data[0][i];
-                fwrite((const void *)&temp[0],1,1,fpw);
-            }
-            fwrite("*",1,1,fpw);
-            for(int i=0;i<count0;i++){
-                temp[0]=data[1][i];
-                fwrite((const void *)&temp[0],1,1,fpw);
-            }
-            fwrite("*",1,1,fpw);
-
-            itoa(thirdScore/10,temp,10);
-            fwrite((const void *)&temp[0],1,1,fpw);
-            itoa(thirdScore%10,temp,10);
-            fwrite((const void *)&temp[0],1,1,fpw);
-
-            for(int i=2;i<count0;i++){
-                temp[0]=data[2][i];
-                fwrite((const void *)&temp[0],1,1,fpw);
-            }
-            break;
-        default:
-            break;
+    FILE* fpw=fopen("pushBox.txt","a+");
+    for(int i=start;i<68;i++){
+        temp[0]=data[group][i];
+        fwrite((const void *)&temp[0],1,1,fpw);
+    }
+    if(group==0||group==1){
+        fwrite("*",1,1,fpw);
     }
     fclose(fpw);
 }
 
-int main(){
+static void writeFileScore(){
+    char temp[2];
+    temp[0]='\0';
+    temp[1]='\0';
+    FILE* fpw=fopen("pushBox.txt","a+");
+    itoa(score/10,temp,10);
+    fwrite((const void *)&temp[0],1,1,fpw);
+    itoa(score%10,temp,10);
+    fwrite((const void *)&temp[0],1,1,fpw);
+    fclose(fpw);
+}
 
+static void record(){
+    FILE* fpw=fopen("pushBox.txt","w+");
+    fclose(fpw);
+    for(int i=0;i<3;i++){
+        if(i==choice){
+            writeFileScore();
+            writeFile(2,i);
+        } else{
+            writeFile(0,i);
+        }
+    }
+}
+
+static void readFile(){
     FILE* fpr=fopen("pushBox.txt","r");
     char stream;
     int count1=0,count2=0;
     stream=fgetc(fpr);
     while(stream!=EOF){
         if(stream=='*'){
-            count0=count2;
             count1 ++;
             count2 =0;
             stream=fgetc(fpr);
@@ -368,7 +200,9 @@ int main(){
         stream=fgetc(fpr);
     }
     fclose(fpr);
+}
 
+static void choose_choice(){
     for(;;){
         printf("请选择地图：1、2、3\n");
         scanf(" %d",&choice);
@@ -379,32 +213,51 @@ int main(){
             printf("非法输入！请重新输入！\n");
         }
     }
+}
 
-    apply();
-
+static void choose_direct(){
     for(;;){
-        drawMaze();
         printf("选择输入：1-右移-2-左移-3-上移-4-下移-\n");
         printf("（提示：#->墙 ▲->玩家 ×->箱子 o->目标位置）\n");
-
         scanf(" %d",&direct);
-        move();
+        if(direct==1||direct==2||direct==3||direct==4){
+            break;
+        } else{
+            printf("非法输入！请重新输入！\n");
+        }
+    }
+}
 
-        if(isDestination(box1_x,box1_y) && isDestination(box2_x,box2_y)){
-            system("cls");
-            drawMaze();
-            printf("挑战成功！");
-            if(100>count){
-                score(100-count);
-                printf("你的分数： %d",100-count);
-            }else{
-                score(0);
-                printf("你的分数： %d",0);
-            }
-            record();
+static int ifWin(){
+    if(isDestination(box1_x,box1_y) && isDestination(box2_x,box2_y)){
+        system("cls");
+        drawMaze();
+        printf("挑战成功！");
+        if(100>count){
+            score=100-count;
+            printf("你的分数： %d",score);
+        }else{
+            score=0;
+            printf("你的分数： %d",0);
+        }
+        record();
+        return 1;
+    } else{
+        return 0;
+    }
+}
+
+int main(){
+    readFile();
+    choose_choice();
+    apply();
+    for(;;){
+        drawMaze();
+        choose_direct();
+        move();
+        if(ifWin()){
             return 0;
         }
-
         Sleep(800);
         system("cls");
     }
