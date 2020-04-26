@@ -1,0 +1,4 @@
+0001                        stone_sword 1
+0002                            diamond 16
+0003                               fish 5
+0004                              apple 2
