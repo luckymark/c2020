@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define maxn 5
+#define maxn 6
 void Print (int n , char one, char three)
 {
 	printf_s("%d %c -> %c\n", n, one, three);
