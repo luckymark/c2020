@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/p01_runningLetter.iml" filepath="$PROJECT_DIR$/.idea/p01_runningLetter.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/C Profile.iml" filepath="$PROJECT_DIR$/.idea/C Profile.iml" />
+>>>>>>> 908a61811d034f67bbf3f9133c8c993e112fd068
     </modules>
   </component>
 </project>

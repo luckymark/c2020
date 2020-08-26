@@ -2,9 +2,6 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/main.c" charset="GBK" />
-<<<<<<< HEAD
-=======
-    <file url="file://D:/Git/c2020/p01_runningLetter/main.c" charset="GBK" />
->>>>>>> 908a61811d034f67bbf3f9133c8c993e112fd068
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

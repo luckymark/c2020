@@ -30,7 +30,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+=======
+    <property name="last_opened_file_path" value="D:/Git/c2020/p01_runningLetter" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+>>>>>>> 908a61811d034f67bbf3f9133c8c993e112fd068
   </component>
   <component name="RunManager">
     <configuration name="p07_encrypt_decrypt" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p07_encrypt_decrypt" TARGET_NAME="p07_encrypt_decrypt" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p07_encrypt_decrypt" RUN_TARGET_NAME="p07_encrypt_decrypt">
@@ -56,6 +61,12 @@
       <workItem from="1582806732729" duration="490000" />
       <workItem from="1582807253292" duration="666000" />
       <workItem from="1582865568139" duration="502000" />
+<<<<<<< HEAD
+=======
+      <workItem from="1583379070685" duration="46000" />
+      <workItem from="1583379204371" duration="22000" />
+      <workItem from="1583379729908" duration="199000" />
+>>>>>>> 908a61811d034f67bbf3f9133c8c993e112fd068
     </task>
     <servers />
   </component>
@@ -71,6 +82,7 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="387" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1582785361137" />
+<<<<<<< HEAD
     <state width="793" height="342" key="GridCell.Tab.0.bottom" timestamp="1582806100248">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -87,6 +99,28 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="793" height="342" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582806100247" />
+=======
+    <state x="426" y="281" key="FileChooserDialogImpl" timestamp="1583379926683">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="426" y="281" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583379926683" />
+    <state width="1493" height="107" key="GridCell.Tab.0.bottom" timestamp="1583379928625">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="107" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583379928625" />
+    <state width="1493" height="107" key="GridCell.Tab.0.center" timestamp="1583379928625">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="107" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583379928625" />
+    <state width="1493" height="107" key="GridCell.Tab.0.left" timestamp="1583379928624">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="107" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583379928624" />
+    <state width="1493" height="107" key="GridCell.Tab.0.right" timestamp="1583379928625">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="107" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583379928625" />
+>>>>>>> 908a61811d034f67bbf3f9133c8c993e112fd068
     <state width="815" height="207" key="GridCell.Tab.1.bottom" timestamp="1582806100246">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -103,6 +137,7 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="815" height="207" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1582806100246" />
+<<<<<<< HEAD
     <state x="29" y="117" width="996" height="707" key="SettingsEditor" timestamp="1582807914683">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -111,6 +146,20 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="824" y="250" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582865568377" />
+=======
+    <state x="29" y="117" width="996" height="707" key="SettingsEditor" timestamp="1583379911096">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="29" y="117" width="996" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583379911096" />
+    <state x="207" y="170" width="1004" height="620" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583379225888">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="207" y="170" width="1004" height="620" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1583379225888" />
+    <state x="824" y="250" key="com.intellij.ide.util.TipDialog" timestamp="1583379729883">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="824" y="250" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583379729883" />
+>>>>>>> 908a61811d034f67bbf3f9133c8c993e112fd068
     <state x="489" y="54" key="refactoring.ChangeSignatureDialog" timestamp="1582799915681">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

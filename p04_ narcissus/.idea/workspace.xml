@@ -30,6 +30,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../p07_encrypt_decrypt" />
+>>>>>>> 908a61811d034f67bbf3f9133c8c993e112fd068
   </component>
   <component name="RunManager">
     <configuration name="p04__narcissus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04__narcissus" TARGET_NAME="p04__narcissus" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p04__narcissus" RUN_TARGET_NAME="p04__narcissus">
@@ -49,6 +53,12 @@
       <option name="presentableId" value="Default" />
       <updated>1582771035335</updated>
       <workItem from="1582771036609" duration="401000" />
+<<<<<<< HEAD
+=======
+      <workItem from="1583378137395" duration="6000" />
+      <workItem from="1583378172358" duration="17000" />
+      <workItem from="1583379117648" duration="86000" />
+>>>>>>> 908a61811d034f67bbf3f9133c8c993e112fd068
     </task>
     <servers />
   </component>
@@ -56,6 +66,13 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< HEAD
+=======
+    <state x="831" y="249" key="FileChooserDialogImpl" timestamp="1583379201070">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="831" y="249" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583379201070" />
+>>>>>>> 908a61811d034f67bbf3f9133c8c993e112fd068
     <state width="723" height="177" key="GridCell.Tab.0.bottom" timestamp="1582771437231">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -72,5 +89,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="723" height="177" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582771437231" />
+<<<<<<< HEAD
+=======
+    <state x="-240" y="225" width="1270" height="620" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583379202953">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="-240" y="225" width="1270" height="620" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1583379202953" />
+    <state x="833" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1583378173379">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="833" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583378173379" />
+>>>>>>> 908a61811d034f67bbf3f9133c8c993e112fd068
   </component>
 </project>

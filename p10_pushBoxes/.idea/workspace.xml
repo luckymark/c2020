@@ -55,6 +55,10 @@
       <workItem from="1583135679398" duration="625000" />
       <workItem from="1583136514678" duration="174000" />
       <workItem from="1583136825162" duration="144000" />
+<<<<<<< HEAD
+=======
+      <workItem from="1583415658126" duration="135000" />
+>>>>>>> 908a61811d034f67bbf3f9133c8c993e112fd068
     </task>
     <servers />
   </component>
@@ -94,10 +98,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="770" height="343" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583134918091" />
+<<<<<<< HEAD
     <state x="698" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1583136864367">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="698" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583136864367" />
+=======
+    <state x="698" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1583415657701">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="698" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583415657701" />
+>>>>>>> 908a61811d034f67bbf3f9133c8c993e112fd068
     <state x="267" y="23" width="642" height="801" key="find.popup" timestamp="1583067392799">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
