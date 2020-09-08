@@ -10,7 +10,16 @@ int main()
         {
             c=i%j;
             if(c==0&&j!=i) break;//这个i不是素数
+<<<<<<< HEAD
             if(c==0&&j==i) {b[m]=i;m+=1;break;}//把素数放入数组 ,共m个
+=======
+            if(c==0&&j==i)
+            {
+                b[m]=i;
+                m+=1;
+                break;
+            }//把素数放入数组 ,共m个
+>>>>>>> d8d4165c6d1a6c4d5aa568cac24ba154e3e7026c
         }
     }
     i=m-1,j=0;
@@ -18,7 +27,15 @@ int main()
     {
         for(j=0;j<=m-1;j++)
         {
+<<<<<<< HEAD
             if(n==b[i]+b[j]){flag=1;break;}
+=======
+            if(n==b[i]+b[j])
+            {
+                flag=1;
+                break;
+            }
+>>>>>>> d8d4165c6d1a6c4d5aa568cac24ba154e3e7026c
         }
         i-=1;
     }
